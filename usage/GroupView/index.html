@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>GroupView - Rocket MV BASIC</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Rocket MV BASIC</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Usage <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Accounts/" class="dropdown-item">Accounts</a>
+</li>
+                                    
+<li>
+    <a href="../Catalog/" class="dropdown-item">Catalog</a>
+</li>
+                                    
+<li>
+    <a href="../Completion/" class="dropdown-item">Completion</a>
+</li>
+                                    
+<li>
+    <a href="../Configuration/" class="dropdown-item">Configuration</a>
+</li>
+                                    
+<li>
+    <a href="../Connection/" class="dropdown-item">Connection</a>
+</li>
+                                    
+<li>
+    <a href="../CustomizeDoc/" class="dropdown-item">CustomizeDoc</a>
+</li>
+                                    
+<li>
+    <a href="../Definition/" class="dropdown-item">Definition</a>
+</li>
+                                    
+<li>
+    <a href="../DocumentSymbol/" class="dropdown-item">DocumentSymbol</a>
+</li>
+                                    
+<li>
+    <a href="../Folding/" class="dropdown-item">Folding</a>
+</li>
+                                    
+<li>
+    <a href="../Formatting/" class="dropdown-item">Formatting</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">GroupView</a>
+</li>
+                                    
+<li>
+    <a href="../Hover/" class="dropdown-item">Hover</a>
+</li>
+                                    
+<li>
+    <a href="../Include/" class="dropdown-item">Include</a>
+</li>
+                                    
+<li>
+    <a href="../References/" class="dropdown-item">References</a>
+</li>
+                                    
+<li>
+    <a href="../Rename/" class="dropdown-item">Rename</a>
+</li>
+                                    
+<li>
+    <a href="../SemanticHighlighting/" class="dropdown-item">SemanticHighlighting</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Formatting/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Hover/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#using-auto-group-view" class="nav-link">Using Auto Group View</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="using-auto-group-view">Using Auto Group View</h2>
+<h3 id="introduction">Introduction</h3>
+<p>The auto-group view function is used to combine files that have similar names into groups. This allows you to organize file lists with more concise groupings. You can also customize group content and hide unnecessary files.</p>
+<h3 id="configuration">Configuration</h3>
+<p>You can specify source code directories and add customized groups by modifying the configuration file. If no customized groups are added, a default rule will be used instead. Note that this default rule can also be changed.</p>
+<p>If a source code directory is not specified, the current opened folder will be used as the source code directory. Folders will not be displayed in the group view unless they are specified as source directories.</p>
+<p>Group view related settings are set from the “groupView” section of the configuration file. </p>
+<p>If you make changes to the configuration file, refresh the group view to make the change take effect.</p>
+<h3 id="ignore-files-list">Ignore files list</h3>
+<p>You can specify which files to ignore (not be displayed in the group view) from the “ignore” section in “groupView”.</p>
+<p>Here is a sample configuration:</p>
+<pre><code>“ignore”: [
+    “VOC”, 
+    “D_*”, 
+    “BP/SAMPLE”
+]
+</code></pre>
+
+<p>The following file specification methods can be used in the “ignore” section:</p>
+<ul>
+<li>File names: for example, “VOC”, “D_VOC”. </li>
+<li>Using the wildcard character: for example, “D*<em>” specifies that all files that start with “D</em>” in the current directory will be ignored.</li>
+<li>Using a relative path: for example, if the current opened folder is “C:\U2\UV\XDEMO”, then “BP/SAMPLE” specifies that “C:\U2\UV\XDEMO\BP\SAMPLE” will not be displayed in the group view. Note that in this example, “BP” should be configured as the source code folder.</li>
+</ul>
+<h3 id="default-auto-group-rule">Default auto-group rule</h3>
+<p>If you do not add customized groups in the configuration file, the auto-group view function will use a default rule to organize the files and create groups in current opened folder.</p>
+<p>Here is the <code>default</code> configuration:</p>
+<pre><code>“default”: {
+    “delimiter”: “.”, 
+    “level”: 2
+}
+</code></pre>
+
+<p><code>delimiter</code> specifies the character(s) to use to separate the file names. For example, if specifying the “.” delimiter, the file “SAMPLE.BASIC.PROGRAM” is separated to 3 parts: “SAMPLE”, ”BASIC” and “PROGRAM”. </p>
+<p>Both single character and multiple character delimiters are supported in “delimiter”, but for readability, we recommend using only single character.</p>
+<p><code>level</code> specifies how to combine group names based on the separated parts of the file names. </p>
+<p>For example, there are three files: “SAMPLE.BASIC.FILE”, “SAMPLE.BASIC.CODE” and “SAMPLE.BASIC.PROGRAM”. These three files all have a uniform file name format in the first two parts of the files: “SAMPLE.BASIC”.</p>
+<p>These can be placed into one group. </p>
+<p>If “level” is set to 2, then these will be placed into the group “SAMPLE.BASIC”. If “level” is set to 1, then these will be placed into the group “SAMPLE”. </p>
+<p>As you can see, “level” specifies that the default group name contains the number of the same parts in file names. If “level” is set to an invalid number (for example, -1), then default value of 2 is used instead.</p>
+<p>Files that do not have similar name formats will not be placed into any groups.</p>
+<h3 id="source-directories-and-customized-groups">Source directories and customized groups</h3>
+<p>In the <code>groups</code> section, you can add source code directories and customize groups.</p>
+<p>Here is a sample configuration:</p>
+<pre><code>“groups”: [
+    {
+        “sourceDir”: “PARENT/BP”
+    }
+]
+</code></pre>
+
+<p>You can add a source code folder by adding an element in <code>groups</code>. Use <code>sourceDir</code> to specify the source code folder name or a relative path. Multiple source code folders can be specified.</p>
+<p>If no source code folder is specified, or if there is only one source code folder configured, the source code folder name will be omitted.</p>
+<p>If there are no customized groups in the source code folder, the default rule will be applied. </p>
+<p>Here is a sample configuration for adding customized groups:</p>
+<pre><code>“groups”: [
+    {
+        “sourceDir”: “PARENT/BP”, 
+        “groupName”: “SAMPLE”, 
+        “include”: [
+            “SAMPLE.*”
+        ], 
+        “exclude”: [
+            “SAMPLE.BASIC.CODE”
+        ]
+    }
+]
+</code></pre>
+
+<ul>
+<li><code>groupName</code> specifies the customized group name. </li>
+<li><code>include</code> specifies which files will be included in this group.</li>
+<li><code>exclude</code> specifies which files should be excluded from this group. Note that when files are excluded from a group, they can alternatively be placed into other groups.</li>
+</ul>
+<p>If you need to add multiple groups into one source code folder, add multiple element items in <code>groups</code>. For example:</p>
+<pre><code>“groups”: [
+    {
+        “sourceDir”: “PARENT/BP”, 
+        “groupName”: “SAMPLE”, 
+        “include”: [
+            “SAMPLE.*”
+        ], 
+        “exclude”: [
+            “SAMPLE.BASIC.CODE”
+        ]
+    }, 
+    {
+        “sourceDir”: “PARENT/BP”, 
+        “groupName”: “SAMPLE2”, 
+        “include”: [
+            “TEST.*”
+        ]
+    }
+]
+</code></pre>
+
+<p>In this example, two customized groups (SAMPLE, SAMPLE2) are added to the source code folder “PARENT/BP”.</p>
+<p>Note that a file can only be placed into one group. This means that if you were to specify that a file be included in multiple different groups, it would only be added to the first specified group.</p>
+<h3 id="examples">Examples</h3>
+<p>The samples below illustrate how to configure the auto-group view function.</p>
+<h4 id="example-1">Example 1</h4>
+<p>In this example, the default rule’s delimiter is changed from “.” to “_”.</p>
+<p>The directory structure of the opened folder is:</p>
+<pre><code>DEMO/
+ |- SAMPLE_BASIC_FILE_1
+ |- SAMPLE_BASIC_FILE_2
+ |- SAMPLE_BASIC_FILE_3
+ |- SAMPLE_MENU_FILE_1
+ |- SAMPLE_MENU_FILE_2
+ |- SAMPLE_FILE
+ |- SAMPLE.CODE
+</code></pre>
+
+<p>The configuration for group view is:</p>
+<pre><code>“groupView”: {
+    “default”: {
+        “delimiter”: “_”, 
+        “level”: 2
+    }
+}
+</code></pre>
+
+<p>In the auto-group result, files with names that contain “_” will be grouped automatically. The result is shown below:</p>
+<pre><code>SAMPLE_BASIC
+ |- SAMPLE_BASIC_FILE_1
+ |- SAMPLE_BASIC_FILE_2
+ |- SAMPLE_BASIC_FILE_3
+ |
+SAMPLE_MENU
+ |- SAMPLE_MENU_FILE_1
+ |- SAMPLE_MENU_FILE_2
+ |
+SAMPLE.CODE
+SAMPLE_FILE
+</code></pre>
+
+<h4 id="example-2">Example 2</h4>
+<p>In this example, a source code directory and a customized group are specified in the settings. </p>
+<p>The directory structure of the opened folder is:</p>
+<pre><code>DEMO/
+ |- BP1/
+ |  |- SAMPLE.BASIC.FILE_1
+ |  |- SAMPLE.BASIC.FILE_2
+ |  |- SAMPLE.CODE.FILE_1
+ |  |- SAMPLE.CODE.FILE_2
+ | 
+ |- BP2/
+ |  |- SAMPLE.BASIC.FILE
+ |
+ |- SAMPLE.FILE
+</code></pre>
+
+<p>Below is the configuration file content:</p>
+<pre><code>“groupView”: {
+    “default”: {
+        “delimiter”: “.”, 
+        “level”: 2
+    }, 
+    “groups”: [
+        {
+            “sourceDir”: “BP1”, 
+            “groupName”: “SAMPLE”, 
+            “include”: [
+                “SAMPLE.BASIC.*”
+            ]
+        }
+    ]
+}
+</code></pre>
+
+<p>In the auto-group result below, groups will be displayed, but the source code folder “BP1” will not. “SAMPLE” group is a customized group, and “SAMPLE.CODE” is generated based on the default auto-group rule.</p>
+<pre><code>SAMPLE
+ |- SAMPLE.BASIC.FILE_1
+ |- SAMPLE.BASIC.FILE_2
+ |
+SAMPLE.CODE
+ |- SAMPLE.CODE.FILE_1
+ |- SAMPLE.CODE.FILE_2
+</code></pre>
+
+<h4 id="example-3">Example 3</h4>
+<p>In this example, there are multiple source code directories and customized groups.</p>
+<p>The directory structure of opened folder is:</p>
+<pre><code>DEMO/
+ |- BP1/
+ |  |- SAMPLE.BASIC.FILE_1
+ |  |- SAMPLE.BASIC.FILE_2
+ |  |- SAMPLE.CODE.FILE_1
+ |  |- SAMPLE.CODE.FILE_2
+ |
+ |- BP2/
+ |  |- SAMPLE.CODE.FILE_3
+ |  |- SAMPLE.CODE.FILE_4
+ |
+ |- SAMPLE.FILE
+</code></pre>
+
+<p>The configuration for group view is:</p>
+<pre><code>“groupView”: {
+    “ignore”: [
+    ], 
+    “default”: {
+        “delimiter”: “.”, 
+        “level”: 2
+    }, 
+    “groups”: [
+        {
+            “sourceDir”: “BP1”, 
+            “groupName”: “BASIC”, 
+            “include”: [
+                “SAMPLE.BASIC.*”
+            ]
+        }, 
+        {
+            “sourceDir”: “BP1”, 
+            “groupName”: “CODE”, 
+            “include”: [
+                “SAMPLE.CODE.*”
+            ]
+        }, 
+        {
+            “sourceDir”: “BP2”
+        }
+    ]
+}
+</code></pre>
+
+<p>In the configuration file, there are different groups which are filled with different elements of the “groups” section. The auto-group result is shown below:</p>
+<pre><code>BP1
+ |- BASIC
+ |  |- SAMPLE.BASIC.FILE_1
+ |  |- SAMPLE.BASIC.FILE_2
+ |
+ |- CODE
+   |- SAMPLE.CODE.FILE_1
+   |- SAMPLE.CODE.FILE_2
+BP2
+ |- SAMPLE.CODE
+   |- SAMPLE.CODE.FILE_3
+   |- SAMPLE.CODE.FILE_4
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
