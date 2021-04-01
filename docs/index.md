@@ -28,7 +28,7 @@ Currently the extension is only used to edit BASIC program files on local machin
 
 ### Installation
 
-Install Java 11 or setup the Java 11 environment following the [configuration guide](#Configurations).
+Install Java 11 or setup the Java 11 environment following the **Configurations** section.
 
 VS Code 1.50 or higher version is required.
 
