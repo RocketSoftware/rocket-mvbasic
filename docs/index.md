@@ -19,7 +19,9 @@ This extension includes the following features:
  - Auto-Completion for BASIC statements, keywords and symbols;
  - Connect to U2 MultiValue server and cache cataloged programs to local machine when necessary;
  - Auto-Group files and customize the group rules;
- - Add customized documentation for functions, subroutines or labels
+ - Add customized documentation for functions, subroutines or labels;
+- Show syntax and grammar errors;
+ - Prompt parameters of BASIC functions
 ## Restriction
 
 Currently the extension is only used to edit BASIC program files on local machine.
@@ -87,13 +89,15 @@ Please click the links below to learn more about using each feature.
 - [Connect to U2 server](./usage/Connection.md)
 - [Customized documentation](./usage/CustomizeDoc.md)
 - [Document symbols](./usage/DocumentSymbol.md)
+- [Diagnostics](./usage/Diagnostics.md)
 - [Find references](./usage/References.md)
 - [Formatting](./usage/Formatting.md)
 - [Go to definition](./usage/Definition.md)
 - [Hover](./usage/Hover.md)
 - [Rename](./usage/Rename.md)
 - [Semantic highlighting](./usage/SemanticHighlighting.md)
+- [Signature Help](./usage/SignatureHelp.md)
 
 ## Contact Us
 
-Please visit our [forum](https://community.rocketsoftware.com/forums) for more information.
+Please visit our [forum](https://community.rocketsoftware.com/forums) for more information

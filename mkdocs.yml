@@ -7,6 +7,7 @@ nav:
         - 'Configuration': 'usage/Configuration.md'
         - 'Customized Documentation': 'usage/CustomizeDoc.md'
         - 'Document Symbol': 'usage/DocumentSymbol.md'
+        - 'Diagnostics': usage/Diagnostics.md
         - 'Folding': 'usage/Folding.md'
         - 'Formatting': 'usage/Formatting.md'
         - 'Group View': 'usage/GroupView.md'
@@ -14,6 +15,7 @@ nav:
         - 'INCLUDE settings': 'usage/Include.md'
         - 'References': 'usage/References.md'
         - 'Semantic Highlighting': 'usage/SemanticHighlighting.md'
+        - 'Signature Help': 'usage/SignatureHelp.md'
         - 'Using Auto Completion': 'usage/Completion.md'
         - 'Using Definition': 'usage/Definition.md'
         - 'Using Rename': 'usage/Rename.md'
