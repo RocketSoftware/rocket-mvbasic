@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>U2 Connection Settings - Rocket MV BASIC</title>
+        <title>Signature Help - Rocket MV BASIC</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -93,7 +93,7 @@
 </li>
                                     
 <li>
-    <a href="../SignatureHelp/" class="dropdown-item">Signature Help</a>
+    <a href="./" class="dropdown-item active">Signature Help</a>
 </li>
                                     
 <li>
@@ -109,7 +109,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">U2 Connection Settings</a>
+    <a href="../Connection/" class="dropdown-item">U2 Connection Settings</a>
 </li>
                                 </ul>
                             </li>
@@ -122,12 +122,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../Rename/" class="nav-link">
+                                <a rel="prev" href="../SemanticHighlighting/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" class="nav-link disabled">
+                                <a rel="next" href="../Completion/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -149,7 +149,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="2"><a href="#u2-connection-settings" class="nav-link">U2 Connection Settings</a>
+            <li class="nav-item" data-level="1"><a href="#signature-help" class="nav-link">Signature Help</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -158,36 +158,26 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h2 id="u2-connection-settings">U2 Connection Settings</h2>
-<p>The Rocket MV BASIC extension can also connect to a U2 server. Regardless of whether you are connected to a server or not, all editor functions will work as expected. But when connected to a U2 server, some functions will have advanced capabilities. </p>
-<p><strong>Note</strong>: you cannot edit program files on the U2 server even if you are connected to it. You can only edit files on your local machine.</p>
-<h3 id="settings">Settings</h3>
-<p>Please refer to <a href="../Configuration/">Configuration</a> to open the configuration file.</p>
-<p>Following settings are used for U2 connection.</p>
-<pre><code> &quot;db&quot;: {
-  &quot;host&quot;: &quot;&quot;,
-  &quot;userName&quot;: &quot;&quot;,
-  &quot;password&quot;: &quot;&quot;,
-  &quot;account&quot;: &quot;&quot;,
-  &quot;dataSource&quot;: &quot;UNIVERSE&quot;,
-  &quot;port&quot;: 31438
- },
-</code></pre>
-
+<h1 id="signature-help">Signature Help</h1>
+<p>When users call Basic internal or customized functions, the Signature Help feature automatically prompts for the parameters of the function.</p>
+<p><img alt="" src="../../img/signature_help.png" /></p>
+<p>Users can add the parameter list of the customized function in the corresponding configuration file.</p>
+<p>Open the customized functions configuration file from the appropriate directory:</p>
 <ul>
-<li><code>host</code>: host name or address of a U2 server.</li>
-<li><code>userName</code>: user name to login to the U2 server.</li>
-<li><code>password</code>: password to login to the U2 server.</li>
-<li><code>account</code>: account name of a U2 server.</li>
-<li><code>dataSource</code>: <code>UNIVERSE</code> or <code>UNIDATA</code>, by default is <code>UNIVERSE</code>.</li>
-<li><code>port</code>: port number of U2 server. For UniVerse and UniData, the port number is <code>31438</code> by default.</li>
+<li>
+<p><strong>For UniVerse</strong>: <code>.rmv/documentation/universe/custom.json</code></p>
+</li>
+<li>
+<p><strong>For UniData</strong>: <code>.rmv/documentation/unidata/custom.json</code></p>
+</li>
 </ul>
-<p><strong>Note</strong>: Please enter these settings before connecting to the server.</p>
-<h3 id="connect-to-server">Connect to Server</h3>
-<p>Press <kbd>F1</kbd> to open the command window and then enter the Connect to MV Server command to connect to the server.</p>
-<p>If some settings are not set in the configuration file, you will need provide these values when prompted in the command window.</p>
-<h3 id="disconnect-from-server">Disconnect from Server</h3>
-<p>Press <kbd>F1</kbd> to open the command window and then enter the Disconnect from MV Server command to disconnect to the server.</p></div>
+<p>then add a new function and parameters list.</p>
+<p><img alt="" src="../../img/sigature_user_define.png" /></p>
+<ul>
+<li><code>brief</code>: A brief description of this function. See the Customize Documentation for more detail.</li>
+<li><code>signature</code>: Parameters list. All parameter names should be listed in one string.</li>
+</ul>
+<p>When this customized function is called in a BASIC program, the parameters will be prompted automatically.</p></div>
             </div>
         </div>
 
