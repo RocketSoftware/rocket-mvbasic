@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Using Auto Completion - Rocket MV BASIC</title>
+        <title>Code Lens - Rocket MV BASIC</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -53,7 +53,7 @@
 </li>
                                     
 <li>
-    <a href="../CodeLens/" class="dropdown-item">Code Lens</a>
+    <a href="./" class="dropdown-item active">Code Lens</a>
 </li>
                                     
 <li>
@@ -101,7 +101,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">Using Auto Completion</a>
+    <a href="../Completion/" class="dropdown-item">Using Auto Completion</a>
 </li>
                                     
 <li>
@@ -126,12 +126,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../SignatureHelp/" class="nav-link">
+                                <a rel="prev" href="../Configuration/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../Definition/" class="nav-link">
+                                <a rel="next" href="../CustomizeDoc/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -153,7 +153,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="2"><a href="#using-auto-completion" class="nav-link">Using Auto-Completion</a>
+            <li class="nav-item" data-level="2"><a href="#code-lens" class="nav-link">Code Lens</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -162,25 +162,9 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h2 id="using-auto-completion">Using Auto-Completion</h2>
-<p>When editing a BASIC program, the auto-completion function can prompt and complete what is currently being edited according to the contextual environment. The completion includes:</p>
-<ul>
-<li>Statements and keywords</li>
-<li>Symbols, functions, subroutines, labels, etc;</li>
-<li>File names and program names</li>
-</ul>
-<p>For some special BASIC statements, auto-completion also has some advanced functionality:</p>
-<ul>
-<li><code>CALL statement</code></li>
-</ul>
-<p>If you do not connect to a MultiValue server, catalog names in CALL statements can be completed based on the currently opened account folder. Please refer to <a href="../Catalog/">Catalog settings</a>.</p>
-<p>If you connect to a MultiValue server, the extension can get all catalog program names from the server and list them. To connect to a MultiValue server, please refer to <a href="../Connection/">Connection settings</a>.</p>
-<ul>
-<li><code>INCLUDE statement</code></li>
-</ul>
-<p>In the INLCUDE statement, the auto-completion function can complete the file name and program name in the statement.</p>
-<p>By default, only the file names and program names in the current account folder can be auto completed, but you can add additional account folders by modifying the configuration file, so that when you are typing INCLUDE statements, the file names and program names from the additional accounts will also be prompted.</p>
-<p>Please refer to <a href="../Accounts/">Accounts settings</a> and Include section for more details. (note … no link present for Include section)</p></div>
+<h2 id="code-lens">Code Lens</h2>
+<p>Code lens allows you to review your code and find references to variables, functions or subroutines without leaving the editor.  To list these references, click the hyperlink as illustrated below. The hyperlink is highlighted when you hover your cursor over the text.</p>
+<p><img alt="" src="../../img/codelens.png" /></p></div>
             </div>
         </div>
 

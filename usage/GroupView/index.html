@@ -53,6 +53,10 @@
 </li>
                                     
 <li>
+    <a href="../CodeLens/" class="dropdown-item">Code Lens</a>
+</li>
+                                    
+<li>
     <a href="../CustomizeDoc/" class="dropdown-item">Customized Documentation</a>
 </li>
                                     
@@ -175,7 +179,6 @@
     “BP/SAMPLE”
 ]
 </code></pre>
-
 <p>The following file specification methods can be used in the “ignore” section:</p>
 <ul>
 <li>File names: for example, “VOC”, “D_VOC”. </li>
@@ -190,7 +193,6 @@
     “level”: 2
 }
 </code></pre>
-
 <p><code>delimiter</code> specifies the character(s) to use to separate the file names. For example, if specifying the “.” delimiter, the file “SAMPLE.BASIC.PROGRAM” is separated to 3 parts: “SAMPLE”, ”BASIC” and “PROGRAM”. </p>
 <p>Both single character and multiple character delimiters are supported in “delimiter”, but for readability, we recommend using only single character.</p>
 <p><code>level</code> specifies how to combine group names based on the separated parts of the file names. </p>
@@ -208,7 +210,6 @@
     }
 ]
 </code></pre>
-
 <p>You can add a source code folder by adding an element in <code>groups</code>. Use <code>sourceDir</code> to specify the source code folder name or a relative path. Multiple source code folders can be specified.</p>
 <p>If no source code folder is specified, or if there is only one source code folder configured, the source code folder name will be omitted.</p>
 <p>If there are no customized groups in the source code folder, the default rule will be applied. </p>
@@ -226,7 +227,6 @@
     }
 ]
 </code></pre>
-
 <ul>
 <li><code>groupName</code> specifies the customized group name. </li>
 <li><code>include</code> specifies which files will be included in this group.</li>
@@ -253,7 +253,6 @@
     }
 ]
 </code></pre>
-
 <p>In this example, two customized groups (SAMPLE, SAMPLE2) are added to the source code folder “PARENT/BP”.</p>
 <p>Note that a file can only be placed into one group. This means that if you were to specify that a file be included in multiple different groups, it would only be added to the first specified group.</p>
 <h3 id="examples">Examples</h3>
@@ -270,7 +269,6 @@
  |- SAMPLE_FILE
  |- SAMPLE.CODE
 </code></pre>
-
 <p>The configuration for group view is:</p>
 <pre><code>“groupView”: {
     “default”: {
@@ -279,7 +277,6 @@
     }
 }
 </code></pre>
-
 <p>In the auto-group result, files with names that contain “_” will be grouped automatically. The result is shown below:</p>
 <pre><code>SAMPLE_BASIC
  |- SAMPLE_BASIC_FILE_1
@@ -293,7 +290,6 @@ SAMPLE_MENU
 SAMPLE.CODE
 SAMPLE_FILE
 </code></pre>
-
 <h4 id="example-2">Example 2</h4>
 <p>In this example, a source code directory and a customized group are specified in the settings. </p>
 <p>The directory structure of the opened folder is:</p>
@@ -309,7 +305,6 @@ SAMPLE_FILE
  |
  |- SAMPLE.FILE
 </code></pre>
-
 <p>Below is the configuration file content:</p>
 <pre><code>“groupView”: {
     “default”: {
@@ -327,7 +322,6 @@ SAMPLE_FILE
     ]
 }
 </code></pre>
-
 <p>In the auto-group result below, groups will be displayed, but the source code folder “BP1” will not. “SAMPLE” group is a customized group, and “SAMPLE.CODE” is generated based on the default auto-group rule.</p>
 <pre><code>SAMPLE
  |- SAMPLE.BASIC.FILE_1
@@ -337,7 +331,6 @@ SAMPLE.CODE
  |- SAMPLE.CODE.FILE_1
  |- SAMPLE.CODE.FILE_2
 </code></pre>
-
 <h4 id="example-3">Example 3</h4>
 <p>In this example, there are multiple source code directories and customized groups.</p>
 <p>The directory structure of opened folder is:</p>
@@ -354,7 +347,6 @@ SAMPLE.CODE
  |
  |- SAMPLE.FILE
 </code></pre>
-
 <p>The configuration for group view is:</p>
 <pre><code>“groupView”: {
     “ignore”: [
@@ -384,7 +376,6 @@ SAMPLE.CODE
     ]
 }
 </code></pre>
-
 <p>In the configuration file, there are different groups which are filled with different elements of the “groups” section. The auto-group result is shown below:</p>
 <pre><code>BP1
  |- BASIC
