@@ -5,6 +5,7 @@ nav:
         - 'Accounts Settings': 'usage/Accounts.md'
         - 'Catalog Settings': 'usage/Catalog.md'
         - 'Configuration': 'usage/Configuration.md'
+        - 'Code Lens': 'usage/CodeLens.md'
         - 'Customized Documentation': 'usage/CustomizeDoc.md'
         - 'Document Symbol': 'usage/DocumentSymbol.md'
         - 'Diagnostics': usage/Diagnostics.md

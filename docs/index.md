@@ -85,6 +85,7 @@ Please click the links below to learn more about using each feature.
 - [Auto-completion](./usage/Completion.md)
 - [Auto-group view](./usage/GroupView.md)
 - [Code Folding](./usage/Folding.md)
+- [Code Lens](./usage/CodeLens.md)
 - [Configurations](./usage/Configuration.md)
 - [Connect to U2 server](./usage/Connection.md)
 - [Customized documentation](./usage/CustomizeDoc.md)
