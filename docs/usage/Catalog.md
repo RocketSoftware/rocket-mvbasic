@@ -34,6 +34,7 @@ Please refer to [Configuration](Configuration.md) to open the database related c
 }
 ```
 
+- `readServerInternal`: the extension requests catalog related information from server per *X* seconds when connected to a U2 server. *X* is the value you set to this setting. By default *X* is 5 seconds. 
 - `isSearchAllDirs`: specifies whether to search all sub-folders to find catalog programs in the current account folder. By default, the value is false, and only the folder containing the file current being edited is searched. If set to true, all sub-folders will be searched.
 - `programDirs`: sets the account and folder in which to search for catalog files. You can add multiple items in this setting.
     - `fileName`: file folder name. 
@@ -72,29 +73,25 @@ Please refer to [Configuration](Configuration.md) to open the database related c
         }
     ]
 
-
-
-**Example 4**. Create a mapping relationship between the names of catalog programs and their source files, where the source code file is in another file folder of the current account. For example, to map the catalog program named "CtlgProgram" to the source code file named "SourceCode" (which exists in the “BP”folder), the settings should be:
+**Example 4**. Create a mapping relationship between the names of catalog programs and their source files, where the source code is in another account folder. For example, to map the catalog program named "CtlgProgram" to the source code file named "SourceCode" (which exists in the “BP” file folder of the "DEMO" account ), the settings should be:
 
 ```
 "programMapping": [
     {
         "catalogName": "CtlgProgram",
-        "account": "DEMO"
         "file": "BP", 
         "program": "SourceCode"
     }
 ]
 ```
 
-
-
-**Example 5**. Create a mapping relationship between the names of catalog programs and their source files, where the source code is in another account folder. For example, to map the catalog program named "CtlgProgram" to the source code file named "SourceCode" (which exists in the “BP” file folder of the "DEMO" account ), the settings should be:
+**Example 5**. Create a mapping relationship between the names of catalog programs and their source files, where the source code file is in another file folder of the current account. For example, to map the catalog program named "CtlgProgram" to the source code file named "SourceCode" (which exists in the “BP”folder), the settings should be:
 
 ```
 "programMapping": [
     {
         "catalogName": "CtlgProgram",
+        "account": "DEMO"
         "file": "BP", 
         "program": "SourceCode"
     }

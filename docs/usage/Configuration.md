@@ -1,30 +1,39 @@
-## Configuration
+# Configuration
 
 There are many configuration settings for the Rocket MV BASIC extension. These settings are organized into different configuration files.
 
 Press <kbd>F1</kbd> to open the command window and then enter the "*Edit Configuration of Rocket MV BASIC*" command.
 
-There are 3 configuration files:
+There are 3 configuration files.
 
-- *Database and BASIC Related Configuration*
+## Database and BASIC Related Configuration
 
-  The following relevant configurations are included:
+The configuration file name is "db.mvbasic.json". 
 
-    - U2 server connection;
+Following relevant configurations are included:
 
-    - Catalog programs configuration;
+- U2 server connection. See [U2 connection](./Connection.md) for more information.
 
-    - Include files configuration;
+ - Additional accounts. See [accounts settings](./Accounts.md) for more information.
 
-    - Additional accounts
+ - Catalog programs configuration. See [catalog settings](./Catalog.md) for more information.
 
-- *Formatting Configuration*
+ - Include files configuration. See [include settings](./Include.md) for more information.
 
-  This configuration file contains the settings for feature Document Formatting. If you need change the formatting settings, please update the settings in this file.
+## Formatting Configuration
 
-- *Group View Configuration*
+The configuration file name is "format.mvbasic.json". 
 
-  This configuration file contains the settings for feature Group View. If you need change the group view behaviors, please update the settings in this file.
+This configuration file contains the settings for feature Document Formatting. If you need change the formatting settings, please update the settings in this file. See [formatting settings](./Formatting.md) for more information.
+
+## Group View Configuration
+
+The configuration file name is "groupView.mvbasic.json". 
+
+This configuration file contains the settings for feature Group View. If you need change the group view behaviors, please update the settings in this file. See [group view settings](./GroupView.md) for more information.
+
+## Configuration Files
+
 
 There are also user level configuration files in the user profile. When you want to apply some settings to all projects of the current user, you can modify the user-level configuration files.
 

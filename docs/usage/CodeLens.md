@@ -4,4 +4,8 @@ Code lens allows you to review your code and find references to variables, funct
 
 ![](../img/codelens.png)
 
+Since 1.2.0 release, this feature is disabled by default. You can enable / disable it through commands:
+
+- *Enable code lens*
+- *Disable code lens*
 

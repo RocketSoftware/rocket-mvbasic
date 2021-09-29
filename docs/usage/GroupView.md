@@ -10,29 +10,29 @@ You can specify source code directories and add customized groups by modifying t
 
 If a source code directory is not specified, the current opened folder will be used as the source code directory. Folders will not be displayed in the group view unless they are specified as source directories.
 
-Group view related settings are set from the “groupView” section of the configuration file. 
+Group view related settings are set from the "groupView" section of the configuration file. 
 
 If you make changes to the configuration file, refresh the group view to make the change take effect.
 
 ### Ignore files list
 
-You can specify which files to ignore (not be displayed in the group view) from the “ignore” section in “groupView”.
+You can specify which files to ignore (not be displayed in the group view) from the "ignore" section in "groupView".
 
 Here is a sample configuration:
 
 ```
-“ignore”: [
-    “VOC”, 
-    “D_*”, 
-    “BP/SAMPLE”
+"ignore": [
+    "VOC", 
+    "D_*", 
+    "BP/SAMPLE"
 ]
 ```
 
-The following file specification methods can be used in the “ignore” section:
+The following file specification methods can be used in the "ignore" section:
 
-- File names: for example, “VOC”, “D_VOC”. 
-- Using the wildcard character: for example, “D**” specifies that all files that start with “D*” in the current directory will be ignored.
-- Using a relative path: for example, if the current opened folder is “C:\U2\UV\XDEMO”, then “BP/SAMPLE” specifies that “C:\U2\UV\XDEMO\BP\SAMPLE” will not be displayed in the group view. Note that in this example, “BP” should be configured as the source code folder.
+- File names: for example, "VOC", "D_VOC". 
+- Using the wildcard character: for example, "D**" specifies that all files that start with "D*" in the current directory will be ignored.
+- Using a relative path: for example, if the current opened folder is "C:\U2\UV\XDEMO", then "BP/SAMPLE" specifies that "C:\U2\UV\XDEMO\BP\SAMPLE" will not be displayed in the group view. Note that in this example, "BP" should be configured as the source code folder.
 
 ### Default auto-group rule
 
@@ -41,25 +41,25 @@ If you do not add customized groups in the configuration file, the auto-group vi
 Here is the `default` configuration:
 
 ```
-“default”: {
-    “delimiter”: “.”, 
-    “level”: 2
+"default": {
+    "delimiter": ".", 
+    "level": 2
 }
 ```
 
-`delimiter` specifies the character(s) to use to separate the file names. For example, if specifying the “.” delimiter, the file “SAMPLE.BASIC.PROGRAM” is separated to 3 parts: “SAMPLE”, ”BASIC” and “PROGRAM”. 
+`delimiter` specifies the character(s) to use to separate the file names. For example, if specifying the "." delimiter, the file "SAMPLE.BASIC.PROGRAM" is separated to 3 parts: "SAMPLE", "BASIC" and "PROGRAM". 
 
-Both single character and multiple character delimiters are supported in “delimiter”, but for readability, we recommend using only single character.
+Both single character and multiple character delimiters are supported in "delimiter", but for readability, we recommend using only single character.
 
 `level` specifies how to combine group names based on the separated parts of the file names. 
 
-For example, there are three files: “SAMPLE.BASIC.FILE”, “SAMPLE.BASIC.CODE” and “SAMPLE.BASIC.PROGRAM”. These three files all have a uniform file name format in the first two parts of the files: “SAMPLE.BASIC”.
+For example, there are three files: "SAMPLE.BASIC.FILE", "SAMPLE.BASIC.CODE" and "SAMPLE.BASIC.PROGRAM". These three files all have a uniform file name format in the first two parts of the files: "SAMPLE.BASIC".
 
 These can be placed into one group. 
 
-If “level” is set to 2, then these will be placed into the group “SAMPLE.BASIC”. If “level” is set to 1, then these will be placed into the group “SAMPLE”. 
+If "level" is set to 2, then these will be placed into the group "SAMPLE.BASIC". If "level" is set to 1, then these will be placed into the group "SAMPLE". 
 
-As you can see, “level” specifies that the default group name contains the number of the same parts in file names. If “level” is set to an invalid number (for example, -1), then default value of 2 is used instead.
+As you can see, "level" specifies that the default group name contains the number of the same parts in file names. If "level" is set to an invalid number (for example, -1), then default value of 2 is used instead.
 
 Files that do not have similar name formats will not be placed into any groups.
 
@@ -70,9 +70,9 @@ In the `groups` section, you can add source code directories and customize group
 Here is a sample configuration:
 
 ```
-“groups”: [
+"groups": [
     {
-        “sourceDir”: “PARENT/BP”
+        "sourceDir": "PARENT/BP"
     }
 ]
 ```
@@ -86,15 +86,15 @@ If there are no customized groups in the source code folder, the default rule wi
 Here is a sample configuration for adding customized groups:
 
 ```
-“groups”: [
+"groups": [
     {
-        “sourceDir”: “PARENT/BP”, 
-        “groupName”: “SAMPLE”, 
-        “include”: [
-            “SAMPLE.*”
+        "sourceDir": "PARENT/BP", 
+        "groupName": "SAMPLE", 
+        "include": [
+            "SAMPLE.*"
         ], 
-        “exclude”: [
-            “SAMPLE.BASIC.CODE”
+        "exclude": [
+            "SAMPLE.BASIC.CODE"
         ]
     }
 ]
@@ -107,28 +107,28 @@ Here is a sample configuration for adding customized groups:
 If you need to add multiple groups into one source code folder, add multiple element items in `groups`. For example:
 
 ```
-“groups”: [
+"groups": [
     {
-        “sourceDir”: “PARENT/BP”, 
-        “groupName”: “SAMPLE”, 
-        “include”: [
-            “SAMPLE.*”
+        "sourceDir": "PARENT/BP", 
+        "groupName": "SAMPLE", 
+        "include": [
+            "SAMPLE.*"
         ], 
-        “exclude”: [
-            “SAMPLE.BASIC.CODE”
+        "exclude": [
+            "SAMPLE.BASIC.CODE"
         ]
     }, 
     {
-        “sourceDir”: “PARENT/BP”, 
-        “groupName”: “SAMPLE2”, 
-        “include”: [
-            “TEST.*”
+        "sourceDir": "PARENT/BP", 
+        "groupName": "SAMPLE2", 
+        "include": [
+            "TEST.*"
         ]
     }
 ]
 ```
 
-In this example, two customized groups (SAMPLE, SAMPLE2) are added to the source code folder “PARENT/BP”.
+In this example, two customized groups (SAMPLE, SAMPLE2) are added to the source code folder "PARENT/BP".
 
 Note that a file can only be placed into one group. This means that if you were to specify that a file be included in multiple different groups, it would only be added to the first specified group.
 
@@ -138,7 +138,7 @@ The samples below illustrate how to configure the auto-group view function.
 
 #### Example 1
 
-In this example, the default rule’s delimiter is changed from “.” to “_”.
+In this example, the default rule’s delimiter is changed from "." to "_".
 
 The directory structure of the opened folder is:
 
@@ -156,15 +156,15 @@ DEMO/
 The configuration for group view is:
 
 ```
-“groupView”: {
-    “default”: {
-        “delimiter”: “_”, 
-        “level”: 2
+"groupView": {
+    "default": {
+        "delimiter": "_", 
+        "level": 2
     }
 }
 ```
 
-In the auto-group result, files with names that contain “_” will be grouped automatically. The result is shown below:
+In the auto-group result, files with names that contain "_" will be grouped automatically. The result is shown below:
 
 ```
 SAMPLE_BASIC
@@ -205,24 +205,24 @@ DEMO/
 Below is the configuration file content:
 
 ```
-“groupView”: {
-    “default”: {
-        “delimiter”: “.”, 
-        “level”: 2
+"groupView": {
+    "default": {
+        "delimiter": ".", 
+        "level": 2
     }, 
-    “groups”: [
+    "groups": [
         {
-            “sourceDir”: “BP1”, 
-            “groupName”: “SAMPLE”, 
-            “include”: [
-                “SAMPLE.BASIC.*”
+            "sourceDir": "BP1", 
+            "groupName": "SAMPLE", 
+            "include": [
+                "SAMPLE.BASIC.*"
             ]
         }
     ]
 }
 ```
 
-In the auto-group result below, groups will be displayed, but the source code folder “BP1” will not. “SAMPLE” group is a customized group, and “SAMPLE.CODE” is generated based on the default auto-group rule.
+In the auto-group result below, groups will be displayed, but the source code folder "BP1" will not. "SAMPLE" group is a customized group, and "SAMPLE.CODE" is generated based on the default auto-group rule.
 
 ```
 SAMPLE
@@ -260,36 +260,36 @@ DEMO/
 The configuration for group view is:
 
 ```
-“groupView”: {
-    “ignore”: [
+"groupView": {
+    "ignore": [
     ], 
-    “default”: {
-        “delimiter”: “.”, 
-        “level”: 2
+    "default": {
+        "delimiter": ".", 
+        "level": 2
     }, 
-    “groups”: [
+    "groups": [
         {
-            “sourceDir”: “BP1”, 
-            “groupName”: “BASIC”, 
-            “include”: [
-                “SAMPLE.BASIC.*”
+            "sourceDir": "BP1", 
+            "groupName": "BASIC", 
+            "include": [
+                "SAMPLE.BASIC.*"
             ]
         }, 
         {
-            “sourceDir”: “BP1”, 
-            “groupName”: “CODE”, 
-            “include”: [
-                “SAMPLE.CODE.*”
+            "sourceDir": "BP1", 
+            "groupName": "CODE", 
+            "include": [
+                "SAMPLE.CODE.*"
             ]
         }, 
         {
-            “sourceDir”: “BP2”
+            "sourceDir": "BP2"
         }
     ]
 }
 ```
 
-In the configuration file, there are different groups which are filled with different elements of the “groups” section. The auto-group result is shown below:
+In the configuration file, there are different groups which are filled with different elements of the "groups" section. The auto-group result is shown below:
 
 ```
 BP1

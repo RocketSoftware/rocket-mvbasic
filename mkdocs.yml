@@ -4,6 +4,7 @@ nav:
     - Usage:
         - 'Accounts Settings': 'usage/Accounts.md'
         - 'Catalog Settings': 'usage/Catalog.md'
+        - 'Compile': 'usage/Compile.md'
         - 'Configuration': 'usage/Configuration.md'
         - 'Code Lens': 'usage/CodeLens.md'
         - 'Customized Documentation': 'usage/CustomizeDoc.md'
@@ -21,4 +22,6 @@ nav:
         - 'Using Definition': 'usage/Definition.md'
         - 'Using Rename': 'usage/Rename.md'
         - 'U2 Connection Settings': 'usage/Connection.md'
+    - FAQ: 'usage/FAQ.md'
+    - Change Log: 'usage/CHANGELOG.md'
         

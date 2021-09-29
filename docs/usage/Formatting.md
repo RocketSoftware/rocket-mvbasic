@@ -246,36 +246,6 @@ A = B : C
 
 
 
-### spacing.assignment
-
-Specify the number of whitespaces around assignment symbols such as “=”, “+=”, “:=”, etc
-
-#### Type and Values
-
-- integer
-
-#### Example
-
-If it is set to *1*,
-
-Before:
-
-```
-A=B
-A+=B
-A:=B
-```
-
-After:
-
-```
-A = B
-A += B
-A := B
-```
-
-
-
 ### spacing.semicolon
 
 Specify the number of whitespaces after a semicolon delimiter between statements on the same line.
@@ -328,6 +298,36 @@ CALL SAY(HELLO, WORLD)
 
 
 
+### spacing.assignment
+
+Specify the number of whitespaces around assignment symbols such as “=”, “+=”, “:=”, etc
+
+#### Type and Values
+
+- integer
+
+#### Example
+
+If it is set to *1*,
+
+Before:
+
+```
+A=B
+A+=B
+A:=B
+```
+
+After:
+
+```
+A = B
+A += B
+A := B
+```
+
+
+
 ### spacing.parentheses
 
 Specify the number of whitespaces after the open parentheses and before the close parentheses for a parameter list or matrix reference.
@@ -357,6 +357,32 @@ CALL SAY( HELLO, WORLD )
 ### spacing.squareBrackets
 
 Specify the number of whitespaces after the open square bracket and before the close square bracket for a parameter list or matrix reference.
+
+#### Type and Values
+
+- integer
+
+#### Example
+
+If it is set to *1*,
+
+Before:
+
+```
+PRINT A["#", 4, 1]
+```
+
+After:
+
+```
+PRINT A[ "#", 4, 1 ]
+```
+
+
+
+### spacing.curlyBrackets
+
+Specify the number of whitespaces after the open curly bracket and before the close curly bracket for a parameter list or matrix reference.
 
 #### Type and Values
 
