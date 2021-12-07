@@ -39,3 +39,11 @@ If some settings are not set in the configuration file, you will need provide th
 ### Disconnect from Server
 
 Press <kbd>F1</kbd> to open the command window and then enter the Disconnect from MV Server command to disconnect to the server.
+
+### Connection status
+
+The connection status icon is displayed in the bottom-left corner.
+
+Click the icon to connect to or disconnect from the U2 server.
+
+![connection_status](../img/connection_status.png)
