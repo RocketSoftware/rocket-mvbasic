@@ -11,11 +11,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: install mkdocs
-        run: |
-          sudo apt-get -y install mkdocs
-          
-      - uses: actions/checkout@v2    
-      - name: mkdocs gh-deploy
-        run: |
-          mkdocs gh-deploy
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - run: pip install mkdocs-material
+      - run: mkdocs gh-deploy --force
