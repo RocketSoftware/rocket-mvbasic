@@ -1,0 +1,21 @@
+name: MkDocs Deploy
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Install MkDocs
+        run: |
+          apt-get install mkdocs
+          
+      - name: mkdocs gh-deploy
+        run: |
+          mkdocs gh-deploy
