@@ -3,6 +3,8 @@ name: MkDocs Deploy
 on:
   push:
     branches: [ master ]
+    paths: 
+      - 'docs/**'
   workflow_dispatch:
 
 jobs:
@@ -12,9 +14,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Install MkDocs
+      - name: install mkdocs
         run: |
-          sudo apt-get install mkdocs
+          sudo apt-get -y install mkdocs
           
       - name: mkdocs gh-deploy
         run: |
