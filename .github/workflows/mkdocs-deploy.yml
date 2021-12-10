@@ -11,13 +11,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
       - name: install mkdocs
         run: |
           sudo apt-get -y install mkdocs
           
+      - uses: actions/checkout@v2    
       - name: mkdocs gh-deploy
         run: |
           mkdocs gh-deploy
