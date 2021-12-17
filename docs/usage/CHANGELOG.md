@@ -1,5 +1,9 @@
 # Change Log
 
+## Version 1.3.2: December 17, 2021
+
+- Upgrade log4j to 2.16.0 to avoid security issue.
+
 ## Version 1.3.1: December 11, 2021
 
 - Upgrade log4j to latest version to prevent remote injection attack.
