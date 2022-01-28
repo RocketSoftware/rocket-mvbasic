@@ -1,5 +1,11 @@
 # Change Log
 
+## Version 1.4.0: January 28, 2022
+
+- Enhancement: show U2 server account name when connection established.
+- Bug fix: resolve some incorrect grammar / syntax releated bugs.
+- Bug fix: resolve some incorrect / misspelling messages.
+
 ## Version 1.3.3: December 21, 2021
 
 - Upgrade log4j to 2.17.0 to avoid security issue.
