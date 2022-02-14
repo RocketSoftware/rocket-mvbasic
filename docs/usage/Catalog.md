@@ -4,6 +4,7 @@ Please refer to [Configuration](Configuration.md) to open the database related c
 
 ```
 "catalog": {
+    "readServerInternal": 5, 
     "isSearchAllDirs": false,
     "programDirs": [
         {
