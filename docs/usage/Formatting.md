@@ -395,13 +395,13 @@ If it is set to *1*,
 Before:
 
 ```
-CALL SAY(HELLO, WORLD)
+CALL SAY{HELLO, WORLD}
 ```
 
 After:
 
 ```
-CALL SAY( HELLO, WORLD )
+CALL SAY{ HELLO, WORLD }
 ```
 
 
