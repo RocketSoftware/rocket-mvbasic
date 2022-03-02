@@ -145,7 +145,7 @@ Specify whether to allow multiple statements on the same line.
 
 #### Example 1
 
-When *clause.useBlock* is set to *false*.
+When *clause.useBlock* is set to *false*, and *multiStatementsOneLine* set to *false*.
 
 Before:
 
@@ -164,7 +164,7 @@ IF CLAUSE.USEBLOCK = FALSE THEN CRT “HI”; CRT “WORLD”
 
 #### Example 2
 
-When *clause.useBlock* is set to *true*.
+When *clause.useBlock* is set to *true*, and *multiStatementsOneLine* set to *false*.
 
 Before:
 
