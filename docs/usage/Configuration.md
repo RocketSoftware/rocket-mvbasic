@@ -6,7 +6,7 @@ Press <kbd>F1</kbd> to open the command window and then enter the "*Edit Configu
 
 There are three configuration files: "Database and BASIC Related Configuration", "Formatting Configuration" and "Group View Configuration".
 
-![](../img/configuration_fiels.png)
+![](../img/configuration_files.png)
 
 If there are multiple workspace folders, you can select the folder to edit. Configuration files in different workspace folders have no relationship or dependency. 
 
