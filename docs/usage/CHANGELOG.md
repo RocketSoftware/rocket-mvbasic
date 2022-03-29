@@ -1,5 +1,11 @@
 # Change Log
 
+## Version 1.5.0: March 31, 2022
+
+- Feature: support multiple workspace folders.
+- Enhancement: change some functions to support multiple workspace folders, for example, auto group view, connection to U2 server, etc.
+- Bug fix: fix 37 issues.
+
 ## Version 1.4.0: January 28, 2022
 
 - Enhancement: show U2 server account name when connection established.

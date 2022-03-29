@@ -62,9 +62,9 @@ Requirements: [VS Code](https://code.visualstudio.com/) 1.50 or higher version i
 
 	**Note**: Using this method, an existing working environment that requires a different version of Java would not be impacted and the extension will work properly in the Java 11 (or above) environment.
 
-  3. Select "File" > "Open Folder" to pen a folder that contains the BASIC program files you want to view or edit. We recommend that you open the U2 account level folder to avoid encountering exceptions.
+  3. Select "File" > "Open Folder" to pen a folder that contains the BASIC program files you want to view or edit. You can also add multiple folders to the workspace using "File" > "Add Folder to Workspace". We recommend that you open the U2 account level folders to avoid encountering exceptions.
 
-	**Note**: Multiple workspace folders are not supported yet. Because of this, ensure that you open only one workspace folder. This extension is designed to work with folders/directories rather than individual program files. If you open a single file, some functions may be limited.
+	**Note**: This extension is designed to work with folders/directories rather than individual program files. If you open a single file, some functions may be limited.
 
   4. Activate the extension.
 
@@ -111,6 +111,11 @@ Click the links below to learn more about using each feature. You can also refer
 - [Configurations](./usage/Configuration.md)
 - [Connect to U2 server](./usage/Connection.md)
 - [Customized documentation](./usage/CustomizeDoc.md)
+
+**Others**
+
+- [Compile BASIC programs](./usage/Compile.md)
+- [Multiple Workspace Folders](./usage/MultipleWorkspaceFolders.md)
 
 ## Contact Us
 

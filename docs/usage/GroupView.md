@@ -6,7 +6,9 @@ The auto-group view function is used to combine files that have similar names in
 
 ### Configuration
 
-You can specify source code directories and add customized groups by modifying the configuration file. If no customized groups are added, a default rule will be used instead. Note that this default rule can also be changed.
+In each workspace folder, you can specify source code directories and add customized groups by modifying the configuration file *groupView.mvbasic.json*. 
+
+If no customized groups are added, a default rule will be used instead. Note that this default rule can also be changed.
 
 If a source code directory is not specified, the current opened folder will be used as the source code directory. Folders will not be displayed in the group view unless they are specified as source directories.
 
@@ -130,7 +132,11 @@ If you need to add multiple groups into one source code folder, add multiple ele
 
 In this example, two customized groups (SAMPLE, SAMPLE2) are added to the source code folder "PARENT/BP".
 
-Note that a file can only be placed into one group. This means that if you were to specify that a file be included in multiple different groups, it would only be added to the first specified group.
+**Note**: one file can only be placed into one group. This means that if you were to specify that a file be included in multiple different groups, it would only be added to the first specified group.
+
+### Multiple workspace folders support
+
+If there are multiple workspace folders, workspace folder names will be displayed in the group view, and group view configuration files for each workspace folders are separated. Please refer to **Exmaple 4** for more details.
 
 ### Examples
 
@@ -306,3 +312,123 @@ BP2
    |- SAMPLE.CODE.FILE_4
 ```
 
+
+#### Example 4
+
+In this example, there are three workspace folders, and each workspace folder has different group view settings.
+
+The directory structure of the opened folder is:
+
+```
+DEMO1/
+ |- BP/
+ |  |- SAMPLE.BASIC.FILE_1
+ |  |- SAMPLE.BASIC.FILE_2
+ |  |- SAMPLE.CODE.FILE_1
+ |  |- SAMPLE.CODE.FILE_2
+DEMO2/
+ |- BP/
+ |  |- SAMPLE.BASIC.FILE_1
+ |  |- SAMPLE.BASIC.FILE_2
+ |  |- SAMPLE.CODE.FILE_1
+ |  |- SAMPLE.CODE.FILE_2
+DEMO3/
+ |- BP/
+ |  |- SAMPLE.BASIC.FILE_1
+ |  |- SAMPLE.BASIC.FILE_2
+ |  |- SAMPLE.CODE.FILE_1
+ |  |- SAMPLE.CODE.FILE_2
+```
+
+The group view configuration in the workspace folder DEMO1 is illustrated below:
+
+```
+"groupView": {
+    "ignore": [
+        ".rmv"
+    ],
+    "default": {
+        "delimiter": ".",
+        "level": "2"
+    },
+
+    "groups": [
+        {
+            "sourceDir": "BP"
+        }
+    ]
+}
+```
+
+The group view configuration in the workspace folder DEMO2 is illustrated below:
+
+```
+"groupView": {
+    "ignore": [
+        ".rmv"
+    ],
+    "default": {
+        "delimiter": ".",
+        "level": "2"
+    },
+
+    "groups": [
+        {
+            "groupName": "ALL", 
+            "sourceDir": "BP", 
+            "include": [
+                "*.*"
+            ]
+        }
+    ]
+}
+```
+
+The group view configuration in the workspace folder DEMO3 is illustrated below:
+
+```
+"groupView": {
+    "ignore": [
+        ".rmv"
+    ],
+    "default": {
+        "delimiter": ".",
+        "level": "2"
+    },
+
+    "groups": [
+        {
+            "groupName": "BASIC", 
+            "sourceDir": "BP", 
+            "include": [
+                "SAMPLE.BASIC.*"
+            ]
+        }
+    ]
+}
+```
+
+The group view would be:
+
+```
+DEMO1/
+ |- SAMPLE.BASIC/
+ |  |- SAMPLE.BASIC.FILE_1
+ |  |- SAMPLE.BASIC.FILE_2
+ |- SAMPLE.CODE/
+ |  |- SAMPLE.CODE.FILE_1
+ |  |- SAMPLE.CODE.FILE_2
+DEMO2/
+ |- ALL/
+ |  |- SAMPLE.BASIC.FILE_1
+ |  |- SAMPLE.BASIC.FILE_2
+ |  |- SAMPLE.CODE.FILE_1
+ |  |- SAMPLE.CODE.FILE_2
+DEMO3/
+ |- BASIC/
+ |  |- SAMPLE.BASIC.FILE_1
+ |  |- SAMPLE.BASIC.FILE_2
+ |- SAMPLE.CODE/
+ |  |- SAMPLE.CODE.FILE_1
+ |  |- SAMPLE.CODE.FILE_2
+```

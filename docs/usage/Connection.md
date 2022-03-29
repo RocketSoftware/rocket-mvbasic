@@ -25,16 +25,22 @@ Following settings are used for U2 connection.
 - `userName`: user name to login to the U2 server.
 - `password`: password to login to the U2 server.
 - `account`: account name of a U2 server.
-- `dataSource`: `UNIVERSE` or `UNIDATA`, by default is `UNIVERSE`.
+- `dataSource`: `UNIVERSE` or `UNIDATA`, by default is `UNIVERSE`. If open multiple workspace folders and set differnet data source in these folders' configuration files, VS Code will choose the root folder's data source as default.
 - `port`: port number of U2 server. For UniVerse and UniData, the port number is `31438` by default.
 
 **Note**: Please enter these settings before connecting to the server.
 
 ### Connect to Server
 
-Press <kbd>F1</kbd> to open the command window and then enter the Connect to MV Server command to connect to the server.
+Press <kbd>F1</kbd> to open the command window and then enter the command "Connect/Disconnect U2 Server" to connect to the server.
 
 If some settings are not set in the configuration file, you will need provide these values when prompted in the command window.
+
+If you have multiple workspace folders and have configured multiple U2 accounts, you can select one account from the accounts list or input the account information manually.
+
+![](../img/multiple_accounts.png)
+
+Same account level folder could be opened by different workspaces and connected to the U2 server separately.
 
 ### Disconnect from Server
 

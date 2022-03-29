@@ -4,7 +4,13 @@ There are many configuration settings for the Rocket MV BASIC extension. These s
 
 Press <kbd>F1</kbd> to open the command window and then enter the "*Edit Configuration of Rocket MV BASIC*" command.
 
-There are 3 configuration files.
+There are three configuration files: "Database and BASIC Related Configuration", "Formatting Configuration" and "Group View Configuration".
+
+![](../img/configuration_fiels.png)
+
+If there are multiple workspace folders, you can select the folder to edit. Configuration files in different workspace folders have no relationship or dependency. 
+
+![](../img/select_folder.png)
 
 ## Database and BASIC Related Configuration
 
@@ -34,7 +40,6 @@ This configuration file contains the settings for feature Group View. If you nee
 
 ## Configuration Files
 
-
 There are also user level configuration files in the user profile. When you want to apply some settings to all projects of the current user, you can modify the user-level configuration files.
 
 The user level configuration files are in the the user profile folder. 
@@ -42,4 +47,3 @@ The user level configuration files are in the the user profile folder.
 For Windows platforms, you can find configuration files in "C:\Users\\*yourusername*\\.rmv\config\".
 
 For Linux platforms, you can find configuration files in "/home/*yourusername*/.rmv/config/".
-

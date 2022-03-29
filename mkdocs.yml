@@ -15,6 +15,7 @@ nav:
         - 'Group View': 'usage/GroupView.md'
         - 'Hover': 'usage/Hover.md'
         - 'INCLUDE settings': 'usage/Include.md'
+        - 'Multiple Workspace Folders': 'usage/MultipleWorkspaceFolders.md'
         - 'References': 'usage/References.md'
         - 'Semantic Highlighting': 'usage/SemanticHighlighting.md'
         - 'Signature Help': 'usage/SignatureHelp.md'
@@ -23,5 +24,7 @@ nav:
         - 'Using Rename': 'usage/Rename.md'
         - 'U2 Connection Settings': 'usage/Connection.md'
     - FAQ: 'usage/FAQ.md'
-    - Change Log: 'usage/CHANGELOG.md'
+    - Change Log:
+        - 'Change Log': 'usage/CHANGELOG.md'
+        - 'Known Issues': 'usage/KnownIssues.md'
         
