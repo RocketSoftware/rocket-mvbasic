@@ -116,6 +116,7 @@ Click the links below to learn more about using each feature. You can also refer
 
 - [Compile BASIC programs](./usage/Compile.md)
 - [Multiple Workspace Folders](./usage/MultipleWorkspaceFolders.md)
+- [Debugging (Preview)](./usage/Debugging.md)
 
 ## Contact Us
 

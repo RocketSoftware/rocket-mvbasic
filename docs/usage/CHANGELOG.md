@@ -1,5 +1,10 @@
 # Change Log
 
+## Version 1.6.0: April 29, 2022
+
+- Feature: (Preview) support debug BASIC program files on UniVerse. Please refer online documentation to see known issues.
+- Bug fix: show connection icon only when extension activated. 
+
 ## Version 1.5.0: March 31, 2022
 
 - Feature: support multiple workspace folders.
