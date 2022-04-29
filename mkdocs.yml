@@ -8,6 +8,7 @@ nav:
         - 'Configuration': 'usage/Configuration.md'
         - 'Code Lens': 'usage/CodeLens.md'
         - 'Customized Documentation': 'usage/CustomizeDoc.md'
+        - 'Debugging (Preview)': 'usage/Debugging.md'
         - 'Document Symbol': 'usage/DocumentSymbol.md'
         - 'Diagnostics': usage/Diagnostics.md
         - 'Folding': 'usage/Folding.md'

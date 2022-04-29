@@ -12,19 +12,13 @@ To support the debugging function, a DAP server will run on the UniVerse server 
 
 ### Downloading DAP Server
 
-You can download DAP server binaries from following link. Please choose the appropriate version for your system:
+You must login to [RBC](https://rbcint.rocketsoftware.com/) platform to download DAP server binaries. Through bellow steps to download related binaries:
 
-**Windows platform**:
-
-UniVerse 11.3.4 release (will be ready later)
-
-UniVerse 12.1.1 release (will be ready later)
-
-**Linux platform**:
-
-UniVerse 11.3.4 release (will be ready later)
-
-UniVerse 12.1.1 release (will be ready later)
+  1) Click button "Search Product Availability"
+  
+  2) Select "Product" to "MV BASIC for VS Code", and select "Windows" (binaries for Linux platform are also in this package)
+  
+  3) In "1.6.0" release, click the "Product" download link
 
 ### Installing the DAP server binaries
 
