@@ -12,7 +12,7 @@ To support the debugging function, a DAP server will run on the UniVerse server 
 
 ### Downloading DAP Server
 
-You must login to [RBC](https://rbcint.rocketsoftware.com/) platform to download DAP server binaries. Through bellow steps to download related binaries:
+You must login to [RBC](https://rbcint.rocketsoftware.com/) platform to download DAP server binaries. Through below steps to download related binaries:
 
   1) Click button "Search Product Availability"
   
@@ -68,7 +68,7 @@ Before using the debugging feature, you must first connect to a UniVerse account
 
 ### Debugging BASIC files
 
-There are 2 methods to debug a BAISC program file: debugging without a launch file and debugging with a launch file.
+There are 2 methods to debug a BASIC program file: debugging without a launch file and debugging with a launch file.
 
 Before debugging, the BASIC program file must be compiled first.
 
@@ -130,7 +130,7 @@ When the process encounters a break point, the program will stop running. You ca
 
 The step over function allows you to run the program line-by-line. Press the F10 button or click the Step Over button from the debug panel to run one line of the program.
 
-![](../img/compile_from_context.png)
+![](../img/debug_step_over.png)
 
 ### View variables
 
@@ -154,3 +154,6 @@ Click the **Stop** button to stop the debugging process.
 
 ![](../img/debug_stop.png)
 
+### Step in and step over
+
+These two operations are still not stable. They could work when breakpoints are set. Please refer [Known Isseus](/KnownIssues.md).
