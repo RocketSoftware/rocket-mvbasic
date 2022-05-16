@@ -156,4 +156,4 @@ Click the **Stop** button to stop the debugging process.
 
 ### Step in and step over
 
-These two operations are still not stable. They could work when breakpoints are set. Please refer [Known Isseus](/KnownIssues.md).
+These two operations are still not stable. They could work when breakpoints are set. Please refer [Known Isseus](./KnownIssues.md).
