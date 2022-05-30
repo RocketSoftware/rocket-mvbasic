@@ -134,6 +134,20 @@ The step over function allows you to run the program line-by-line. Press the F10
 
 ![](../img/debug_step_over.png)
 
+### Step into and step out
+
+These two operations are still not stable. They partially work if breakpoints are set at CALL line. Please refer [Known Issues](./KnownIssues.md).
+
+## Restart debug
+
+This operation is currently not supported.
+
+### Stop debugging
+
+Click the **Stop** button to stop the debugging process.
+
+![](../img/debug_stop.png)
+
 ### View variables
 
 When debugging starts, you can view all variables in the **Run and Debug** view.
@@ -149,18 +163,3 @@ You can also add variables to the **WATCH** panel.
 Click the plus (+) button from the **WATCH** panel and enter the variable name to display the variable’s value.
 
 ![](../img/debug_add_watch.png)
-
-## Restart debug
-
-This operation is currently not supported.
-
-### Stop debugging
-
-Click the **Stop** button to stop the debugging process.
-
-![](../img/debug_stop.png)
-
-### Step into and step out
-
-These two operations are still not stable. They partially work if breakpoints are set at CALL line. Please refer [Known Issues](./KnownIssues.md).
-
