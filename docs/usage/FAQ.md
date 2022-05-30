@@ -33,3 +33,15 @@ The item in the example image above specifies that the Rocket MV BASIC extension
     ![](../img/faq_exclude.png)
 
 3. Click "Add Pattern", and then enter a pattern that exists in the file names you want to exclude.
+
+**Q: Why sometimes the extension failed to upgrade on Windows platform?**
+
+**A:** This is because some files of the extension still being used. To resolve this issue, please follow below steps:
+
+1. Uninstall MV BASIC extension first. 
+   
+2. Close all VS Code and java processes through task manager.
+
+3. Manually remove the MV BASIC extension directory under user profile. For example, you may find MV BASIC extension version 1.6.0 in "C:\Users\user_name\.vscode\extensions\rocketsoftware.rocket-mvbasic-1.6.0".
+
+4. Restart VS Code and install the latest extension.
