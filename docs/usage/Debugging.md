@@ -1,18 +1,18 @@
-## Debugging (Peview)
+## Debugging (Preview)
 
-With the debugging function, you can easily debug BASIC programs and observe and track the results and changes to variables for each step when running a BASIC program. 
+With the debugging function, you can easily debug BASIC programs, observe, track the results and changes to variables for each step when running a BASIC program. 
 
-The current version of the debugging function is a preview version and is only supported for UniVerse 11.3.4, 12.1.1 releases(some functions are not yet stable). And debugging also could not work well is there are multiple workspace folders.
+The current version of the debugging function is a preview version and is only supported for UniVerse the v11.3.4 and 12.1.1 releases. There are limits to debugging features and not all debugging functions are stable.
 
 Please refer [Known issues](./KnownIssues.md) list to find out existing issues in debugging feature.
 
 ### Setup Environment
 
-To support the debugging function, a DAP server will run on the UniVerse server side. In this preview version, you need download the DAP server binaries and add them to UniVerse manually. In future releases, this process will be done automatically.
+To support the debugging function, a DAP server will run on the UniVerse server side. In this preview version, you need download the DAP server binaries and add them to UniVerse manually. In future releases, this process will be automated.
 
 ### Downloading DAP Server
 
-You must login to [RBC](https://rbcint.rocketsoftware.com/) platform to download DAP server binaries. Through below steps to download related binaries:
+You must login to [RBC platform](https://rbc.rocketsoftware.com/) to download DAP server binaries. Through below steps to download related binaries:
 
   1) Click button "Search Product Availability"
   
@@ -26,9 +26,11 @@ You need copy the DAP binaries to the U2 server manually. Complete the steps bel
 
 #### Linux Platform
 
-1) Copy **uvdap_server** and **uvdap_slave** to the **$UVHOME/bin** Folder. **$UVHOME** is the installation path for UniVerse.
+1) Copy **uvdap_server** and **uvdap_slave** to the *$UVHOME/bin* folder. *$UVHOME* is the installation path for UniVerse.
 
-2) Open the **unishared** folder and find the unirpc services file (unishared/unirpc/unirpcservices). 
+Ensure permission accordingly to installed release for permission, owner, and group similar to **uvapi_server** and **uvapi_slave**.
+
+2) Open the **unishared** folder and find the unirpc services file (unishared/unirpc/unirpcservices). Ensure you have write permissions to the file. 
 
 3) Open the **unirpcservices** file and add the following new line to unirpcservices:
 
@@ -70,7 +72,7 @@ Before using the debugging feature, you must first connect to a UniVerse account
 
 There are 2 methods to debug a BASIC program file: debugging without a launch file and debugging with a launch file.
 
-Before debugging, the BASIC program file must be compiled first.
+Before debugging, open the BASIC program first.
 
 ### Debugging without a launch file
 
@@ -144,9 +146,13 @@ If variables have no value or have not been initialized, the variable’s value 
 
 You can also add variables to the **WATCH** panel.
 
-Click the plus (+)button from the **WATCH** panel and enter the variable nameto display the variable’s value.
+Click the plus (+) button from the **WATCH** panel and enter the variable name to display the variable’s value.
 
 ![](../img/debug_add_watch.png)
+
+## Restart debug
+
+This operation is currently not supported.
 
 ### Stop debugging
 
@@ -154,6 +160,7 @@ Click the **Stop** button to stop the debugging process.
 
 ![](../img/debug_stop.png)
 
-### Step in and step over
+### Step into and step out
 
-These two operations are still not stable. They could work when breakpoints are set. Please refer [Known Isseus](./KnownIssues.md).
+These two operations are still not stable. They partially work if breakpoints are set at CALL line. Please refer [Known Issues](./KnownIssues.md).
+
