@@ -12,7 +12,7 @@ To support the debugging function, a DAP server will run on the UniVerse server 
 
 ### Downloading DAP Server
 
-You must login to [RBC platform](https://rbc.rocketsoftware.com/) to download DAP server binaries. Through below steps to download related binaries:
+You must login to [RBC platform](https://rbc.rocketsoftware.com/) to download DAP server binaries. Follow below steps to download related binaries:
 
   1) Click button "Search Product Availability"
   
@@ -97,6 +97,33 @@ In the **Run and Debug** view, click the create a `launch.json` file link.
 Select the **MVBasic Debug** from the Select environment dialog box.
 
 ![](../img/debug_type.png)
+
+Then a default debugging configuration file launch.json will be generated in directory .vscode.
+
+```
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "mvbasic",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "",
+            "stopOnEntry": true,
+            "preLaunchTask": "BASIC: Build",
+            "dependencies": []
+        }
+    ]
+}
+```
+
+ - "type": "mvbasic" is required to build BASIC program files.
+ - "request": keep this value "launch" to launch a program.
+ - "name": this is the name of the launch task. You can change the name to other values.
+ - "program": if this value is empty, current focused file will be debugged. You can also set this value to another BASIC program file's absolute path. This file will be compiled before debugging.
+ - "stopOnEntry": used to control whether the program will be stopped at the first runnable line when start debugging. Currently only true is supported.
+ - "preLanuchTask": this is used to run pre-required task before debugging. In our extension, we use this setting to compile the BASIC program in setting "program" first.
+ - "depenedncies": put other BASIC program files here if they need to be compiled before debugging.
 
 From the **Run and Debug** view, set the launch option to **Launch Program**. Then press the F5 button to start debugging. 
 
