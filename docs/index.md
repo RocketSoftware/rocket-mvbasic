@@ -22,7 +22,7 @@ This extension includes the following features:
  - Add customized documentation for functions, subroutines, or labels
  - Show syntax and grammar errors
  - Prompt parameters of BASIC internal functions
- - Compile / Catalog BASIC programs on the U2 server
+ - Compile / Catalog / Debug BASIC programs on the U2 server
 
 ## Restriction
 

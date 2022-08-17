@@ -2,21 +2,23 @@
 
 ## Debugging Preview
 
-**MVVS-711** Step-in may terminate debugging session.
+**MVVS-793** Sometimes the stack trace could not be displayed correctly and could not focus on correct line.
 
-**MVVS-713** Sometimes unable to step out at the end of CALL subroutine.
+**MVVS-802** "Internal error " shows in VARIABLES view when debug basic in UD windows 
 
-**MVVS-722** Unable to use step in/out on Windows platform.
+**MVVS-803** unable to recognize INPUT value during debugging in VS Code sometimes
 
-**MVVS-725** Unable to run debugging in multiple workspace folders.
+**MVVS-805** unable to debug with lanch.json file in some cases
+
+**MVVS-808** unable to debugging with long variable length for UD
+
+**MVVS-814** Debug with launch.json will automatically catalog program if specified dependencies BASIC and launch.json has catalog option
+
+**MVVS-815** MVVS spends lots of time drawing dimension of big array
 
 ## Others
 
 **MVVS-527** BASIC CALL subroutines statement can not be recognized correctly by the parser.
-
-**MVVS-547** Unable to connect / disconnect U2 server when parser is busy.
-
-**MVVS-567** Sometimes the extension could not be activated successfully.
 
 **MVVS-590** READU statement syntax highlight incorrect and misleading.
 
@@ -25,7 +27,5 @@
 **MVVS-636** All lines of nonsense are accepted in editor.
 
 **MVVS-671** Can't connect to UniData demo account on linux.
-
-**MVVS-678** When open a network file path in the VS Code, the extension will be failed to activate.
 
 **MVVS-707** Compilation incorrect status if user has no permission to edit files on U2 server.

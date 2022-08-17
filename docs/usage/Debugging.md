@@ -1,72 +1,34 @@
 ## Debugging (Preview)
 
-With the debugging function, you can easily debug BASIC programs, observe, track the results and changes to variables for each step when running a BASIC program. 
+With the debugging function, user can easily debug BASIC programs, observe, track the results and changes to variables for each step when running a BASIC program. 
 
-The current version of the debugging function is a preview version and is only supported for UniVerse the v11.3.4 and 12.1.1 releases. There are limits to debugging features and not all debugging functions are stable.
+The 1.7.0 version of the debugging function is a preview version. There are limitations to the debugging features and not all debugging functions are stable. The following U2 server versions and platforms are supported:
+
+### UniVerse
+
+Versions: 12.1.1 and before
+
+Platforms: Windows, Linux, AIX
+
+### UniData
+
+Versions: 8.2.4
+
+Platforms: Windows, Linux, AIX
 
 Please refer [Known issues](./KnownIssues.md) list to find out existing issues in debugging feature.
 
 ### Setup Environment
 
-To support the debugging function, a DAP server will run on the UniVerse server side. In this preview version, you need download the DAP server binaries and add them to UniVerse manually. In future releases, this process will be automated.
-
-### Downloading DAP Server
-
-You must login to [RBC platform](https://rbc.rocketsoftware.com/) to download DAP server binaries. Follow below steps to download related binaries:
-
-  1) Click button "Search Product Availability"
-  
-  2) Select "Product" to "MV BASIC for VS Code", and select "Windows" (binaries for Linux platform are also in this package)
-  
-  3) In "1.6.0" release, click the "Product" download link
-
-### Installing the DAP server binaries
-
-You need copy the DAP binaries to the U2 server manually. Complete the steps below to configure the environment.
-
-#### Linux Platform
-
-1) Copy **uvdap_server** and **uvdap_slave** to the *$UVHOME/bin* folder. *$UVHOME* is the installation path for UniVerse.
-
-Ensure permission accordingly to installed release for permission, owner, and group similar to **uvapi_server** and **uvapi_slave**.
-
-2) Open the **unishared** folder and find the unirpc services file (unishared/unirpc/unirpcservices). Ensure you have write permissions to the file. 
-
-3) Open the **unirpcservices** file and add the following new line to unirpcservices:
-
-```
-uvdaps <absolute file path of uvdap_server> * TCP/IP 0 3600
-```
-
-**Note**: You will need to change to the root user to update this file. 
-
-If you encounter some permission issues during debugging, please try following commands to change these binaries' ownership.
-
-```
-chmod 755 uvdap*
-chown uvdb uvdap*
-chgrp input uvdap*
-```
-
-#### Windows Platform
-
-1) Copy the **uvdap_server.exe** and **uvdap_slave.exe** files to the UniVerse bin folder. By default, UniVerse is installed to **"C:\U2\UV"**, and its bin folder is **"C:\U2\UV\bin"**.
-
-2) Open the **unishared** folder and find the unirpc services file named **unirpcservices**. By default, the **unishared** folder installation path is **"C:\U2\unishared"**, and you can find file **unirpcservices** under **"C:\U2\unishared\unirpc"**.
-
-3) Open file **unirpcservices** file and add the following new line to it:
-
-```
-uvdaps <absolute file path of uvdap_server> * TCP/IP 0 3600
-```
+In the 1.6.0 release, additional binaries should be installed on UniVerse to support the debugging features. This is no longer necessary for the 1.7.0 release.
 
 ## Start Debugging
 
-### Connecting to a UniVerse account folder
+### Connecting to a U2 server account folder
 
-Before using the debugging feature, you must first connect to a UniVerse account folder. Please see the [Connection section](./Connection.md) to learn how to connect to a UniVerse server.
+Before using the debugging feature, you must connect to a U2 server account folder firstly. Please see the [Connection section](./Connection.md) to learn how to connect to a U2 server account.
 
-**Note**: The debugging feature only works on **UniVerse** 11.3.4 and 12.1.1 releases in this preview version. The debugging feature will not work if you only open a single BASIC program file in VS Code. You must open an account folder.
+**Note**: The debugging feature will not work if you only open a single BASIC program file in VS Code. You must open an account folder.
 
 ### Debugging BASIC files
 
@@ -83,8 +45,6 @@ Before debugging, open the BASIC program first.
 ![](../img/run_and_debug.png)
 
 The BASIC program file will be compiled first. If successful, the debugging process will stop at the first runnable line of code in the program file.
-
-![](../img/debug_start.png)
 
 ### Debug with launch file
 
@@ -153,11 +113,15 @@ The program will stop when the process encounters a break point.
 
 When the process encounters a break point, the program will stop running. You can press the F5 key or click the Continue button from the debug panel to continue running the program. 
 
+**Note**: Program cannot jump out of a subroutine through this operation in UniVerse.
+
 ![](../img/debug_continue.png)
 
 ### Step over
 
 The step over function allows you to run the program line-by-line. Press the F10 button or click the Step Over button from the debug panel to run one line of the program.
+
+**Note**: Program cannot jump out of a subroutine through this operation in UniVerse.
 
 ![](../img/debug_step_over.png)
 
@@ -165,9 +129,11 @@ The step over function allows you to run the program line-by-line. Press the F10
 
 These two operations are still not stable. They partially work if breakpoints are set at CALL line. Please refer [Known Issues](./KnownIssues.md).
 
+**Note**: Program cannot jump out of a subroutine through **Step Out** operation in UniVerse.
+
 ## Restart debug
 
-This operation is currently not supported.
+This operation is currently NOT supported.
 
 ### Stop debugging
 
@@ -190,3 +156,9 @@ You can also add variables to the **WATCH** panel.
 Click the plus (+) button from the **WATCH** panel and enter the variable name to display the variable’s value.
 
 ![](../img/debug_add_watch.png)
+
+### Handle input operation
+
+You can switch to the VS Code terminal to handle an INPUT statement during BASIC program running. 
+
+![](../img/debug_input.png)

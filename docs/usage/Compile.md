@@ -5,9 +5,9 @@ Users can compile and catalog BASIC programs using this extension.
 **Note**:
 
 - Before compiling BASIC programs, a U2 server must be connected. For information on connecting to a U2 server, please see [this section](./Connection.md).
-- After compiling, regardless of whether the compile  succeeds or fails, the BASIC files will be synchronized to the U2 server, overwriting the existing ones and new files will also be created. 
+- After compiling, regardless of whether the compile succeeds or fails, the BASIC files will be synchronized to the U2 server, overwriting the existing ones and new files will also be created. 
 - Generated objective files will not be synchronized from the server to the local machine.
-- Compilation does not work properly when VS Code and the extension run on Linux platform.
+- Compilation does not work properly when VS Code and the extension installed on Linux platform.
 
 ## Compile and catalog
 
@@ -45,7 +45,7 @@ By using VS Code task, users can compile or catalog multiple BASIC programs at t
 
 #### Create a BASIC build task
 
-Select "Run Build Task ..." from the "Terminal" menu to open the Command Palette.
+Select "Configure Default Build Task ..." or "Configure Tasks ..." from the "Terminal" menu to open the Command Palette.
 
 ![](../img/compile_from_menu_1.png)
 

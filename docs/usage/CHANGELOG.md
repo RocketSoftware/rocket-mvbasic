@@ -1,8 +1,14 @@
 # Change Log
 
+## Version 1.7.0: Auguest 17, 2022
+
+- Feature: (Preview) support debugging functionalities on UniData 8.2.4. 
+- Bug fix: improve the stability of debugging.
+- Bug fix: improve file parsing performance.
+
 ## Version 1.6.0: April 29, 2022
 
-- Feature: (Preview) support debug BASIC program files on UniVerse. Please refer online documentation to see known issues.
+- Feature: (Preview) support debug BASIC program files on UniVerse. Please refer online documentation about known issues.
 - Bug fix: show connection icon only when extension activated. 
 
 ## Version 1.5.0: March 31, 2022
