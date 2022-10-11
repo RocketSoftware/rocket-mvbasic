@@ -1,6 +1,6 @@
 # Change Log
 
-## Version 1.7.0: Auguest 17, 2022
+## Version 1.7.0: August 17, 2022
 
 - Feature: (Preview) support debugging functionalities on UniData 8.2.4. 
 - Bug fix: improve the stability of debugging.
