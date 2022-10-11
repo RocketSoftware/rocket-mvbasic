@@ -30,7 +30,7 @@ Currently, the extension can only be used to edit BASIC program files on the mac
 
 ## Quick Start
 
-Requirements: [VS Code](https://code.visualstudio.com/) 1.50 or higher version is required.
+Requirements: [VS Code](https://code.visualstudio.com/) 1.70.2 or higher version is required.
 
   1. Install this extension from the VS Code Marketplace.
 
