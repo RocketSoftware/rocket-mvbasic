@@ -99,16 +99,20 @@ Appender used to define output to the file
 1. To set the log file level output to info level or higher., you only need to change log file level to info:
 
  - property.ROOT_LEVEL=Info
+
  - property.CONSOLE_LEVEL=Info
+
  - property.FILE_LEVEL=Info
 
 2. Set the console output information to debug level or higher and set the , log file output information to info level or higher:
 
  - property.ROOT_LEVEL=Debug
+
  - property.CONSOLE_LEVEL=Debug
+
  - property.FILE_LEVEL=Info
 
 3. Change the log file size to 20M
 
  - appender.file.policies.size.size=20M
- - 
+ 

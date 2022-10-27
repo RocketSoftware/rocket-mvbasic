@@ -1,5 +1,12 @@
 # Change Log
 
+## Version 1.8.0: October 27, 2022
+
+- Feature: support logging system. Please refer online documentation for details.
+- Feature: monitor U2 server connection status.
+- Enhancement: when compiling a BASIC program, the account folder name must be the same as the connected account name.
+- Bug fix: 38 bugs fixed.
+
 ## Version 1.7.0: August 17, 2022
 
 - Feature: (Preview) support debugging functionalities on UniData 8.2.4. 
