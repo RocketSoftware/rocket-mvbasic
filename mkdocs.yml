@@ -17,6 +17,7 @@ nav:
         - 'Hover': 'usage/Hover.md'
         - 'INCLUDE settings': 'usage/Include.md'
         - 'Multiple Workspace Folders': 'usage/MultipleWorkspaceFolders.md'
+        - 'Logging': 'usage/Logging.md'
         - 'References': 'usage/References.md'
         - 'Semantic Highlighting': 'usage/SemanticHighlighting.md'
         - 'Signature Help': 'usage/SignatureHelp.md'
