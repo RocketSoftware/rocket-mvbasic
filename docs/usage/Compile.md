@@ -63,7 +63,8 @@ A default build task configuration will be created and displayed in the editor.
 			"type": "BASIC",
 			"targets": [],
 			"compile": {
-				"dataSource": "UNIVERSE"
+				"dataSource": "UNIVERSE", 
+				"arguments": ""
 			},
 			"problemMatcher": [],
 			"label": "BASIC: Build", 
@@ -89,7 +90,7 @@ You can find task properties in the [VS Code official documents](https://code.vi
   - **language**: (For UniData only) The programming language flavor. Must be "UniBasic" or "Pick". If not set, "UniBasic" is the default.
   - **catalog**: For UniVerse, you can select "global", "local" or "normal". For UniData, you can select "global", "local" or "direct". If not set, files will not be cataloged.
   - **initialCharacter**: (For UniVerse only) The initial character of the cataloged program can only be set when the **catalog** parameter is set to “global”.
-
+  - **arguments**: Put additional compilation arguments here. For more details, please refer UniVerse / UniData user manual for more details. By default, this setting doesn’t appear in the configuration file. Please add it manually if needed.
 #### Run build task
 
 Select "Run build task" from the "Terminal" menu to start the build task.
@@ -97,7 +98,6 @@ Select "Run build task" from the "Terminal" menu to start the build task.
 **Note**: Ensure that a U2 server has been connected. Otherwise, an error will occur.
 
 ![](../img/compile_from_menu_3.png)
-
 
 
 ## UniVerse Compile Task Examples
@@ -361,3 +361,31 @@ Select "Run build task" from the "Terminal" menu to start the build task.
 
 - Add another task object in "tasks"
 - Change "label" in the tasks, When run build tasks, you can select one of these tasks
+
+**Example 4**. Additional compilation arguments
+
+```json
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "BASIC",
+			"targets": [
+				"BP/SAMPLE_FILE"
+			],
+			"compile": {
+				"dataSource":"UNIVERSE", 
+				"arguments": "-L -X"
+			},
+			"problemMatcher": [],
+			"label": "BASIC: Build",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+    ]
+}
+```
+
+- Compile the BASIC program with arguments "-L" and "-X".

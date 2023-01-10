@@ -62,7 +62,7 @@ Requirements: [VS Code](https://code.visualstudio.com/) 1.70.2 or higher version
 
 	**Note**: Using this method, an existing working environment that requires a different version of Java would not be impacted and the extension will work properly in the Java 11 (or above) environment.
 
-  3. Select "File" > "Open Folder" to pen a folder that contains the BASIC program files you want to view or edit. You can also add multiple folders to the workspace using "File" > "Add Folder to Workspace". We recommend that you open the U2 account level folders to avoid encountering exceptions.
+  3. Select "File" > "Open Folder" to open a folder that contains the BASIC program files you want to view or edit. You can also add multiple folders to the workspace using "File" > "Add Folder to Workspace". We recommend that you open the U2 account level folders to avoid encountering exceptions.
 
 	**Note**: This extension is designed to work with folders/directories rather than individual program files. If you open a single file, some functions may be limited.
 

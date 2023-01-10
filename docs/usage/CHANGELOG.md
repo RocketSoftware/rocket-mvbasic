@@ -1,5 +1,10 @@
 # Change Log
 
+## Version 1.9.0: January 5, 2023
+
+ - Enhancement: support additional parameters for compilation
+ - Enhancement: support additional parameters for debugging
+
 ## Version 1.8.0: October 27, 2022
 
 - Feature: support logging system. Please refer online documentation for details.

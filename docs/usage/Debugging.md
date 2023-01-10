@@ -1,12 +1,12 @@
-## Debugging (Preview)
+## Debugging
 
-With the debugging function, user can easily debug BASIC programs, observe, track the results and changes to variables for each step when running a BASIC program. 
+With the debugging function, users can easily debug BASIC programs, as well as observe and track the results and changes to variables for each step when running a BASIC program. 
 
-The 1.7.0 version of the debugging function is a preview version. There are limitations to the debugging features and not all debugging functions are stable. The following U2 server versions and platforms are supported:
+The following U2 server versions and platforms are supported:
 
 ### UniVerse
 
-Versions: 12.1.1 and before
+Versions: 11.3.2 or higher
 
 Platforms: Windows, Linux, AIX
 
@@ -24,6 +24,8 @@ In the 1.6.0 release, additional binaries should be installed on UniVerse to sup
 
 ## Start Debugging
 
+**Note**: You should not debug BASIC subroutines direcly, because this not allowed in UniVerse and UniData.
+
 ### Connecting to a U2 server account folder
 
 Before using the debugging feature, you must connect to a U2 server account folder firstly. Please see the [Connection section](./Connection.md) to learn how to connect to a U2 server account.
@@ -35,6 +37,8 @@ Before using the debugging feature, you must connect to a U2 server account fold
 There are 2 methods to debug a BASIC program file: debugging without a launch file and debugging with a launch file.
 
 Before debugging, open the BASIC program first.
+
+**Note**: debugging a BASIC subroutine directly is not allowed
 
 ### Debugging without a launch file
 
@@ -71,7 +75,8 @@ Then a default debugging configuration file launch.json will be generated in dir
             "program": "",
             "stopOnEntry": true,
             "preLaunchTask": "BASIC: Build",
-            "dependencies": []
+            "dependencies": [], 
+            "arguments": ""
         }
     ]
 }
@@ -84,6 +89,7 @@ Then a default debugging configuration file launch.json will be generated in dir
  - "stopOnEntry": used to control whether the program will be stopped at the first runnable line when start debugging. Currently only true is supported.
  - "preLanuchTask": this is used to run pre-required task before debugging. In our extension, we use this setting to compile the BASIC program in setting "program" first.
  - "depenedncies": put other BASIC program files here if they need to be compiled before debugging.
+ - "arguments": put additional debugging arguments here. Please refer to your UniVerse / UniData user documentation for more details. By default, this setting doesn’t appear in the configuration file, but can be added manually if needed.
 
 From the **Run and Debug** view, set the launch option to **Launch Program**. Then press the F5 button to start debugging. 
 
