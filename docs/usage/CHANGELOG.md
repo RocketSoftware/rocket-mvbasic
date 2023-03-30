@@ -1,5 +1,12 @@
 # Change Log
 
+## Version 1.10.0: March 30, 2023
+
+ - Enhancement: full path support in UniData $INCLUDE statement
+ - Enhancement: disconnect debug session when U2 server is disconnected.
+ - Enhancement: add functions / labels / subroutines to breadcrumbs.
+ - Bugs fix: 6 bugs fixed.
+
 ## Version 1.9.0: January 5, 2023
 
  - Enhancement: support additional parameters for compilation
