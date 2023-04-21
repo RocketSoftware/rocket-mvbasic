@@ -5,6 +5,14 @@ on:
     branches: [ master ]
     paths: 
       - 'docs/**'
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+    paths: 
+      - 'docs/**'
   workflow_dispatch:
 
 jobs:
@@ -16,7 +24,15 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install mkdocs-material
-      - run: |
+      - name: Deploy to production
+        if: github.ref == 'refs/heads/master'
+        run: |
           git config user.name 'github-actions'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           mkdocs gh-deploy --force
+      - name: Deploy preview
+        if: github.event_name == 'pull_request'
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: .
+          preview-branch: preview-gh-pages
