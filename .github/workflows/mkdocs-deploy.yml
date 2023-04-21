@@ -41,3 +41,4 @@ jobs:
         with:
           source-dir: site
           preview-branch: preview-gh-pages
+          umbrella-dir: site/pr-preview
