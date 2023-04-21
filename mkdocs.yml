@@ -6,6 +6,7 @@ nav:
         - 'Catalog Settings': 'usage/Catalog.md'
         - 'Compile': 'usage/Compile.md'
         - 'Configuration': 'usage/Configuration.md'
+        - 'Create File Share': 'usage/CreateFileShare.md'
         - 'Code Lens': 'usage/CodeLens.md'
         - 'Customized Documentation': 'usage/CustomizeDoc.md'
         - 'Debugging (Preview)': 'usage/Debugging.md'

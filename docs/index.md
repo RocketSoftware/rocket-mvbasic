@@ -1,66 +1,70 @@
-## About The Project
+# Rocket MV Basic for VS Code
 
 Rocket MV BASIC for VS Code is a free Visual Studio Code extension created by Rocket Software. This extension enables BASIC developers to modernize their MultiValue applications in one of the most popular development platforms with an exceptional editing experience.
 
 ## Features
 
-This extension offers these features:
+This extension allows:
 
  - Highlight BASIC statements and keywords
  - Semantic highlighting
- - Go to / Peek definition of variables and subroutines across files
- - Auto-complete BASIC statements, keywords, and symbols
- - Compile / Debug / Catalog BASIC programs on your U2 server
+ - Go to and Peek definition of includes and subroutines across files
+ - Auto-completing BASIC statements, keywords, and symbols
+ - Compiling, Debugging, and Cataloging BASIC programs on a U2 server
 
-[and more...](./usage/Features.md)
+To see [all features](./usage/Features.md).
 
 ## Restriction
 
-You can use the extension to edit BASIC program files on the machine VS Code is installed. Direct online editing of BASIC programs on remote multivalue servers it not yet supported.
+Editing BASIC programs is only supported on the machine where VS Code is installed.  Direct online editing on remote MultiValue servers is not yet supported.
 
-## Quick Start
+## Get started
 
 Requirements:
 
-1. [VS Code](https://code.visualstudio.com/) version 1.70.2 or higher
-2. [JDK](https://www.oracle.com/java/technologies/downloads/) or [OpenJDK](https://openjdk.org/projects/jdk/20/) version 11 or higher
+1. [VS Code](https://code.visualstudio.com/) version 1.70.2 or higher.
+2. [JDK](https://www.oracle.com/java/technologies/downloads/) or [OpenJDK](https://openjdk.org/projects/jdk/20/) version 11 or higher.
 
-Using the following steps you can install and start using the Rocket MV Basic extension.
+### Install & configure the extension
 
-#### Install & configure the extension
+Install and start using the Rocket MV Basic extension.
 
 1. Open **Visual Studio Code**.
-
-2. Click the **Extensions** icon (<kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>X</kbd>).  
-
+2. Click the **Extensions** icon ![EXTENSIONS](./img/icon-extensions-20x20.png) (<kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>X</kbd>).  
     This opens the **EXTENSIONS** panel.
 
-3. Search for **Rocket MV Basic**
+3. Search for **Rocket MV Basic**.
 
 4. Click **Install** and wait for the installation to complete.
 
-
 If JDK is not part of your PATH you will have to configure the **JDK Environment**. In the **Extensions** panel:
 
-1. Click the **Manage** icon, then **Extension settings**. 
-
+1. Click **Manage** ![Manage](./img/icon-manage-20x20.png) **>** **Extension settings**.  
     This opens the **Extension Settings** window.  
 
 2. In the **JDK Environment** section enter the full path to the JDK **bin** folder.
 
     E.g., *C:\jdk-20\bin*.
 
-#### Open an account folder as a workspace
+### Create a file share
 
-The source code of your application is stored on the U2 server. To edit it with VS Code you need it accessible on the computer you are using to run VS Code.
+The source code of your application is stored on the U2 server. The VS Code explorer shows your local file system, and to edit you need your account accessible on the computer you are using to run VS Code.
 
-One way to do this is to create a file share to your application servers' root folder. This folder usually is the parent folder to the accounts available in the application server. You can then open the accounts available.
+One way to do this is to create a file share of your U2 accounts folder, e.g.: `C:\U2\UV` or `/usr/uv/`. 
+
+This folder is the parent folder to accounts available on the application server. By mapping or mounting this file share to your development environment, you can open the accounts as workspaces.
+
+[How to create a file share.](./usage/CreateFileShare.md)
+
+### Open an account folder as a workspace
+
+Once you have your application server directories available locally:
 
 1. Click **File** in the Menu bar and select **Open Folder**.
 
 2. Browse to your (network) location and select the account you want to open as a workspace.    
 
-    In this example we browsed to the network location **U:\\**, and selected the MVTUTOR account.
+    In this screenshot we browsed to the network location **U:\\**, and selected the MVTUTOR account.
 ![](./img/open-mvtutor-workspace.png)
 
 3. Click **Select Folder**.  
@@ -70,7 +74,7 @@ One way to do this is to create a file share to your application servers' root f
 4. Select to **Trust the authors of all files in the parent folder**.
 5. Click **Yes, I trust the authors**.
 
-#### Activate the extension
+### Activate the extension
 
 Now that you have opened an account you can enable the extension. This will create two new subfolders: **.rmv** and **.vscode**.
 
@@ -85,9 +89,9 @@ Now that you have opened an account you can enable the extension. This will crea
 
 In the **EXPLORER** you will see two new folders: **.rmv** and **.vscode**. These are created by the extension and contain configuration files.
 
-#### Connect to your server
+### Connect to your U2 account
 
-The VS Code extension can connect to your MultiValue application server. This allows you to compile, debug, and catalog your programs. To connect to your server you need:
+The VS Code extension can connect to your account on the U2 application server. This allows you to compile, debug, and catalog your programs. It also enables auto-completion and Go To definition. To connect to your account you need:
 
 * the **server address**.
 * your **username**.
@@ -117,11 +121,11 @@ To connect:
 
     You will see a notification Disconnected from MV server.
 
-> You can also connect using the **Click to connect** icon in the status bar. This will open the same prompts for server address, user name, password, and account name.
+> You can also connect using the **Click to connect** icon ![Click to connect](./img/icon-connect-17x17.png).
 
 > When connected, you can disconnect by clicking on the account name in the status bar.
 
-#### Create and run `Hello World`!
+### Create and run `Hello World`!
 
 You are now connected. Let's create a new Hello World program and compile and run it.
 
@@ -150,12 +154,12 @@ You are now connected. Let's create a new Hello World program and compile and ru
 
     Optionally, a **Windows Firewall** window might ask for permission to connect JDK to your application server.
 
-8. Click the **Continue** icon (<kbd>F5</kbd>).
+8. Click the **Continue** icon ![Continue](./img/icon-continue-18x17.png) (<kbd>F5</kbd>).
 
     The terminal will print **HELLO WORLD**.
 
 
-## Usage
+## Further usage
 
 Click the links below to learn more about using each feature. You can also refer to the user manual [documentation online](https://rocketsoftware.github.io/rocket-mvbasic/).
 
