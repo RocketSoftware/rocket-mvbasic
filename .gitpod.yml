@@ -1,0 +1,14 @@
+tasks:
+  - name: Install & Build
+  - before: pip install -r requirements-dev.txt
+    command: mkdocs serve
+
+ports:
+  - name: Website
+    description: Website Preview
+    port: 8000
+    onOpen: open-preview
+
+vscode:
+  extensions: 
+  - streetsidesoftware.code-spell-checker
