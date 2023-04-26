@@ -18,11 +18,15 @@ Ask your system administrator to create a file share on your Windows U2 server. 
 
     The **Network Access** window opens.
 
-6. Click **Share** and wait for the process to finish.  
+6. Search and select the user(s) and click **Add**.
+
+    By default the current owner is already selected.
+
+7. Click **Share** and wait for the process to finish.  
 
     The **Your folder is shared** message will show.
 
-7. Click **Done**.  
+8. Click **Done**.  
     
     This displays the network path needed to map the file share as a network drive.
 
