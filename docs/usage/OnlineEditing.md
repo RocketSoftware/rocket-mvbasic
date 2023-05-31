@@ -102,13 +102,13 @@ You can also Add or Delete BASIC files:
 
 Here is the synchronization process when editing a BASIC program file:
 
-    1. When opening a BASIC program in the extension online editing mode, the extension will apply a READU lock on the corresponding file on the server side. If the file is already locked on the server side, this request will fail, and an error message will be displayed.
+1. When opening a BASIC program in the extension online editing mode, the extension will apply a READU lock on the corresponding file on the server side. If the file is already locked on the server side, this request will fail, and an error message will be displayed.
 
-    2. Once the file is opened in VS Code, the lock will be released, and a copy will be saved on the VS Code side.
+2. Once the file is opened in VS Code, the lock will be released, and a copy will be saved on the VS Code side.
 
-    3. When a user saves changes in the extension online editing mode, the extension will attempt to apply a WRITE lock to the file on the server side. If the application of this lock fails, a warning message will be displayed.
+3. When a user saves changes in the extension online editing mode, the extension will attempt to apply a WRITE lock to the file on the server side. If the application of this lock fails, a warning message will be displayed.
 
-    4. After successfully applying the WRITE lock to the BASIC file on the server side, the extension will overwrite the corresponding file with the local copy of the BASIC program. All changes made on the server side will be overwritten without warning.
+4. After successfully applying the WRITE lock to the BASIC file on the server side, the extension will overwrite the corresponding file with the local copy of the BASIC program. All changes made on the server side will be overwritten without warning.
 
 ### Limitation:
 Most of the LSP (Language Server Protocol) features are supported, but there are some limitations. 

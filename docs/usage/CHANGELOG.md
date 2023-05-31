@@ -1,5 +1,9 @@
 # Change Log
 
+## Version 2.1.0: May 31, 2023
+
+- Support online editing (preview) which can help user to edit BASIC program files on remote U2 servers.
+
 ## Version 1.10.1: March 30, 2023
 
 - Update extension's logo.
