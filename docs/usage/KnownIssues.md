@@ -16,6 +16,12 @@
 
 **MVVS-815** MVVS spends lots of time drawing dimension of big array
 
+## Online Editing
+
+**MVVS-1026** Duplicated host names were incorrectly allowed in the configuration file.
+
+**MVVS-1036** User may not be aware of the change on the server side.
+
 ## Others
 
 **MVVS-527** BASIC CALL subroutines statement can not be recognized correctly by the parser.
