@@ -1,5 +1,9 @@
 # Change Log
 
+## Version 1.10.1: March 30, 2023
+
+- Update extension's logo.
+
 ## Version 1.10.0: March 30, 2023
 
  - Enhancement: full path support in UniData $INCLUDE statement

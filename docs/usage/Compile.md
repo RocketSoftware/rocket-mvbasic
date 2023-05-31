@@ -29,6 +29,10 @@ The compilation result will display in the VS Code terminal.
 
 **Note**: Using this method, compiled programs will not be cataloged.
 
+For UniData, different flavors are supported. You can select “Pick” flavor or “UniData” flavor when using right-click compile:
+
+![](../img/compile_basic_in_unidata_with_different_flavors.png)
+
 ### From a file explorer
 
 Select one or more files, then right click the file(s) and select "Compile selected BASIC programs".

@@ -22,15 +22,12 @@ This extension includes the following features:
  - Add customized documentation for functions, subroutines, or labels
  - Show syntax and grammar errors
  - Prompt parameters of BASIC internal functions
- - Compile / Catalog / Debug BASIC programs on the U2 server
-
-## Restriction
-
-Currently, the extension can only be used to edit BASIC program files on the machine where the VS Code installed, it does not support editing BASIC program files on remote servers directly. 
+ - Compile / Catalog / Debug BASIC programs on the U2 server、
+ - Remote editing of BASIC program files on a U2 server (preview)
 
 ## Quick Start
 
-Requirements: [VS Code](https://code.visualstudio.com/) 1.70.2 or higher version is required.
+Requirements: [VS Code](https://code.visualstudio.com/) 1.75 or higher version is required.
 
   1. Install this extension from the VS Code Marketplace.
 
@@ -103,6 +100,7 @@ Click the links below to learn more about using each feature. You can also refer
 - [Rename](./usage/Rename.md)
 - [Semantic highlighting](./usage/SemanticHighlighting.md)
 - [Signature help](./usage/SignatureHelp.md)
+- [Online Editing](./usage/OnlineEditing.md)
 
 **Development Environment**
 
