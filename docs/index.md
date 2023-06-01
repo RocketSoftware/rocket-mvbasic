@@ -177,6 +177,7 @@ Click the links below to learn more about using each feature. You can also refer
 - [Rename](./usage/Rename.md)
 - [Semantic highlighting](./usage/SemanticHighlighting.md)
 - [Signature help](./usage/SignatureHelp.md)
+- [Online Editing](./usage/OnlineEditing.md)
 
 **Development Environment**
 
