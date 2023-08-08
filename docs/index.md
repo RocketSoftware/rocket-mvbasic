@@ -1,88 +1,165 @@
-## About The Project
+# Rocket MV Basic for VS Code
 
-Rocket MV BASIC for VS code is a free Visual Studio Code Extension created by Rocket Software. The purpose of this extension is to enable BASIC developers to develop MV BASIC applications in one of the most popular development platforms- Microsoft Visual Studio Code. Rocket MV BASIC for VS code provides users with an exceptional editing experience.
+Rocket MV BASIC for VS Code is a free Visual Studio Code extension created by Rocket Software. This extension enables BASIC developers to modernize their MultiValue applications in one of the most popular development platforms with an exceptional editing experience.
 
 ## Features
 
-This extension includes the following features:
+This extension allows:
 
- - BASIC statements / keywords highlighting
+ - Highlight BASIC statements and keywords
  - Semantic highlighting
- - Symbols collection / outline on the current document
- - Code folding
- - Go to / Peek definition on the current document or crossing different files
- - Rename symbols for the same type
- - Find symbol references in current document and crossing different files
- - Hover over a statement to display its documentation
- - Document formatting, range formatting and on typing formatting
- - Detail settings for formatting
- - Auto-Completion for BASIC statements, keywords, and symbols
- - Connect to U2 MultiValue server and cache cataloged programs to local machine when necessary
- - Auto-Group files and customize the group rules
- - Add customized documentation for functions, subroutines, or labels
- - Show syntax and grammar errors
- - Prompt parameters of BASIC internal functions
- - Compile / Catalog / Debug BASIC programs on the U2 server、
- - Remote editing of BASIC program files on a U2 server (preview)
+ - Go to and Peek definition of includes and subroutines across files
+ - Auto-completing BASIC statements, keywords, and symbols
+ - Compiling, Debugging, and Cataloging BASIC programs on a U2 server
 
-## Quick Start
+To see [all features](./usage/Features.md).
 
-Requirements: [VS Code](https://code.visualstudio.com/) 1.75 or higher version is required.
+## Restriction
 
-  1. Install this extension from the VS Code Marketplace.
+Editing BASIC programs is only supported on the machine where VS Code is installed.  Direct online editing on remote MultiValue servers is not yet supported.
 
-  2. Download, install and setup the Java environment. Note that you can skip Step 1 and Step 2 if you already have Java 11+ (OpenJDK or Oracle JDK) installed. 
+## Get started
 
-	*Step 1*: Download the Open JDK 11 or above GA releases zip file from [this page](http://jdk.java.net/archive/).
+Requirements:
 
-	*Step 2*: Unzip the downloaded zip file to a temporary location on your system (for example, "*C:\ThirdParty\open-jdk-11*").
+1. [VS Code](https://code.visualstudio.com/) version 1.70.2 or higher.
+2. [JDK](https://www.oracle.com/java/technologies/downloads/) or [OpenJDK](https://openjdk.org/projects/jdk/20/) version 11 or higher.
 
-	*Step 3*.  Open User Settings (use the appropriate option listed below):
+### Install & configure the extension
 
-	**On Windows/Linux**
+Install and start using the Rocket MV Basic extension.
 
-	- File > Preferences > Settings
+1. Open **Visual Studio Code**.
+2. Click the **Extensions** icon ![EXTENSIONS](./img/icon-extensions-20x20.png) (<kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>X</kbd>).  
+    This opens the **EXTENSIONS** panel.
 
-	- Use the keyboard shortcut <kbd>Ctrl</kbd> + <kbd>,</kbd> to open the setting editor 
+3. Search for **Rocket MV Basic**.
 
-	- Press <kbd>F1</kbd> or <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> to open the Command Palette, and then select `Preferences: Open Settings (UI)`
+4. Click **Install** and wait for the installation to complete.
 
-	**On macOS** 
+If JDK is not part of your PATH you will have to configure the **JDK Environment**. In the **Extensions** panel:
 
-	- Code > Preferences > Settings
+1. Click **Manage** ![Manage](./img/icon-manage-20x20.png) **>** **Extension settings**.  
+    This opens the **Extension Settings** window.  
 
-	- Press <kbd>F1</kbd> or <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> on Mac to open Command Palette, and then select `Preferences: Open Settings (UI)`
+2. In the **JDK Environment** section enter the full path to the JDK **bin** folder.
 
-	*Step 4*. Search “Rocket” to locate the Rocket MV BASIC extension and enter the Java bin path as illustrated in the example below.
-	
-	![](./img/readme_config.png)
+    E.g., *C:\jdk-20\bin*.
 
-	**Note**: Using this method, an existing working environment that requires a different version of Java would not be impacted and the extension will work properly in the Java 11 (or above) environment.
+### Create a file share
 
-  3. Select "File" > "Open Folder" to open a folder that contains the BASIC program files you want to view or edit. You can also add multiple folders to the workspace using "File" > "Add Folder to Workspace". We recommend that you open the U2 account level folders to avoid encountering exceptions.
+The source code of your application is stored on the U2 server. The VS Code explorer shows your local file system, and to edit you need your account accessible on the computer you are using to run VS Code.
 
-	**Note**: This extension is designed to work with folders/directories rather than individual program files. If you open a single file, some functions may be limited.
+One way to do this is to create a file share of your U2 accounts folder, e.g.: `C:\U2\UV` or `/usr/uv/`. 
 
-  4. Activate the extension.
+This folder is the parent folder to accounts available on the application server. By mapping or mounting this file share to your development environment, you can open the accounts as workspaces.
 
-    - By default, the extension is automatically activated when opening a file with the suffix ".B". If your BASIC program files don’t end with a ".B" suffix, please refer to the FAQ to see how to customize the rules for activating the extension automatically.
-    - If the extension is not activated automatically, please open the *Command Palette* in VS code(use any option listed below), and enter the "Activate Rocket MV BASIC" command to activate it manually.  
-    
-        **On Windows/Linux**
-    
-        - View > Command Palette
-    
-        - Press <kbd>F1</kbd> or <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>
-    
-        **On macOS**
-    
-        - View > Command Palette
-    
-        - Press <kbd>F1</kbd> or <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>
-    
-    **Note**: Currently, the extension does not provide version control capabilities. Users should manage source code versions independent of this extension.
+[How to create a file share.](./usage/CreateFileShare.md)
 
-## Usage
+### Open an account folder as a workspace
+
+Once you have your application server directories available locally:
+
+1. Click **File** in the Menu bar and select **Open Folder**.
+
+2. Browse to your (network) location and select the account you want to open as a workspace.    
+
+    In this screenshot we browsed to the network location **U:\\**, and selected the MVTUTOR account.
+![](./img/open-mvtutor-workspace.png)
+
+3. Click **Select Folder**.  
+
+    The **Do you trust the authors of the files in this folder?** window opens.
+
+4. Select to **Trust the authors of all files in the parent folder**.
+5. Click **Yes, I trust the authors**.
+
+### Activate the extension
+
+Now that you have opened an account you can enable the extension. This will create two new subfolders: **.rmv** and **.vscode**.
+
+1. Press <kbd>F1</kbd>.  
+
+    This opens the command palette.
+
+2. Type **Activate Rocket MV Basic** and click on the option as it appears.
+3. Choose between **UniVerse** and **UniData**.  
+
+    A notification will show **Rocket MV BASIC extension started**.
+
+In the **EXPLORER** you will see two new folders: **.rmv** and **.vscode**. These are created by the extension and contain configuration files.
+
+### Connect to your U2 account
+
+The VS Code extension can connect to your account on the U2 application server. This allows you to compile, debug, and catalog your programs. It also enables auto-completion and Go To definition. To connect to your account you need:
+
+* the **server address**.
+* your **username**.
+* your **password**.
+* the **name** of the account you want to open.
+
+To connect:
+
+1. Press <kbd>F1</kbd>.  
+
+    The command palette opens.
+
+2. Type **Connect**, then click **Connect/Disconnect U2 server**.
+
+3. Type the **server address** and confirm with **Enter**.
+
+4. Type your **user name**. If required, you can prefix your user name with your domain such as *MYCOMPANY3\myname*.
+
+5. Type your *password*.
+
+6. Type the **name** of the *account* you want to open. Then confirm with  <kbd>Enter</kbd> 
+
+    This shows the notification **Connection to account MVTUTOR established**.
+
+7. Notice the check box and account name in the status bar, this indicates the connection status.
+8. To disconnect press <kbd>F1</kbd>, then click **Connect/Disconnect U2 server**.  
+
+    You will see a notification Disconnected from MV server.
+
+> You can also connect using the **Click to connect** icon ![Click to connect](./img/icon-connect-17x17.png).
+
+> When connected, you can disconnect by clicking on the account name in the status bar.
+
+### Create and run `Hello World`!
+
+You are now connected. Let's create a new Hello World program and compile and run it.
+
+1. In the **EXPLORER** expand your program folder. E.g., *MVTUTORBP* or *BP*.
+
+2. Right-click the folder and select **New file...**, then enter the name **HELLO.WORLD** and confirm with <kbd>Enter</kbd>.
+
+3. Type the following statement on the new and empty line 1.  
+    `CRT 'HELLO WORLD'`
+
+4. Notice how the **HELLO.WORLD** editor tab now has a circle icon (⚫).  
+
+    This indicates the program has changed and changes are not yet saved to disk.
+
+5. Press <kbd>CTRL</kbd> + <kbd>S</kbd> to save the file.  
+
+    The file is displayed as PLAIN TEXT without syntax highlighting. In rare cases your source code might be recognized as Visual Basic.
+
+6. Click on **Plain Text** in the status bar to open the command palette, then type **Rocket** and click **Rocket MV Basic**.
+
+    This activates the extension for this editor, the program is now displayed with syntax highlighting. At a later stage you will add file associations to automatically enable syntax highlighting.
+
+7. Click **Run** > **Run without debugging** (<kbd>CTRL</kbd> + <kbd>F5</kbd>), then click **MVBasic debug** in the command palette prompt.
+
+    A terminal window opens and the debug menu is displayed.
+
+    Optionally, a **Windows Firewall** window might ask for permission to connect JDK to your application server.
+
+8. Click the **Continue** icon ![Continue](./img/icon-continue-18x17.png) (<kbd>F5</kbd>).
+
+    The terminal will print **HELLO WORLD**.
+
+
+## Further usage
 
 Click the links below to learn more about using each feature. You can also refer to the user manual [documentation online](https://rocketsoftware.github.io/rocket-mvbasic/).
 
