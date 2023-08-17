@@ -16,15 +16,13 @@ Versions: 8.2.4
 
 Platforms: Windows, Linux, AIX
 
-Please refer [Known issues](./KnownIssues.md) list to find out existing issues in debugging feature.
+### A high performance debugging feature
 
-### Setup Environment
-
-In the 1.6.0 release, additional binaries should be installed on UniVerse to support the debugging features. This is no longer necessary for the 1.7.0 release.
+Since the 2.2.0 release, a high-performance debugging feature is supported on UniVerse 11.4.1. To use this feature, you must upgrade to UniVerse 11.4.1 or higher version. Please see [Debugging Binaries Releases](./DAPRelease.md) for more details.
 
 ## Start Debugging
 
-**Note**: You should not debug BASIC subroutines direcly, because this not allowed in UniVerse and UniData.
+**Note**: You should not debug BASIC subroutines directly, because this not allowed in UniVerse and UniData.
 
 ### Connecting to a U2 server account folder
 
@@ -38,7 +36,7 @@ There are 2 methods to debug a BASIC program file: debugging without a launch fi
 
 Before debugging, open the BASIC program first.
 
-**Note**: debugging a BASIC subroutine directly is not allowed
+**Note**: debugging a BASIC subroutine directly is not allowed.
 
 ### Debugging without a launch file
 
@@ -87,9 +85,9 @@ Then a default debugging configuration file launch.json will be generated in dir
  - "name": this is the name of the launch task. You can change the name to other values.
  - "program": if this value is empty, current focused file will be debugged. You can also set this value to another BASIC program file's absolute path. This file will be compiled before debugging.
  - "stopOnEntry": used to control whether the program will be stopped at the first runnable line when start debugging. Currently only true is supported.
- - "preLanuchTask": this is used to run pre-required task before debugging. In our extension, we use this setting to compile the BASIC program in setting "program" first.
- - "depenedncies": put other BASIC program files here if they need to be compiled before debugging.
- - "arguments": put additional debugging arguments here. Please refer to your UniVerse / UniData user documentation for more details. By default, this setting doesn’t appear in the configuration file, but can be added manually if needed.
+ - "preLaunchTask": this is used to run pre-required task before debugging. In our extension, we use this setting to compile the BASIC program in setting "program" first.
+ - "dependencies": put other BASIC program files' absolute paths here if they need to be compiled before debugging. For example, "C:\U2\UV\XDEMO\TEST". 
+ - "arguments": put additional debugging online· here. Please refer to your UniVerse / UniData user documentation for more details. By default, this setting doesn’t appear in the configuration file, but can be added manually if needed.
 
 From the **Run and Debug** view, set the launch option to **Launch Program**. Then press the F5 button to start debugging. 
 
@@ -115,6 +113,8 @@ You can find all break points in **BREAKPOINTS** panel of the **Run and Debug** 
 
 The program will stop when the process encounters a break point.
 
+**Note**: Condition breakpoints are not supported.
+
 ### Continue
 
 When the process encounters a break point, the program will stop running. You can press the F5 key or click the Continue button from the debug panel to continue running the program. 
@@ -139,7 +139,7 @@ These two operations are still not stable. They partially work if breakpoints ar
 
 ## Restart debug
 
-This operation is currently NOT supported.
+Click **restart** button to restart debugging process.
 
 ### Stop debugging
 
@@ -149,7 +149,9 @@ Click the **Stop** button to stop the debugging process.
 
 ### View variables
 
-When debugging starts, you can view all variables in the **Run and Debug** view.
+When debugging starts, you can view all variables in the **Run and Debug** view. 
+
+You can also change a variable's value by double-clicking it in the **Run and Debug** view (this only works on UniVerse 11.4.1).
 
 ![](../img/debug_variables.png)
 
@@ -162,6 +164,8 @@ You can also add variables to the **WATCH** panel.
 Click the plus (+) button from the **WATCH** panel and enter the variable name to display the variable’s value.
 
 ![](../img/debug_add_watch.png)
+
+**Note**: Only variables are supported. Expressions are not supported.
 
 ### Handle input operation
 

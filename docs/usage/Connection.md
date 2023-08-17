@@ -1,8 +1,12 @@
 ## U2 Connection Settings
 
-The Rocket MV BASIC extension can also connect to a U2 server. Regardless of whether you are connected to a server or not, all editor functions will work as expected. But when connected to a U2 server, some functions will have advanced capabilities. 
+The Rocket MV BASIC extension can also connect to a U2 server. Regardless of whether you are connected to a server or not, all editor functions will work as expected. But when connected to a U2 server, some new features will be enabled, and some features will be enhanced:
 
-**Note**: you cannot edit program files on the U2 server even if you are connected to it. You can only edit files on your local machine.
+ - [Goto definition](./Definition.md)
+ - [Auto-completion](./Completion.md)
+ - [Catalog](./Catalog.md)
+ - [Compile BASIC program](./Compile.md)
+ - [Debugging BASIC program](./Debugging.md)
 
 ### Settings
 

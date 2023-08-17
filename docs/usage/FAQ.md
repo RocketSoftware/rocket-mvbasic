@@ -45,3 +45,11 @@ The item in the example image above specifies that the Rocket MV BASIC extension
 3. Manually remove the MV BASIC extension directory under user profile. For example, you may find MV BASIC extension version 1.6.0 in "C:\Users\user_name\.vscode\extensions\rocketsoftware.rocket-mvbasic-1.6.0".
 
 4. Restart VS Code and install the latest extension.
+
+**Q: Why isn’t the debugging functionality working? It was working well before.**
+
+**A:** This may be a result of the VS Code upgrade. In VS Code 1.79.x, the debugging functionality has some updates which impact our extension. If you encounter debugging issues, please try to downgrade VS Code to [version 1.78.2](https://code.visualstudio.com/updates/v1_78) (on which the debugging functionality should work well). Please refer [VS Code Compatibility](./Compatibility.md) for more details.
+
+**Q: How can I exclude specific files from the explorer view?** 
+**A:** You can update the vscode settings file “.vscode/settings.json” to exclude files. For more details, please refer VS Code official online documentation.
+
