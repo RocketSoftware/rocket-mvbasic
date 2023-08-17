@@ -18,4 +18,4 @@ Below is a detailed breakdown of the information for each release. You can find 
 
 ### Assets
 
-Please download dap_agent binaries form [GitHub release](https://github.com/RocketSoftware/rocket-mvbasic/releases).
+Please download dap_agent binaries from [GitHub release](https://github.com/RocketSoftware/rocket-mvbasic/releases).
