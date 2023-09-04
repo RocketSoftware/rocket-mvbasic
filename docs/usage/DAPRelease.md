@@ -2,7 +2,7 @@
 
 A high-performance debugging feature has been introduced in the 2.2.0 release (and in UniVerse 11.4.1). However, to use this feature, you will need to upgrade UniVerse to version 11.4.1 or higher. If you decide not to upgrade, you can continue using the original debugging feature available on previous versions of the U2 server.
 
-Below is a detailed breakdown of the information for each release. You can find instructions for configuring the debugging binaries in UniVerse [here](./ConfigDap.md).
+Below is a detailed breakdown of the information for each release.
 
 ### 2.2.0 
 
