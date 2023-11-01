@@ -1,5 +1,16 @@
 # Change Log
 
+## Version 2.3.0: October 31, 2023
+
+ - Implement the ability to sort BASIC program files while in online editing mode.
+ - Provide support for configuring unique server names for online editing servers.
+ - Enhance warning messages for specific operations.
+ - Implement various optimizations for the online editing mode.
+
+## Version 2.2.0: August 17, 2023
+
+- Support high performance debugging on UniVerse 11.4.1 (Windows / Linux)
+
 ## Version 2.1.0: May 31, 2023
 
 - Support online editing (preview) which can help user to edit BASIC program files on remote U2 servers.

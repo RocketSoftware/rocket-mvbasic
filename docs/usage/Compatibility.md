@@ -4,6 +4,10 @@ Upgrading VS Code may potentially introduce some issues that could result in ano
 
 |  VS Code  |   GRPC Debug  |  CLI Debug  | Compilation | Online Editing |
 | --------- | ------------- | ----------- | ----------- | -------------- |
+|  1.83.1   |      x        |      x      |      √      |       √        |
+|  1.82.3   |      x        |      x      |      √      |       √        |
+|  1.82.2   |      √        |      √      |      √      |       √        |
+|  1.82.1   |      √        |      √      |      √      |       √        |
 |  1.81.0   |      √        |      √      |      √      |       √        |
 |  1.80.2   |      √        |      ×      |      √      |       √        |
 |  1.79.2   |      √        |      ×      |      √      |       √        |
@@ -11,5 +15,7 @@ Upgrading VS Code may potentially introduce some issues that could result in ano
 |  1.77.3   |      √        |      √      |      √      |       √        |
 |  1.76.2   |      √        |      √      |      √      |       √        |
 |  1.75.1   |      √        |      √      |      √      |       √        |
+
+ - Due to the upgrades to VS Code versions 1.82.3 and 1.83.1, the restart functionality in the debugging feature cannot be used properly, but other debugging functions work without issues.
 
 **Note**: Please refer [Debugging](./Debugging.md) to find out suitable UniVerse / UniData for debugging features.

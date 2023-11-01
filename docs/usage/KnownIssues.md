@@ -16,11 +16,7 @@
 
 **MVVS-653** reporting syntax error for "open(line) = 1" in the parser
 
-**MVVS-693** Custom documentation should refresh automatically
-
 **MVVS-843** parser reporting syntax issue in APP.PROGS\AMLC
-
-**MVVS-925** Format case change should respect the casing in user functions
 
 **MVVS-927** Variables name displayed in breadcrumbs rather than functions name in some cases
 
@@ -33,8 +29,6 @@
 **MVVS-1054** Wrong documentation tips in some situations
 
 **MVVS-1119** Formatting a document will format "$options -static.dim" to "$options - static.dim", resulting in incorrect code behavior
-
-**MVVS-1128** Goto and peek definition can not be found after repeated use
 
 **MVVS-1136** enhancement request to avoid to add a blank line to the end of BASIC source code
 
@@ -68,8 +62,6 @@
 
 **MVVS-1190** After pausing during a long for loop, continue button does not work
 
-**MVVS-1200** The output in terminal view is not correct when debug a BASIC program which calls python program
-
 **MVVS-1205** Click F5, compilation pass but there is error line below code
 
 **MVVS-1207** Debugger F5(continue) can't stop at breakpoint in subroutine
@@ -84,17 +76,8 @@
 
 **MVVS-671** Can't connect to UniData demo account on linux
 
-**MVVS-1026** Duplicated host names were incorrectly allowed in the configuration file.
-
-**MVVS-1053** connection disconnected, but icon still shows connected and refreshing
-
-**MVVS-1058** Disconnection after using two accounts to connect to the same server will result in failure to connect
-
 **MVVS-1121** java throw exception when failed to connect to the UV account
 
-## Online editing
-
-**MVVS-1088** Clicking icon at bottom left corner cannot connect to server
 
 ## Others
 
@@ -104,12 +87,4 @@
 
 **MVVS-1055** Command 'extension.selectU2Server' not found
 
-**MVVS-1063** delete the port for a connected server and refresh, current editor will exit and without any save
-
-**MVVS-1068** Fail to save as the file when it is created in another server
-
-**MVVS-1118** Unknown exception happened when switch basic program
-
 **MVVS-1156** Can not delete basic file under a customer account added to UV.ACCOUNTS
-
-**MVVS-1202** account mismatch warning displayed when there is no opened BASIC for debugging
