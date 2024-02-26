@@ -44,6 +44,10 @@
 
 **MVVS-1024** compile option not works for UniData account in MVVS 2.1.0 build
 
+**MVVS-1312** Need support flavor 'r' and 'm' in task.json.
+
+**MVVS-1313** Build task flavor impacts gRPC debugging mode compilation flavor.
+
 ## Debugging
 
 **MVVS-713** unable to step out at the end of call subroutine
@@ -72,11 +76,23 @@
 
 **MVVS-1222** Step Out is not working properly in MVVS 2.2.0 release
 
+**MVVS-1315** Debug with launch.json file should validate dependencies file first.
+
+**MVVS-1316** Stop debugging when receiving from INPUT statement will crash extension.
+
+**MVVS-1317** Restart button is not working in grpc debugging mode.
+
+**MVVS-1318** Step into and out with WATCH variable will crash debugging process.
+
 ## Connection
 
 **MVVS-671** Can't connect to UniData demo account on linux
 
 **MVVS-1121** java throw exception when failed to connect to the UV account
+
+**MVVS-1314** delete currently connected server should also disconnect from current connection in online editing mode.
+
+**MVVS-1320** Execute offline editing mode commands will disable online editing mode.
 
 
 ## Others
@@ -85,6 +101,5 @@
 
 **MVVS-1036** User may not be aware of the change on the server side.
 
-**MVVS-1055** Command 'extension.selectU2Server' not found
-
 **MVVS-1156** Can not delete basic file under a customer account added to UV.ACCOUNTS
+

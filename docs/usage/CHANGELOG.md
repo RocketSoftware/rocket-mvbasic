@@ -1,5 +1,11 @@
 # Change Log
 
+## Version 2.4.0: February 26, 2024
+
+ - Support high performance  debugging on UniData 8.3.1 (Windows / Linux).
+ - Support new compilation flavor 'r' and 'm' for UniData.
+ - Resolve the issue that extension could not be started when _JAVA_OPTIONS_ is configured.
+
 ## Version 2.3.0: October 31, 2023
 
  - Implement the ability to sort BASIC program files while in online editing mode.
