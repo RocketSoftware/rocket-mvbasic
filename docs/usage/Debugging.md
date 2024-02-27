@@ -18,7 +18,7 @@ Platforms: Windows, Linux, AIX
 
 ### A high performance debugging feature
 
-Since the 2.2.0 release, a high-performance debugging feature is supported on UniVerse 11.4.1. To use this feature, you must upgrade to UniVerse 11.4.1 or higher version. Please see [Debugging Binaries Releases](./DAPRelease.md) for more details.
+A high-performance debugging feature is supported on UniVerse 11.4.1 and UniData 8.3.1. To use this feature, you must upgrade to UniVerse 11.4.1 / UniData 8.3.1 or higher version. Please see [Debugging Binaries Releases](./DAPRelease.md) for more details.
 
 ## Start Debugging
 
@@ -151,7 +151,7 @@ Click the **Stop** button to stop the debugging process.
 
 When debugging starts, you can view all variables in the **Run and Debug** view. 
 
-You can also change a variable's value by double-clicking it in the **Run and Debug** view (this only works on UniVerse 11.4.1).
+You can also change a variable's value by double-clicking it in the **Run and Debug** view (this only works on UniVerse 11.4.1 / UniData 8.3.1).
 
 ![](../img/debug_variables.png)
 
