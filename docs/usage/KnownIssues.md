@@ -103,3 +103,7 @@
 
 **MVVS-1156** Can not delete basic file under a customer account added to UV.ACCOUNTS
 
+**MVVS-1324** Q-pointer with question mark in the name will causing open file exception in online editing mode.
+
+**MVVS-1326** Duplicated file path used on the Linux environment.
+
