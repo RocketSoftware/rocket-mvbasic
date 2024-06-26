@@ -21,7 +21,8 @@ Following settings are used for U2 connection.
   "password": "",
   "account": "",
   "dataSource": "UNIVERSE",
-  "port": 31438
+  "port": 31438,
+  "rpcName": ""
  },
 ```
 
@@ -31,6 +32,7 @@ Following settings are used for U2 connection.
 - `account`: account name of a U2 server.
 - `dataSource`: `UNIVERSE` or `UNIDATA`, by default is `UNIVERSE`. If open multiple workspace folders and set differnet data source in these folders' configuration files, VS Code will choose the root folder's data source as default.
 - `port`: port number of U2 server. For UniVerse and UniData, the port number is `31438` by default.
+- `rpcName`: optional. Specifies the name of the remote procedure call (RPC) to be used. Common RPC names for `UNIDATA` and `UNIVERSE` are `udcs` and `uvcs`, respectively, but custom RPC names can be configured as needed.
 
 **Note**: Please enter these settings before connecting to the server.
 
