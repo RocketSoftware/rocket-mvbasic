@@ -11,6 +11,7 @@ Below is a detailed breakdown of the information for each release.
 
 |  UniVerse  Version |   Windows |   Linux    |    AIX   |
 | ------------------ | --------- | ---------- | -------- |
+|   14.1.1           |     ✔️   |     ✔️     |    ❌   |
 |   11.4.1           |     ✔️   |     ✔️     |    ❌   |
 |   < 11.4.1         |     ❌   |     ❌     |    ❌   |
 

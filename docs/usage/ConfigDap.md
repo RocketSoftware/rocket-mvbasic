@@ -13,7 +13,7 @@ To configure the debugging related binaries, please follow below steps.
 
 #### Windows
 
-1. Copy **dap_agent.exe** and **grpcs.exe** from the package to your UniVerse **bin** folder. E.g., *C:\U2\UV\bin*
+1. Copy **uddap_server** and **uddap_slave** from the package to your UniVerse **bin** folder. E.g., *C:\U2\UV\bin*
   
 2. Verify whether the unirpcservices file contains **grpcs** service. If **grpcs** service doesn't exist, you must add it manually. Add the new service as shown below to the **unirpcservices** file:
 
@@ -25,7 +25,7 @@ To configure the debugging related binaries, please follow below steps.
 
 #### Linux
 
-1. Copy **dap_agent** and **grpcs** from the package to your UniVerse **bin** folder. For example, */usr/u2/uv/bin/*
+1. Copy **uddap_server** and **uddap_slave** from the package to your UniVerse **bin** folder. For example, */usr/u2/uv/bin/*
   
 2. Verify whether the **unirpcservices** file contains the **grpcs** service. If the **grpcs** service doesn't exist, you must add it manually. Add the new service as shown below to the **unirpcservices** file:
 

@@ -1,5 +1,11 @@
 # Change Log
 
+## Version 2.5.0: June 26, 2024
+
+ - Support compile / catalog BASIC program files in online editing mode.
+ - Support the rpc service name can be customized (only in offline mode)
+ - Customer bug fixes - some incorrect behaviors on Linux
+
 ## Version 2.4.0: February 26, 2024
 
  - Support high performance  debugging on UniData 8.3.1 (Windows / Linux).
