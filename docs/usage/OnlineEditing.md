@@ -46,7 +46,7 @@ By accessing the configuration file, you can perform actions such as adding, edi
 
 ![](../img/online_editing_server_3.png)
 
- - **"datasource"**: Must be either UNIVERSE or UNIDATA. In the online editing feature, you can only choose one data source. 
+ - **"datasource"**: Must be either UNIVERSE or UNIDATA. In the online editing feature, you can only choose one data source. If you change the data source, the extension must be restarted for the change to take affect.
  
  - **"address"**: Specify the address of the U2 server. 
  
@@ -110,12 +110,34 @@ Here is the synchronization process when editing a BASIC program file:
 
 4. After successfully applying the WRITE lock to the BASIC file on the server side, the extension will overwrite the corresponding file with the local copy of the BASIC program. All changes made on the server side will be overwritten without warning.
 
+### Compile and catalog
+Before using the compilation or catalog functions, a U2 database account must already connected.
+
+#### Quick compile
+Users can right-click a BASIC program file and select “” to compile a single file. 
+
+![](../img/online_editing_compile_1.png)
+
+For UniData, there are multiple compilation commands for different flavors.
+
+#### Compile / Catalog with configuration file
+The configuration file can help a user to compile and catalog multiple files.
+Select “Configure Default Build Task…” from the Terminal menu, and then select “BASIC: Online Editing build” to create a build task.
+
+![](../img/online_editing_compile_2.png)
+
+![](../img/online_editing_compile_3.png)
+
+A default task file will be generated. For more information on this file, see the “Compile” documentation.
+
+![](../img/online_editing_compile_4.png)
+
 ### Limitation:
 Most of the LSP (Language Server Protocol) features are supported, but there are some limitations. 
 
  - Features like Go to Definition, Rename, and Find References may not be able to locate references or definitions in other files. 
 
- - Compilation and debugging functionalities are currently not supported. 
+ - Debugging related functions are currently not supported. 
 
  - Custom documentation features are also not supported now. 
 

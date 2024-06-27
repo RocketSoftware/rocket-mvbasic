@@ -92,8 +92,6 @@
 
 **MVVS-1314** delete currently connected server should also disconnect from current connection in online editing mode.
 
-**MVVS-1320** Execute offline editing mode commands will disable online editing mode.
-
 
 ## Others
 
@@ -107,3 +105,16 @@
 
 **MVVS-1326** Duplicated file path used on the Linux environment.
 
+**MVVS-1374** Delete file exception if other user locked same BASIC on the server side
+
+**MVVS-1373** Compilation failed if user clicked another account folder in ROCKET EXPLORER
+
+**MVVS-1372** read BASIC file exception after sorted files in different order
+
+**MVVS-1369** MVVS code exception for the included file
+
+**MVVS-1367** Receive U2 XToolSub read directory record exception for ".swp" file
+
+**MVVS-1366** Unable to open account folder if user has no WRITE access to the VOC file
+
+**MVVS-1364** U2 XToolSub file lock exception when compiled BASIC is opened in another
