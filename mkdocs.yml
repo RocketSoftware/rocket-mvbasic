@@ -15,6 +15,7 @@ nav:
         - 'Diagnostics': usage/Diagnostics.md
         - 'Folding': 'usage/Folding.md'
         - 'Formatting': 'usage/Formatting.md'
+        - 'GaraSign': 'usage/GaraSign.md'
         - 'Group View': 'usage/GroupView.md'
         - 'Hover': 'usage/Hover.md'
         - 'INCLUDE settings': 'usage/Include.md'
