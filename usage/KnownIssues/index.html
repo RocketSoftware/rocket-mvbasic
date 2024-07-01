@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Known Issues - Rocket MV BASIC</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Rocket MV BASIC</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Usage</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Accounts/" class="dropdown-item">Accounts Settings</a>
+</li>
+                                    
+<li>
+    <a href="../Catalog/" class="dropdown-item">Catalog Settings</a>
+</li>
+                                    
+<li>
+    <a href="../Compile/" class="dropdown-item">Compile</a>
+</li>
+                                    
+<li>
+    <a href="../Configuration/" class="dropdown-item">Configuration</a>
+</li>
+                                    
+<li>
+    <a href="../CodeLens/" class="dropdown-item">Code Lens</a>
+</li>
+                                    
+<li>
+    <a href="../Compatibility/" class="dropdown-item">Compatibility</a>
+</li>
+                                    
+<li>
+    <a href="../CustomizeDoc/" class="dropdown-item">Customized Documentation</a>
+</li>
+                                    
+<li>
+    <a href="../DAPRelease/" class="dropdown-item">DAP Binaries</a>
+</li>
+                                    
+<li>
+    <a href="../Debugging/" class="dropdown-item">Debugging</a>
+</li>
+                                    
+<li>
+    <a href="../DocumentSymbol/" class="dropdown-item">Document Symbol</a>
+</li>
+                                    
+<li>
+    <a href="../Diagnostics/" class="dropdown-item">Diagnostics</a>
+</li>
+                                    
+<li>
+    <a href="../Folding/" class="dropdown-item">Folding</a>
+</li>
+                                    
+<li>
+    <a href="../Formatting/" class="dropdown-item">Formatting</a>
+</li>
+                                    
+<li>
+    <a href="../GaraSign/" class="dropdown-item">GaraSign</a>
+</li>
+                                    
+<li>
+    <a href="../GroupView/" class="dropdown-item">Group View</a>
+</li>
+                                    
+<li>
+    <a href="../Hover/" class="dropdown-item">Hover</a>
+</li>
+                                    
+<li>
+    <a href="../Include/" class="dropdown-item">INCLUDE settings</a>
+</li>
+                                    
+<li>
+    <a href="../Logging/" class="dropdown-item">Logging</a>
+</li>
+                                    
+<li>
+    <a href="../MultipleWorkspaceFolders/" class="dropdown-item">Multiple Workspace Folders</a>
+</li>
+                                    
+<li>
+    <a href="../OnlineEditing/" class="dropdown-item">Online Editing</a>
+</li>
+                                    
+<li>
+    <a href="../References/" class="dropdown-item">References</a>
+</li>
+                                    
+<li>
+    <a href="../SemanticHighlighting/" class="dropdown-item">Semantic Highlighting</a>
+</li>
+                                    
+<li>
+    <a href="../SignatureHelp/" class="dropdown-item">Signature Help</a>
+</li>
+                                    
+<li>
+    <a href="../Completion/" class="dropdown-item">Using Auto Completion</a>
+</li>
+                                    
+<li>
+    <a href="../Definition/" class="dropdown-item">Using Definition</a>
+</li>
+                                    
+<li>
+    <a href="../Rename/" class="dropdown-item">Using Rename</a>
+</li>
+                                    
+<li>
+    <a href="../Connection/" class="dropdown-item">U2 Connection Settings</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../FAQ/" class="nav-link">FAQ</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Change Log</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../CHANGELOG/" class="dropdown-item">Change Log</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Known Issues</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../CHANGELOG/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#known-issues" class="nav-link">Known Issues</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#editing" class="nav-link">Editing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#compilation" class="nav-link">Compilation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#debugging" class="nav-link">Debugging</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#connection" class="nav-link">Connection</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#others" class="nav-link">Others</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="known-issues">Known Issues</h1>
+<h2 id="editing">Editing</h2>
+<p><strong>MVVS-309</strong> The selected formatting alignment is not correct</p>
+<p><strong>MVVS-399</strong> Reference bug by scope cause</p>
+<p><strong>MVVS-535</strong> extremely slow to including U2MQI.H file for the parser</p>
+<p><strong>MVVS-548</strong> EQU could not work correctly in IF statement</p>
+<p><strong>MVVS-590</strong> READU statement syntax highlight incorrect and misleading</p>
+<p><strong>MVVS-636</strong> All lines of nonsense are accepted in editor</p>
+<p><strong>MVVS-653</strong> reporting syntax error for "open(line) = 1" in the parser</p>
+<p><strong>MVVS-843</strong> parser reporting syntax issue in APP.PROGS\AMLC</p>
+<p><strong>MVVS-927</strong> Variables name displayed in breadcrumbs rather than functions name in some cases</p>
+<p><strong>MVVS-928</strong> unable to display label name in the path line for subroutine</p>
+<p><strong>MVVS-1003</strong> Using a STOP statement to end a program instead of RETURN causes an indentation problem</p>
+<p><strong>MVVS-1042</strong> Incorrect grammar tip for the SWAP function</p>
+<p><strong>MVVS-1054</strong> Wrong documentation tips in some situations</p>
+<p><strong>MVVS-1119</strong> Formatting a document will format "$options -static.dim" to "$options - static.dim", resulting in incorrect code behavior</p>
+<p><strong>MVVS-1136</strong> enhancement request to avoid to add a blank line to the end of BASIC source code</p>
+<h2 id="compilation">Compilation</h2>
+<p><strong>MVVS-867</strong> build task is missing when debug BASIC in multi-workspace</p>
+<p><strong>MVVS-918</strong> compile BASIC with options for UniVerse account is not working</p>
+<p><strong>MVVS-919</strong> compile BASIC programs will list out nonexistent BASIC program</p>
+<p><strong>MVVS-1007</strong> unable to compile BASIC program which contains special characters in a string</p>
+<p><strong>MVVS-1024</strong> compile option not works for UniData account in MVVS 2.1.0 build</p>
+<p><strong>MVVS-1312</strong> Need support flavor 'r' and 'm' in task.json.</p>
+<p><strong>MVVS-1313</strong> Build task flavor impacts gRPC debugging mode compilation flavor.</p>
+<h2 id="debugging">Debugging</h2>
+<p><strong>MVVS-713</strong> unable to step out at the end of call subroutine</p>
+<p><strong>MVVS-795</strong> Next, continue could not step out from subroutine in UV debugging, Only step in works. </p>
+<p><strong>MVVS-809</strong> Debugger should not report "undefined variable" for field inside {}</p>
+<p><strong>MVVS-857</strong> Debugging hangs on subroutine RETURN</p>
+<p><strong>MVVS-920</strong> unable to debug BASIC program with launch.json file if there was an error in the configuration file</p>
+<p><strong>MVVS-1008</strong> Debug option can lose focus on terminal window</p>
+<p><strong>MVVS-1188</strong> An exception occurred when debug the program with local subroutine for the second time</p>
+<p><strong>MVVS-1190</strong> After pausing during a long for loop, continue button does not work</p>
+<p><strong>MVVS-1205</strong> Click F5, compilation pass but there is error line below code</p>
+<p><strong>MVVS-1207</strong> Debugger F5(continue) can't stop at breakpoint in subroutine</p>
+<p><strong>MVVS-1210</strong> Click stop debugging, then the file can't be edit</p>
+<p><strong>MVVS-1211</strong> Debug failed against a basic program(a correct basic program)</p>
+<p><strong>MVVS-1222</strong> Step Out is not working properly in MVVS 2.2.0 release</p>
+<p><strong>MVVS-1315</strong> Debug with launch.json file should validate dependencies file first.</p>
+<p><strong>MVVS-1316</strong> Stop debugging when receiving from INPUT statement will crash extension.</p>
+<p><strong>MVVS-1317</strong> Restart button is not working in grpc debugging mode.</p>
+<p><strong>MVVS-1318</strong> Step into and out with WATCH variable will crash debugging process.</p>
+<h2 id="connection">Connection</h2>
+<p><strong>MVVS-671</strong> Can't connect to UniData demo account on linux</p>
+<p><strong>MVVS-1121</strong> java throw exception when failed to connect to the UV account</p>
+<p><strong>MVVS-1314</strong> delete currently connected server should also disconnect from current connection in online editing mode.</p>
+<h2 id="others">Others</h2>
+<p><strong>MVVS-982</strong> "The RPC failed" error will crash VS Code extension</p>
+<p><strong>MVVS-1036</strong> User may not be aware of the change on the server side.</p>
+<p><strong>MVVS-1156</strong> Can not delete basic file under a customer account added to UV.ACCOUNTS</p>
+<p><strong>MVVS-1324</strong> Q-pointer with question mark in the name will causing open file exception in online editing mode.</p>
+<p><strong>MVVS-1326</strong> Duplicated file path used on the Linux environment.</p>
+<p><strong>MVVS-1374</strong> Delete file exception if other user locked same BASIC on the server side</p>
+<p><strong>MVVS-1373</strong> Compilation failed if user clicked another account folder in ROCKET EXPLORER</p>
+<p><strong>MVVS-1372</strong> read BASIC file exception after sorted files in different order</p>
+<p><strong>MVVS-1369</strong> MVVS code exception for the included file</p>
+<p><strong>MVVS-1367</strong> Receive U2 XToolSub read directory record exception for ".swp" file</p>
+<p><strong>MVVS-1366</strong> Unable to open account folder if user has no WRITE access to the VOC file</p>
+<p><strong>MVVS-1364</strong> U2 XToolSub file lock exception when compiled BASIC is opened in another</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
