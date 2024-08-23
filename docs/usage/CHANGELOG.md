@@ -1,5 +1,9 @@
 # Change Log
 
+## Version 2.5.1: August 23, 2024
+
+ - Support for cataloging BASIC program files via right-click component in both online and offline modes.
+
 ## Version 2.5.0: June 26, 2024
 
  - Support compile / catalog BASIC program files in online editing mode.
