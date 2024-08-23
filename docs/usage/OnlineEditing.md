@@ -116,9 +116,16 @@ Before using the compilation or catalog functions, a U2 database account must al
 #### Quick compile
 Users can right-click a BASIC program file and select “” to compile a single file. 
 
-![](../img/online_editing_compile_1.png)
+![](../img/catalog_compile.png)
 
 For UniData, there are multiple compilation commands for different flavors.
+
+#### Quick catalog
+Users can right-click a BASIC program file and select "Catalog" to catalog a single file for both Universe and Unidata databases 
+
+![](../img/catalog.png)
+ 
+Clicking on 'Catalog' will use the parameters from the catalog.mvbasic.json file to catalog the file. If you need to change the catalog type, arguments, or initial character, please update the settings in this file. See [Catalog Settings in "catalog.mvbasic.json" file](./Catalog.md#quick-catalog) for more information.
 
 #### Compile / Catalog with configuration file
 The configuration file can help a user to compile and catalog multiple files.
@@ -142,3 +149,7 @@ Most of the LSP (Language Server Protocol) features are supported, but there are
  - Custom documentation features are also not supported now. 
 
  - Please note that only one instance of VS Code can be run at a time.
+
+ - Do not click on another account's folder before completing the cataloging of the current BASIC program. Doing so may result in cataloging the wrong BASIC program on the U2 server side. 
+
+ - The parameter "arguments" in the catalog.mvbasic.json file is currently not supported by the catalog feature. By default, the argument is set to FORCE for both the UV and UD databases.

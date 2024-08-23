@@ -1,4 +1,4 @@
-## Catalog Settings
+## Catalog Settings in "db.mvbasic.json" file
 
 Please refer to [Configuration](Configuration.md) to open the database related configuration file and then find the "catalog" section.
 
@@ -99,3 +99,97 @@ Please refer to [Configuration](Configuration.md) to open the database related c
 ]
 ```
 
+## Quick Catalog
+
+Users can right-click a BASIC program file and select "Catalog" to catalog a single file for both Universe and Unidata databases 
+
+![](../img/catalog.png)
+
+## Catalog Settings in "catalog.mvbasic.json" file
+
+Cataloging a program makes it available to all users or to users of one account. You must catalog a program before another BASIC program can call it as an external subroutine.
+
+```
+{
+    "catalog": "",
+    "arguments": "",
+    "initialCharacter": ""
+}
+```
+
+### Cataloging in Universe
+
+**Local Catalog**: Local cataloging creates a VOC entry for the program. This entry is a verb that points to the file and
+record containing the object code for the cataloged program. You can access a locally cataloged
+program only from the account in which it was cataloged, unless you copy the VOC entry for the
+catalog name to another account. Because cataloging a program locally only creates a VOC entry
+pointing to the object file, you need not recatalog the program every time you recompile it
+
+    {
+        "catalog": "local",
+        "arguments": "",
+        "initialCharacter": ""
+    }
+
+**Normal Catalog**: Normal cataloging copies the specified object record to the system catalog space, making it available
+to all users. The name of the program in the catalog is in the following format:
+*account*catalog.name
+account is the name of the current account directory.
+Normal cataloging also creates a VOC entry for the catalog name. This entry is a verb that contains the
+name *account*catalog.name in field 2.
+Because normal cataloging copies the object code to the system catalog space, you must recatalog
+the program every time you recompile it.
+To catalog a program normally, specify a catalog.name that does not begin with the characters *, -, $,
+or !, and do not specify the keyword LOCAL.
+
+    {
+        "catalog": "normal",
+        "arguments": "",
+        "initialCharacter": ""
+    }
+
+**Global Catalog**: Like normal cataloging, global cataloging copies the specified object record to the system catalog
+space, making it available to all users. The name of the program in the catalog is in the following
+format:
+*catalog.name
+-catalog.name
+$catalog.name
+!catalog.name
+Global cataloging does not create a VOC entry for the catalog name. The UniVerse command processor
+and the run machine look in the system catalog space for verbs or external subroutines with names
+that have an initial *, - , $, or ! character. Because globally cataloged subroutines are accessed without
+a VOC entry, they are available to all accounts on the system as soon as they are cataloged.
+Because global cataloging copies the object code to the system catalog space, you must recatalog the
+program every time you recompile it.
+To catalog a program globally, specify a catalog.name beginning with *, -, $, or !, and do not specify
+the keyword LOCAL.
+
+    {
+        "catalog": "global",
+        "arguments": "",
+        "initialCharacter": "*"
+    }
+
+### Cataloging in Unidata
+
+**Direct Catalog**: Catalogs the program locally without copying it to the local or system CTLG directory. Instead, UniData creates an entry in the VOC file that is a pointer to the directory where the program resides.
+
+    {
+        "catalog": "direct",
+        "arguments": "",
+        "initialCharacter": ""
+    }
+
+**Local Catalog**: Catalogs the program locally and places a copy of it in a subdirectory of the local CTLG catalog (in the account where the user is running the program). UniData creates a VOC pointer to the subdirectory.UniData creates the CTLG and the subdirectory, if they do not
+already exist.
+
+    {
+        "catalog": "local",
+        "arguments": "",
+        "initialCharacter": ""
+    }
+
+
+**Note 1 :** The parameter "arguments" in the catalog.mvbasic.json file is currently not supported by the catalog feature. By default, the argument is set to FORCE for both the UV and UD databases.
+
+**Note 2 :** If the `./rmv` configuration exists, the `catalog.mvbasic.json` file will be created during the first catalog attempt. If the `./rmv` configuration does not exist, the `config/catalog.mvbasic.json` file will be created when the extension is activated.

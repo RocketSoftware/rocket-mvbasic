@@ -92,6 +92,9 @@
 
 **MVVS-1314** delete currently connected server should also disconnect from current connection in online editing mode.
 
+## Catalog
+
+**MVVS-1385** The "arguments" parameter in catalog.mvbasic.json is not supported, defaulting to FORCE for UV and UD databases.
 
 ## Others
 
