@@ -18,8 +18,6 @@
 
 **MVVS-843** parser reporting syntax issue in APP.PROGS\AMLC
 
-**MVVS-927** Variables name displayed in breadcrumbs rather than functions name in some cases
-
 **MVVS-928** unable to display label name in the path line for subroutine
 
 **MVVS-1003** Using a STOP statement to end a program instead of RETURN causes an indentation problem
