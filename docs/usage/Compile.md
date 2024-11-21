@@ -29,9 +29,9 @@ The compilation result will display in the VS Code terminal.
 
 **Note**: Using this method, compiled programs will not be cataloged.
 
-For UniData, different flavors are supported. You can select “Pick” flavor or “UniData” flavor when using right-click compile:
+For UniData, different flavors are supported. Right-click in the file you want to compile then select "Compile BASIC programs". It will read the language value from the basic.mvbasic.json file, with the value set to: "ud_compile_flavor". [Please see this section to set ud_compile_flavor value.](./Compile.md#unidata-compile-flavor-in-basicmvbasicjson-file)
 
-![](../img/compile_basic_in_unidata_with_different_flavors.png)
+![](../img/compile_from_context.png)
 
 ### From a file explorer
 
@@ -91,7 +91,7 @@ You can find task properties in the [VS Code official documents](https://code.vi
 - **targets**: a list that contains the files you want to compile. The value should be the file's relative path. Please see the examples section for more details.
 - **compile**: compilation related settings. It contains following configurable items.
   - **dataSource**: Must be "UNIVERSE" or "UNIDATA", depending on the connected U2 server.
-  - **language**: (For UniData only) The programming language flavor. Must be "UniBasic" or "Pick". If not set, "UniBasic" is the default.
+  - **language**: (For UniData only) The programming language flavor. Must be "UniBasic" or "Pick". If not set, "UniBasic" is the default, **but It will read the language value from the basic.mvbasic.json file, with the value set to: "ud_compile_flavor".** [Please see this section to set ud_compile_flavor value.](./Compile.md#unidata-compile-flavor-in-basicmvbasicjson-file)
   - **catalog**: For UniVerse, you can select "global", "local" or "normal". For UniData, you can select "global", "local" or "direct". If not set, files will not be cataloged.
   - **initialCharacter**: (For UniVerse only) The initial character of the cataloged program can only be set when the **catalog** parameter is set to “global”.
   - **arguments**: Put additional compilation arguments here. For more details, please refer UniVerse / UniData user manual for more details. By default, this setting doesn’t appear in the configuration file. Please add it manually if needed.
@@ -99,10 +99,11 @@ You can find task properties in the [VS Code official documents](https://code.vi
 
 Select "Run build task" from the "Terminal" menu to start the build task.
 
-**Note**: Ensure that a U2 server has been connected. Otherwise, an error will occur.
+**Note 1**: Ensure that a U2 server has been connected. Otherwise, an error will occur.
 
 ![](../img/compile_from_menu_3.png)
 
+**Note 2**: Once you click on "Run build task," it will compile BASIC using the compile flavor value set to ud_compile_flavor in the basic.mvbasic.json file, instead of compiling with the "language" value specified in the task (for Unidata).
 
 ## UniVerse Compile Task Examples
 
@@ -281,7 +282,7 @@ Select "Run build task" from the "Terminal" menu to start the build task.
 - Add source code relative path to "targets". In this example, SAMPLE_FILE is in the BP folder
 - "dataSource" must be "UNIDATA" for UniData
 - No need to set "catalog" if you don't want to catalog programs
-- You can select the language flavor in "language". In this example, the language flavor is "UniBasic"
+- You can select the language flavor in "language". In this example, the language flavor is "UniBasic", **but It will read the language value from the basic.mvbasic.json file, with the value set to: "ud_compile_flavor".** [Please see this section to set ud_compile_flavor value.](./Compile.md#unidata-compile-flavor-in-basicmvbasicjson-file)
 
 
 
@@ -315,7 +316,7 @@ Select "Run build task" from the "Terminal" menu to start the build task.
 ```
 
 - You can add multiple source code relative paths to "targets"
-- Set "language" to "Pick" flavor
+- Set "language" to "Pick" flavor, **but It will read the language value from the basic.mvbasic.json file, with the value set to: "ud_compile_flavor".** [Please see this section to set ud_compile_flavor value.](./Compile.md#unidata-compile-flavor-in-basicmvbasicjson-file)
 - Set "catalog" to "global" if you want to perform global cataloging
 
 
@@ -393,3 +394,59 @@ Select "Run build task" from the "Terminal" menu to start the build task.
 ```
 
 - Compile the BASIC program with arguments "-L" and "-X".
+
+## Unidata Compile Flavor in basic.mvbasic.json File
+
+By Uusing the VS Code task, users can compile or catalog multiple BASIC programs at the same time. BASIC compilation will use the specified Task propetiesproperties (except the "language" property).
+
+
+```json
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "BASIC",
+			"targets": [
+				"BP/SAMPLE_FILE"
+			],
+			"compile": {
+				"dataSource":"UNIDATA", 
+                "language": "UniBasic"
+			},
+			"problemMatcher": [],
+			"label": "BASIC: Build",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+    ]
+}
+```
+
+It will read the language value from the basic.mvbasic.json file, with the value set to: "ud_compile_flavor"
+
+	{
+        "catalog": "direct",
+        "arguments": "",
+        "initialCharacter": "",
+        "ud_compile_flavor": "Pick"
+    }
+
+**Example 1**. Compile a single BASIC program with flavor UniBasic.
+
+	{
+        "catalog": "local",
+        "arguments": "",
+        "initialCharacter": "",
+        "ud_compile_flavor": "UniBasic"
+    }
+
+**Example 2**. Compile a single BASIC program with flavor revelation.
+
+	{
+        "catalog": "local",
+        "arguments": "",
+        "initialCharacter": "",
+        "ud_compile_flavor": "revelation"
+    }

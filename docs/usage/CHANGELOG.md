@@ -1,5 +1,10 @@
 # Change Log
 
+## Version 2.6.0: November 21, 2024
+ - Enhancement: UD compilation will read parameters from basic.mvbasic.json file.
+ - Support pattern configuration for account, folder and file filtering (only in online mode).
+ - Customer bug fixes
+  
 ## Version 2.5.1: August 23, 2024
 
  - Support for cataloging BASIC program files via right-click component in both online and offline modes.

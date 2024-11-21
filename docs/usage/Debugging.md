@@ -40,13 +40,16 @@ Before debugging, open the BASIC program first.
 
 ### Debugging without a launch file
 
- - Click the **Run and Debug** icon on left menu bar. The **Run and Debug** view will display if you have no `launch.json` file in your project.
+ - Click the **Run and Debug** icon on from the left menu bar. The **Run and Debug** view will display if you have no `launch.json` file in your project.
 
  - Click the **Run and Debug** button to start debugging the currently focused BASIC program file. 
 
 ![](../img/run_and_debug.png)
 
-The BASIC program file will be compiled first. If successful, the debugging process will stop at the first runnable line of code in the program file.
+The BASIC program file will be compiled first.
+For UniData, there are different compilation flavors and it will read the compile flavor from basic.mvbasic.json, with the value set to: "ud_compile_flavor". [Please see this section to set ud_compile_flavor value.](./Compile.md#unidata-compile-flavor-in-basicmvbasicjson-file)
+ 
+On successful compilation, the debugging process will stop at the first runnable line of code in the program file.
 
 ### Debug with launch file
 

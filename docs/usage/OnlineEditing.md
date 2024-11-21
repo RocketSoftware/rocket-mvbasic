@@ -58,6 +58,8 @@ By accessing the configuration file, you can perform actions such as adding, edi
  
  - **"port"**: By default, the port is set to 31438, but you can change this according to your U2 server configuration.
 
+ - **"filterPatterns"**_(Optional)_: Used to specify filter patterns for Accounts, Folders and Files.
+
 There are additional methods available to edit the configuration file: 
 
  - Right-click on a tree view node and select "Add New Server" to add a new U2 server configuration. 
@@ -85,6 +87,32 @@ If you wish to disconnect from a U2 server, right-click the corresponding server
 **Note:** In the online editing feature, the connection icon in the status bar cannot be clicked. This contrasts with the offline mode, where clicking the connection icon allows you to establish or terminate a connection to a server.
 
 ![](../img/online_editing_connection_icon.png)
+
+### Filtering
+
+Users can establish filters to filter out information which that they user do not want the MVVS to display. Users can configure MVVS to filter out certain file names. This is done to minimize the amount number of unnecessary files listed.
+
+In the Configure Patterns option, enter the account/folder/file name patterns you want to match. Separate each pattern with a comma. Pattern matching characters are:
+ * \* = any string
+ * ? = any character
+
+#### **Steps to Configure Filter Pattern**
+**Access Configuration**:
+* Right-click the server name, account, or folder.
+* Select the "Configure Pattern" option.
+
+![](../img/online_editing_configure_pattern_option.png)
+
+**Enter Filter Pattern**:
+* Add your desired filter pattern to the servers.mvbasic.json file.
+* Save the changes.
+
+**Refresh Connection**:
+* If you are already connected to the server, manually refresh it to apply the changes.
+
+**View Filtered Results**:
+* Expand the specific server or folder to see only the filtered accounts, folders, and files.
+
 
 ### Editing BASIC programs
 
@@ -118,14 +146,14 @@ Users can right-click a BASIC program file and select “” to compile a single
 
 ![](../img/catalog_compile.png)
 
-For UniData, there are multiple compilation commands for different flavors.
+For UniData, there are multiple compilation commands for different flavors. Please refer [UD Compilation here](./Compile.md#unidata-compile-flavor-in-basicmvbasicjson-file)
 
 #### Quick catalog
 Users can right-click a BASIC program file and select "Catalog" to catalog a single file for both Universe and Unidata databases 
 
 ![](../img/catalog.png)
  
-Clicking on 'Catalog' will use the parameters from the catalog.mvbasic.json file to catalog the file. If you need to change the catalog type, arguments, or initial character, please update the settings in this file. See [Catalog Settings in "catalog.mvbasic.json" file](./Catalog.md#quick-catalog) for more information.
+Clicking on 'Catalog' will use the parameters from the basic.mvbasic.json file to catalog the file. If you need to change the catalog type, arguments, or initial character, please update the settings in this file. See [Catalog Settings in "basic.mvbasic.json" file](./Catalog.md#quick-catalog) for more information.
 
 #### Compile / Catalog with configuration file
 The configuration file can help a user to compile and catalog multiple files.
@@ -152,4 +180,4 @@ Most of the LSP (Language Server Protocol) features are supported, but there are
 
  - Do not click on another account's folder before completing the cataloging of the current BASIC program. Doing so may result in cataloging the wrong BASIC program on the U2 server side. 
 
- - The parameter "arguments" in the catalog.mvbasic.json file is currently not supported by the catalog feature. By default, the argument is set to FORCE for both the UV and UD databases.
+ - The parameter "arguments" in the basic.mvbasic.json file is currently not supported by the catalog feature. By default, the argument is set to FORCE for both the UV and UD databases.

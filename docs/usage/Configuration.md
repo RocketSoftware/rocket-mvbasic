@@ -40,11 +40,11 @@ This configuration file contains the settings for feature Group View. If you nee
 
 ## Catalog Configuration
 
-The configuration file name is "catalog.mvbasic.json". 
+The configuration file name is "basic.mvbasic.json". 
 
-This configuration file contains the parameters for the Catalog feature. If you need to change the catalog type, arguments, or initial character, please update the settings in this file. See [Catalog Settings in "catalog.mvbasic.json" file](./Catalog.md#quick-catalog) for more information.
+This configuration file contains the parameters for the Catalog feature. If you need to change the catalog type, arguments, or initial character, please update the settings in this file. See [Catalog Settings in "basic.mvbasic.json" file](./Catalog.md#quick-catalog) for more information.
 
-**Note:** If either `./rmv` or `./rmvonline` configuration exists, the `catalog.mvbasic.json` file will be created during the first catalog attempt. If the `./rmv` configuration does not exist, the `config/catalog.mvbasic.json` file will be created when the extension is activated.
+**Note:** If either `./rmv` or `./rmvonline` configuration exists, the `basic.mvbasic.json` file will be created during the first catalog attempt. If the `./rmv` configuration does not exist, the `config/basic.mvbasic.json` file will be created when the extension is activated.
 
 ## Configuration Files
 

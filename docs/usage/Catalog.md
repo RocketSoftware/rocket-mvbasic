@@ -105,7 +105,7 @@ Users can right-click a BASIC program file and select "Catalog" to catalog a sin
 
 ![](../img/catalog.png)
 
-## Catalog Settings in "catalog.mvbasic.json" file
+## Catalog Settings in "basic.mvbasic.json" file
 
 Cataloging a program makes it available to all users or to users of one account. You must catalog a program before another BASIC program can call it as an external subroutine.
 
@@ -113,7 +113,8 @@ Cataloging a program makes it available to all users or to users of one account.
 {
     "catalog": "",
     "arguments": "",
-    "initialCharacter": ""
+    "initialCharacter": "",
+    "ud_compile_flavor": ""
 }
 ```
 
@@ -128,7 +129,8 @@ pointing to the object file, you need not recatalog the program every time you r
     {
         "catalog": "local",
         "arguments": "",
-        "initialCharacter": ""
+        "initialCharacter": "",
+        "ud_compile_flavor": ""
     }
 
 **Normal Catalog**: Normal cataloging copies the specified object record to the system catalog space, making it available
@@ -145,7 +147,8 @@ or !, and do not specify the keyword LOCAL.
     {
         "catalog": "normal",
         "arguments": "",
-        "initialCharacter": ""
+        "initialCharacter": "",
+        "ud_compile_flavor": ""
     }
 
 **Global Catalog**: Like normal cataloging, global cataloging copies the specified object record to the system catalog
@@ -167,7 +170,8 @@ the keyword LOCAL.
     {
         "catalog": "global",
         "arguments": "",
-        "initialCharacter": "*"
+        "initialCharacter": "*",
+        "ud_compile_flavor": ""
     }
 
 ### Cataloging in Unidata
@@ -177,7 +181,8 @@ the keyword LOCAL.
     {
         "catalog": "direct",
         "arguments": "",
-        "initialCharacter": ""
+        "initialCharacter": "",
+        "ud_compile_flavor": ""
     }
 
 **Local Catalog**: Catalogs the program locally and places a copy of it in a subdirectory of the local CTLG catalog (in the account where the user is running the program). UniData creates a VOC pointer to the subdirectory.UniData creates the CTLG and the subdirectory, if they do not
@@ -186,10 +191,11 @@ already exist.
     {
         "catalog": "local",
         "arguments": "",
-        "initialCharacter": ""
+        "initialCharacter": "",
+        "ud_compile_flavor": ""
     }
 
 
-**Note 1 :** The parameter "arguments" in the catalog.mvbasic.json file is currently not supported by the catalog feature. By default, the argument is set to FORCE for both the UV and UD databases.
+**Note 1 :** The parameter "arguments" in the basic.mvbasic.json file is currently not supported by the catalog feature. By default, the argument is set to FORCE for both the UV and UD databases.
 
-**Note 2 :** If the `./rmv` configuration exists, the `catalog.mvbasic.json` file will be created during the first catalog attempt. If the `./rmv` configuration does not exist, the `config/catalog.mvbasic.json` file will be created when the extension is activated.
+**Note 2 :** If the `./rmv` configuration exists, the `basic.mvbasic.json` file will be created during the first catalog attempt. If the `./rmv` configuration does not exist, the `config/basic.mvbasic.json` file will be created when the extension is activated.
