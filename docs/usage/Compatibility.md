@@ -1,3 +1,9 @@
+# U2 Product Compatibility
+
+For the Rocket MV BASIC Extension product, not all features are currently supported on all U2 products & platforms. Users need to pay attention to the U2 product version and platform information first, as some feature may not working properly.
+
+For more details, please refer [Rocket-MV-BASIC-Extension-features-support-matrix](https://my.rocketsoftware.com/RocketCommunity/s/article/Rocket-MV-BASIC-Extension-features-support-matrix).
+
 # VS Code Compatibility 
 
 Upgrading VS Code may potentially introduce some issues that could result in anomalies with the compilation or debugging functions of our extension. In such cases, you can consider downgrading VS Code as a workaround. We have summarized a list of recent stable versions of VS Code for your reference.

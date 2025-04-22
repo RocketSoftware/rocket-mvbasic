@@ -6,13 +6,13 @@ The following U2 server versions and platforms are supported:
 
 ### UniVerse
 
-Versions: 11.3.2 or higher
+Versions: For offline mode debugging 11.3.2 or higher and for online mode debugging 11.4.1 and higher
 
 Platforms: Windows, Linux, AIX
 
 ### UniData
 
-Versions: 8.2.4
+Versions: For offline mode debugging 8.2.4 or higher and for online mode debugging 8.3.1 and higher
 
 Platforms: Windows, Linux, AIX
 
@@ -26,7 +26,7 @@ A high-performance debugging feature is supported on UniVerse 11.4.1 and UniData
 
 ### Connecting to a U2 server account folder
 
-Before using the debugging feature, you must connect to a U2 server account folder firstly. Please see the [Connection section](./Connection.md) to learn how to connect to a U2 server account.
+Before using the debugging feature, you must connect to a U2 server account folder firstly. Please see the [Connection section](./Connection.md) for offline mode and [Online Editing](./OnlineEditing.md) for online mode to learn how to connect to a U2 server account.
 
 **Note**: The debugging feature will not work if you only open a single BASIC program file in VS Code. You must open an account folder.
 
@@ -39,6 +39,8 @@ Before debugging, open the BASIC program first.
 **Note**: debugging a BASIC subroutine directly is not allowed.
 
 ### Debugging without a launch file
+> **Note** : 
+> Debugging without a launch file works properly in offline mode only; in online mode, the behavior is uncertain.
 
  - Click the **Run and Debug** icon on from the left menu bar. The **Run and Debug** view will display if you have no `launch.json` file in your project.
 
@@ -92,6 +94,8 @@ Then a default debugging configuration file launch.json will be generated in dir
  - "dependencies": put other BASIC program files' absolute paths here if they need to be compiled before debugging. For example, "C:\U2\UV\XDEMO\TEST". 
  - "arguments": put additional debugging online· here. Please refer to your UniVerse / UniData user documentation for more details. By default, this setting doesn’t appear in the configuration file, but can be added manually if needed.
 
+For online mode create build task as mentioned in [Online Editing](./OnlineEditing.md)
+
 From the **Run and Debug** view, set the launch option to **Launch Program**. Then press the F5 button to start debugging. 
 
 ![](../img/debug_launch_program.png)
@@ -99,6 +103,10 @@ From the **Run and Debug** view, set the launch option to **Launch Program**. Th
 ## Support Operations
 
 The following debug operations are supported.
+
+>**Note**
+>
+>In online mode, the source code is accessed virtually. When debugging starts, the source code always comes from the U2 debugger service, (which is why a different file is launched for debugging).
 
 ### Setting break point
 
@@ -113,6 +121,12 @@ When debugging starts, you can set a break point by:
 You can find all break points in **BREAKPOINTS** panel of the **Run and Debug** view.
 
 ![](../img/debug_breakpoints_view.png)
+
+>**Note**
+>
+>In online mode, a different file is launched for debugging, so and breakpoints are applied to that file as well. As a result, the user will see the same breakpoints in the "BREAKPOINTS" view, but in two different files.
+>
+> ![](../img/online_debug_multiple_breakpoints.png)
 
 The program will stop when the process encounters a break point.
 

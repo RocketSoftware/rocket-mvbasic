@@ -113,6 +113,30 @@ In the Configure Patterns option, enter the account/folder/file name patterns yo
 **View Filtered Results**:
 * Expand the specific server or folder to see only the filtered accounts, folders, and files.
 
+### Search BASIC programs
+
+Users can search for BASIC programs within a folder. Users can specify a search pattern or text to find specific files. This feature is designed for quick access to files, eliminating the need to scroll through the VS Code file view.
+
+In the Search option, enter the file name pattern you want to match. Pattern matching characters are:
+ * \* = any string
+ * ? = any character
+
+#### **Steps to Search BASIC programs**
+**Access Configuration**:
+* Right-click the folder inside Account.
+* Select the "Search" option.
+
+![](../img/online_editing_search_option.png)
+
+**Enter Search Pattern**:
+* Enter the file name or search criteria and click Enter.
+
+![](../img/online_editing_search_criteria.png)
+
+**View Search Results**:
+* Users can view search result in "SEARCH RESULTS" view and open files directly from that view.
+![](../img/online_editing_search_results_view.png)
+
 
 ### Editing BASIC programs
 
@@ -157,7 +181,7 @@ Clicking on 'Catalog' will use the parameters from the basic.mvbasic.json file t
 
 #### Compile / Catalog with configuration file
 The configuration file can help a user to compile and catalog multiple files.
-Select “Configure Default Build Task…” from the Terminal menu, and then select “BASIC: Online Editing build” to create a build task.
+Select “Configure Default Build Task…” from the Terminal menu, and then select “BASIC: Build” to create a build task.
 
 ![](../img/online_editing_compile_2.png)
 
@@ -166,6 +190,9 @@ Select “Configure Default Build Task…” from the Terminal menu, and then se
 A default task file will be generated. For more information on this file, see the “Compile” documentation.
 
 ![](../img/online_editing_compile_4.png)
+
+### Debugging in online mode
+Refer [Debugging](./Debugging.md) for debugging steps.
 
 ### Limitation:
 Most of the LSP (Language Server Protocol) features are supported, but there are some limitations. 
