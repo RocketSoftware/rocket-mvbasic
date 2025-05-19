@@ -1,5 +1,11 @@
 # Change Log
 
+## Version 2.7.0: April 22, 2025
+ - Separate compile and catalog option
+ - Support for debugging BASIC program files in online editing mode. (support with UV 11.4.1 and upcoming 14.2.1)
+ - Support for keyword search within U2 accounts via right-click context menu.
+ - Customer bug fixes
+
 ## Version 2.6.0: November 21, 2024
  - Enhancement: UD compilation will read parameters from basic.mvbasic.json file.
  - Support pattern configuration for account, folder and file filtering (only in online mode).
