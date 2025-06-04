@@ -16,6 +16,8 @@ Versions: For offline mode debugging 8.2.4 or higher and for online mode debuggi
 
 Platforms: Windows, Linux, AIX
 
+**Note:** For more details, please refer [Rocket-MV-BASIC-Extension-features-support-matrix](https://my.rocketsoftware.com/RocketCommunity/s/article/Rocket-MV-BASIC-Extension-features-support-matrix).
+
 ### A high performance debugging feature
 
 A high-performance debugging feature is supported on UniVerse 11.4.1 and UniData 8.3.1. To use this feature, you must upgrade to UniVerse 11.4.1 / UniData 8.3.1 or higher version. Please see [Debugging Binaries Releases](./DAPRelease.md) for more details.
@@ -40,7 +42,7 @@ Before debugging, open the BASIC program first.
 
 ### Debugging without a launch file
 > **Note** : 
-> Debugging without a launch file works properly in offline mode only; in online mode, the behavior is uncertain.
+> Debugging without a launch file works properly in offline mode only; in online mode, please create launch file.
 
  - Click the **Run and Debug** icon on from the left menu bar. The **Run and Debug** view will display if you have no `launch.json` file in your project.
 
@@ -55,7 +57,17 @@ On successful compilation, the debugging process will stop at the first runnable
 
 ### Debug with launch file
 
-You can also configure a `launch.json` file for debugging.
+You have the option to configure the type and task parameters in the launch.json file which helps VS Code know how to run and debug your code.
+
+`launch.json` file helps VSCode know how to run and debug your code.
+ 
+`launch.json` in MVVS has the type and task parameters, it means that VSCode is first running a task before starting the debugging process.
+ 
+type: The type parameter tells VS Code what type of code you're working with. Valid values are: MVBasic, Python. 
+
+task: The task parameter is a step that needs to happen before debugging starts, like preparing your code.
+ 
+You have the option to tell VS Code which debugging settings to use in the launch.json file.
 
 In the **Run and Debug** view, click the create a `launch.json` file link. 
 
@@ -65,7 +77,7 @@ Select the **MVBasic Debug** from the Select environment dialog box.
 
 ![](../img/debug_type.png)
 
-Then a default debugging configuration file launch.json will be generated in directory .vscode.
+A default debugging configuration file named launch.json is generated in directory .vscode and contains the following. 
 
 ```
 {
@@ -94,7 +106,10 @@ Then a default debugging configuration file launch.json will be generated in dir
  - "dependencies": put other BASIC program files' absolute paths here if they need to be compiled before debugging. For example, "C:\U2\UV\XDEMO\TEST". 
  - "arguments": put additional debugging online· here. Please refer to your UniVerse / UniData user documentation for more details. By default, this setting doesn’t appear in the configuration file, but can be added manually if needed.
 
-For online mode create build task as mentioned in [Online Editing](./OnlineEditing.md)
+>#### To enable debugging in online mode, the `tasks.json` file is required.
+>For online mode, create a build task as shown in [Online Editing](./OnlineEditing.md).
+>
+>For more details on task refer [Compile](./Compile.md).
 
 From the **Run and Debug** view, set the launch option to **Launch Program**. Then press the F5 button to start debugging. 
 

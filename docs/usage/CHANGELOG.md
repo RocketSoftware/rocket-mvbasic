@@ -1,5 +1,10 @@
 # Change Log
 
+## Version 2.7.1: June 04, 2025
+ - Added VS Code language auto-detection (online mode)
+ - Auto-close files on server disconnect in online mode
+ - Customer bug fixes
+
 ## Version 2.7.0: April 22, 2025
  - Separate compile and catalog option
  - Support for debugging BASIC program files in online editing mode. (support with UV 11.4.1 and upcoming 14.2.1)

@@ -142,7 +142,64 @@ In the Search option, enter the file name pattern you want to match. Pattern mat
 
 Once connected to a U2 server, you can expand the server node to access and view the BASIC program files stored on that server.
 
-![](../img/online_editing_edit_open.png)
+When you open a program file for editing, the MVVS extension automatically detects the language based on the file extension:
+
+- Files with a `.py` extension are recognized as **Python**.
+- Files with a `.json` extension are recognized as **JSON**.
+- **BASIC files**, however, are **not auto-detected** and you must manually set the language mode to **Rocket MV BASIC**.
+
+There are **three ways** to set the language mode for BASIC files:
+
+#### 1. Configure language association in `settings.json`
+
+You can configure VS Code to recognize BASIC files by associating filepaths or names with the Rocket MV BASIC language.
+
+- **To apply the language mode to all files under the `BP` folder**:
+  ```json
+  "files.associations": {
+      "**/BP/**": "rocket-mvbasic"
+  }
+- **To apply it to a specific file, such as TESTSUM**:
+  ```json
+  "files.associations": {
+    "TESTSUM": "rocket-mvbasic"
+  }
+- **Full example configuration:**:
+    ```json
+    {
+        "[rocket-mvbasic]": {
+            "editor.codeLens": false
+        },
+        "files.associations": {
+            "**/BP/**": "rocket-mvbasic",
+            "**/.rmv/config/*.json": "jsonc"
+        },
+        "files.exclude": {
+            "**/.git": true,
+            "**/.svn": true,
+            "**/.hg": true,
+            "**/CVS": true,
+            "**/.DS_Store": true,
+            "**/Thumbs.db": true,
+            "**/.rmv/catalog/**": true,
+            "*/_*": false
+        }
+    }
+#### 2. Use the Command Palette
+You can manually change the language mode using the VS Code Command Palette:
+
+ 1. Press Ctrl+Shift+P to open the Command Palette.
+ 2. Type and select “Change Language Mode”.
+ 3. Choose “Rocket MV BASIC” from the list of languages.
+
+#### 3. Use the status bar language selector
+You can also change the language mode via the status bar.
+At the bottom-right of VS Code, you'll see the current language mode, for example, Plain Text, JSON.
+
+ 1. Click on the current language mode. A language selection menu displays.
+ 2. Select Rocket MV BASIC from the list.
+
+![](../img/lang_mode.png)
 
 You can also Add or Delete BASIC files:
 
