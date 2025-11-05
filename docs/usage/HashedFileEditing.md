@@ -100,4 +100,5 @@ A confirmation message displays to ensure you want to proceed with the deletion.
 When a record is locked:
 
 1. The **Release Record** button becomes visible. Click this button to release the exclusive lock on the record, allowing other users to edit it.
+
 ---

@@ -13,12 +13,12 @@ nav:
         - 'Debugging': 'usage/Debugging.md'
         - 'Document Symbol': 'usage/DocumentSymbol.md'
         - 'Diagnostics': usage/Diagnostics.md
-        - 'Hash File Edit Locking': 'usage/HashedFileEditing.md'
         - 'File Locking': 'usage/FileLock.md'
         - 'Folding': 'usage/Folding.md'
         - 'Formatting': 'usage/Formatting.md'
         - 'GaraSign': 'usage/GaraSign.md'
         - 'Group View': 'usage/GroupView.md'
+        - 'Hash File Edit Locking': 'usage/HashedFileEditing.md'
         - 'Hover': 'usage/Hover.md'
         - 'INCLUDE settings': 'usage/Include.md'
         - 'Logging': 'usage/Logging.md'

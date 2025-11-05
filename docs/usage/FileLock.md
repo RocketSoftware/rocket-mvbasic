@@ -50,9 +50,8 @@ Continuous locks can:
 If another user already has the file open with an exclusive lock, any subsequent user attempting to open the same file will see the following message:
 
 **Message:**
-```
-This file is locked by another user.
-```
+> This file is locked by another user.
+
 ![](../img/optimistic_lock.png)
 
 The file open operation will be aborted, and the file will not open in the editor.
@@ -101,10 +100,9 @@ Exclusive Mode (`file_lock_state` = ON):
 When the same file on the same server is edited by another user, the system will notify you with the following message:
 
 **Message:**
-```
-The file "fileName" in "dirName" has been modified by another user on the server.
+> The file "fileName" in "dirName" has been modified by another user on the server.
 Click Okay to overwrite the file.
-```
+
 ![](../img/optimistic_lockByAnotherUser.png)
 
 **User Actions & Outcomes:**
