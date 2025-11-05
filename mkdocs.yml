@@ -18,7 +18,7 @@ nav:
         - 'Formatting': 'usage/Formatting.md'
         - 'GaraSign': 'usage/GaraSign.md'
         - 'Group View': 'usage/GroupView.md'
-        - 'Hash File Edit Locking': 'usage/HashedFileEditing.md'
+        - 'Hashed File Editing': 'usage/HashedFileEditing.md'
         - 'Hover': 'usage/Hover.md'
         - 'INCLUDE settings': 'usage/Include.md'
         - 'Logging': 'usage/Logging.md'
