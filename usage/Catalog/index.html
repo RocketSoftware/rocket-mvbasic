@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Catalog Settings - Rocket MV BASIC</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Rocket MV BASIC</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Usage</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Accounts/" class="dropdown-item">Accounts Settings</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Catalog Settings</a>
+</li>
+                                    
+<li>
+    <a href="../Compile/" class="dropdown-item">Compile</a>
+</li>
+                                    
+<li>
+    <a href="../Configuration/" class="dropdown-item">Configuration</a>
+</li>
+                                    
+<li>
+    <a href="../CodeLens/" class="dropdown-item">Code Lens</a>
+</li>
+                                    
+<li>
+    <a href="../Compatibility/" class="dropdown-item">Compatibility</a>
+</li>
+                                    
+<li>
+    <a href="../CustomizeDoc/" class="dropdown-item">Customized Documentation</a>
+</li>
+                                    
+<li>
+    <a href="../DAPRelease/" class="dropdown-item">DAP Binaries</a>
+</li>
+                                    
+<li>
+    <a href="../Debugging/" class="dropdown-item">Debugging</a>
+</li>
+                                    
+<li>
+    <a href="../DocumentSymbol/" class="dropdown-item">Document Symbol</a>
+</li>
+                                    
+<li>
+    <a href="../Diagnostics/" class="dropdown-item">Diagnostics</a>
+</li>
+                                    
+<li>
+    <a href="../FileLock/" class="dropdown-item">File Locking</a>
+</li>
+                                    
+<li>
+    <a href="../Folding/" class="dropdown-item">Folding</a>
+</li>
+                                    
+<li>
+    <a href="../Formatting/" class="dropdown-item">Formatting</a>
+</li>
+                                    
+<li>
+    <a href="../GaraSign/" class="dropdown-item">GaraSign</a>
+</li>
+                                    
+<li>
+    <a href="../GroupView/" class="dropdown-item">Group View</a>
+</li>
+                                    
+<li>
+    <a href="../HashedFileEditing/" class="dropdown-item">Hashed File Editing</a>
+</li>
+                                    
+<li>
+    <a href="../Hover/" class="dropdown-item">Hover</a>
+</li>
+                                    
+<li>
+    <a href="../Include/" class="dropdown-item">INCLUDE settings</a>
+</li>
+                                    
+<li>
+    <a href="../Logging/" class="dropdown-item">Logging</a>
+</li>
+                                    
+<li>
+    <a href="../MultipleWorkspaceFolders/" class="dropdown-item">Multiple Workspace Folders</a>
+</li>
+                                    
+<li>
+    <a href="../OnlineEditing/" class="dropdown-item">Online Editing</a>
+</li>
+                                    
+<li>
+    <a href="../References/" class="dropdown-item">References</a>
+</li>
+                                    
+<li>
+    <a href="../SemanticHighlighting/" class="dropdown-item">Semantic Highlighting</a>
+</li>
+                                    
+<li>
+    <a href="../SignatureHelp/" class="dropdown-item">Signature Help</a>
+</li>
+                                    
+<li>
+    <a href="../Completion/" class="dropdown-item">Using Auto Completion</a>
+</li>
+                                    
+<li>
+    <a href="../Definition/" class="dropdown-item">Using Definition</a>
+</li>
+                                    
+<li>
+    <a href="../Rename/" class="dropdown-item">Using Rename</a>
+</li>
+                                    
+<li>
+    <a href="../Connection/" class="dropdown-item">U2 Connection Settings</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../FAQ/" class="nav-link">FAQ</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Change Log</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../CHANGELOG/" class="dropdown-item">Change Log</a>
+</li>
+                                    
+<li>
+    <a href="../KnownIssues/" class="dropdown-item">Known Issues</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Accounts/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Compile/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#catalog-settings-in-dbmvbasicjson-file" class="nav-link">Catalog Settings in "db.mvbasic.json" file</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#quick-catalog" class="nav-link">Quick Catalog</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#catalog-settings-in-basicmvbasicjson-file" class="nav-link">Catalog Settings in "basic.mvbasic.json" file</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="catalog-settings-in-dbmvbasicjson-file">Catalog Settings in "db.mvbasic.json" file</h2>
+<p>Please refer to <a href="../Configuration/">Configuration</a> to open the database related configuration file and then find the "catalog" section.</p>
+<pre><code>&quot;catalog&quot;: {
+    &quot;readServerInternal&quot;: 5, 
+    &quot;isSearchAllDirs&quot;: false,
+    &quot;programDirs&quot;: [
+        {
+            &quot;fileName&quot;: &quot;&quot;
+        },
+        {
+            &quot;account&quot;: &quot;&quot;,
+            &quot;fileName&quot;: &quot;&quot;
+        }
+    ],
+    &quot;programMapping&quot;: [
+        {
+            &quot;catalogName&quot;: &quot;&quot;,
+            &quot;program&quot;: &quot;&quot;
+        },
+        {
+            &quot;catalogName&quot;: &quot;&quot;,
+            &quot;fileName&quot;: &quot;&quot;,
+            &quot;program&quot;: &quot;&quot;
+        },
+        {
+            &quot;catalogName&quot;: &quot;&quot;,
+            &quot;account&quot;: &quot;&quot;,
+            &quot;fileName&quot;: &quot;&quot;,
+            &quot;program&quot;: &quot;&quot;
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li><code>readServerInternal</code>: the extension requests catalog related information from server per <em>X</em> seconds when connected to a U2 server. <em>X</em> is the value you set to this setting. By default <em>X</em> is 5 seconds. </li>
+<li><code>isSearchAllDirs</code>: specifies whether to search all sub-folders to find catalog programs in the current account folder. By default, the value is false, and only the folder containing the file current being edited is searched. If set to true, all sub-folders will be searched.</li>
+<li><code>programDirs</code>: sets the account and folder in which to search for catalog files. You can add multiple items in this setting.<ul>
+<li><code>fileName</code>: file folder name. </li>
+<li><code>account</code>: account folder name.</li>
+</ul>
+</li>
+<li><code>programMapping</code>:<ul>
+<li><code>catalogName</code>: catalog program name; sometimes this is different from the source code file name.</li>
+<li><code>program</code>: catalog program file name, which is the source code file name.</li>
+<li><code>account</code>: specifies the account that contains the catalog program file. You can configure multiple account folders in the configuration file. Please refer to <a href="../Accounts/">Accounts Settings</a> for more details.</li>
+<li><code>fileName</code>: file folder name.</li>
+</ul>
+</li>
+</ul>
+<h3 id="examples">Examples</h3>
+<p><strong>Example 1</strong>. Search for catalog programs in another source code folder in the current account folder. For example, add a folder named "OtherFolder" to search for catalog programs in current account folder:</p>
+<pre><code>"programDirs": [
+    {
+        "fileName": "OtherFolder"
+    }
+]
+</code></pre>
+<p><strong>Example 2</strong>. Search for catalog programs in another account’s folders. For example, add the folder "OtherFolder" (from the “DEMO” account) to search for catalog program files:</p>
+<pre><code>"programDirs": [
+    {
+        "account": "DEMO",
+        "fileName": "OtherFolder"
+    }
+]
+</code></pre>
+<p><strong>Example 3</strong>. Create a mapping relationship between the names of catalog programs and their source files. For example, to map the catalog program named "CtlgProgram" to the source code file named "SourceCode", the settings should be:</p>
+<pre><code>"programMapping": [
+    {
+        "catalogName": "CtlgProgram",
+        "program": "SourceCode"
+    }
+]
+</code></pre>
+<p><strong>Example 4</strong>. Create a mapping relationship between the names of catalog programs and their source files, where the source code is in another account folder. For example, to map the catalog program named "CtlgProgram" to the source code file named "SourceCode" (which exists in the “BP” file folder of the "DEMO" account ), the settings should be:</p>
+<pre><code>&quot;programMapping&quot;: [
+    {
+        &quot;catalogName&quot;: &quot;CtlgProgram&quot;,
+        &quot;file&quot;: &quot;BP&quot;, 
+        &quot;program&quot;: &quot;SourceCode&quot;
+    }
+]
+</code></pre>
+<p><strong>Example 5</strong>. Create a mapping relationship between the names of catalog programs and their source files, where the source code file is in another file folder of the current account. For example, to map the catalog program named "CtlgProgram" to the source code file named "SourceCode" (which exists in the “BP”folder), the settings should be:</p>
+<pre><code>&quot;programMapping&quot;: [
+    {
+        &quot;catalogName&quot;: &quot;CtlgProgram&quot;,
+        &quot;account&quot;: &quot;DEMO&quot;
+        &quot;file&quot;: &quot;BP&quot;, 
+        &quot;program&quot;: &quot;SourceCode&quot;
+    }
+]
+</code></pre>
+<h2 id="quick-catalog">Quick Catalog</h2>
+<p>Users can right-click a BASIC program file and select "Catalog" to catalog a single file for both Universe and Unidata databases </p>
+<p><img alt="" src="../../img/catalog.png" /></p>
+<h2 id="catalog-settings-in-basicmvbasicjson-file">Catalog Settings in "basic.mvbasic.json" file</h2>
+<p>Cataloging a program makes it available to all users or to users of one account. You must catalog a program before another BASIC program can call it as an external subroutine.</p>
+<pre><code>{
+    &quot;catalog&quot;: &quot;&quot;,
+    &quot;arguments&quot;: &quot;&quot;,
+    &quot;initialCharacter&quot;: &quot;&quot;,
+    &quot;ud_compile_flavor&quot;: &quot;&quot;
+}
+</code></pre>
+<h3 id="cataloging-in-universe">Cataloging in Universe</h3>
+<p><strong>Local Catalog</strong>: Local cataloging creates a VOC entry for the program. This entry is a verb that points to the file and
+record containing the object code for the cataloged program. You can access a locally cataloged
+program only from the account in which it was cataloged, unless you copy the VOC entry for the
+catalog name to another account. Because cataloging a program locally only creates a VOC entry
+pointing to the object file, you need not recatalog the program every time you recompile it</p>
+<pre><code>{
+    "catalog": "local",
+    "arguments": "",
+    "initialCharacter": "",
+    "ud_compile_flavor": ""
+}
+</code></pre>
+<p><strong>Normal Catalog</strong>: Normal cataloging copies the specified object record to the system catalog space, making it available
+to all users. The name of the program in the catalog is in the following format:
+<em>account</em>catalog.name
+account is the name of the current account directory.
+Normal cataloging also creates a VOC entry for the catalog name. This entry is a verb that contains the
+name <em>account</em>catalog.name in field 2.
+Because normal cataloging copies the object code to the system catalog space, you must recatalog
+the program every time you recompile it.
+To catalog a program normally, specify a catalog.name that does not begin with the characters *, -, $,
+or !, and do not specify the keyword LOCAL.</p>
+<pre><code>{
+    "catalog": "normal",
+    "arguments": "",
+    "initialCharacter": "",
+    "ud_compile_flavor": ""
+}
+</code></pre>
+<p><strong>Global Catalog</strong>: Like normal cataloging, global cataloging copies the specified object record to the system catalog
+space, making it available to all users. The name of the program in the catalog is in the following
+format:
+<em>catalog.name
+-catalog.name
+$catalog.name
+!catalog.name
+Global cataloging does not create a VOC entry for the catalog name. The UniVerse command processor
+and the run machine look in the system catalog space for verbs or external subroutines with names
+that have an initial </em>, - , $, or ! character. Because globally cataloged subroutines are accessed without
+a VOC entry, they are available to all accounts on the system as soon as they are cataloged.
+Because global cataloging copies the object code to the system catalog space, you must recatalog the
+program every time you recompile it.
+To catalog a program globally, specify a catalog.name beginning with *, -, $, or !, and do not specify
+the keyword LOCAL.</p>
+<pre><code>{
+    "catalog": "global",
+    "arguments": "",
+    "initialCharacter": "*",
+    "ud_compile_flavor": ""
+}
+</code></pre>
+<h3 id="cataloging-in-unidata">Cataloging in Unidata</h3>
+<p><strong>Direct Catalog</strong>: Catalogs the program locally without copying it to the local or system CTLG directory. Instead, UniData creates an entry in the VOC file that is a pointer to the directory where the program resides.</p>
+<pre><code>{
+    "catalog": "direct",
+    "arguments": "",
+    "initialCharacter": "",
+    "ud_compile_flavor": ""
+}
+</code></pre>
+<p><strong>Local Catalog</strong>: Catalogs the program locally and places a copy of it in a subdirectory of the local CTLG catalog (in the account where the user is running the program). UniData creates a VOC pointer to the subdirectory.UniData creates the CTLG and the subdirectory, if they do not
+already exist.</p>
+<pre><code>{
+    "catalog": "local",
+    "arguments": "",
+    "initialCharacter": "",
+    "ud_compile_flavor": ""
+}
+</code></pre>
+<p><strong>Note 1 :</strong> The parameter "arguments" in the basic.mvbasic.json file is currently not supported by the catalog feature. By default, the argument is set to FORCE for both the UV and UD databases.</p>
+<p><strong>Note 2 :</strong> If the <code>./rmv</code> configuration exists, the <code>basic.mvbasic.json</code> file will be created during the first catalog attempt. If the <code>./rmv</code> configuration does not exist, the <code>config/basic.mvbasic.json</code> file will be created when the extension is activated.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
