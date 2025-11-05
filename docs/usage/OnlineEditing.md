@@ -1,16 +1,16 @@
 ## Online Editing
 
-Online Editing is an additional method for modifying BASIC program files on the U2 server. With this feature, users can remotely edit BASIC program files on the U2 server instead of having to retrieve or upload files from a repository. However, it is important to note that users cannot simultaneously utilize this mode alongside the traditional editing mode.
+Online Editing is an additional method for modifying BASIC program files on the U2 server. With this feature, users can remotely edit BASIC program files on the U2 server instead of having to retrieve or upload files from a repository. However, you cannot simultaneously utilize this mode alongside the traditional editing mode.
 
 **Note:** VS Code version 1.75 or higher is required to use this feature. Only Windows is supported in this preview version.
 
 ### Start Using
 
-Before utilizing this feature, it is necessary for the user to create a new empty folder. This folder will be used to hold the project-related files, including cache files and configuration files, that will be created by this extension. Alternatively, users may opt to open an existing folder dedicated to online editing projects.
+Before utilizing this feature, you must create a new empty folder. This folder will be used to hold the project-related files, including cache files and configuration files, that will be created by this extension. Alternatively, you can opt to open an existing folder dedicated to online editing projects.
 
-**Note:** The presence of both the ".rmv" folder and the ".rmvonline" folder in the same directory should be avoided, as it may result in unexpected issues.
+**Note:** Do not put both the ".rmv" folder and the ".rmvonline" folder in the same directory as this causes unexpected issues.
 
-Once the folder is set up, users can initiate the Online Editing functionality by clicking on the Rocket icon located in the left sidebar.
+Once the folder is set up, initiate the Online Editing functionality by clicking on the Rocket icon located in the left sidebar.
 
 ![](../img/online_editing_icon.png)
 
@@ -30,7 +30,7 @@ If you open an online editing project folder or have initialized an empty folder
 
 ![](../img/online_editing_configure_file.png)
 
-Using this feature, multiple U2 servers are supported. However, it is important to note that you can only connect to one server at a time.
+Using this feature, multiple U2 servers are supported. However, it is important to note that you can connect to only one server at a time.
 
 ### Configure Server
 
@@ -46,7 +46,7 @@ By accessing the configuration file, you can perform actions such as adding, edi
 
 ![](../img/online_editing_server_3.png)
 
- - **"datasource"**: Must be either UNIVERSE or UNIDATA. In the online editing feature, you can only choose one data source. If you change the data source, the extension must be restarted for the change to take affect.
+ - **"datasource"**: Must be either UNIVERSE or UNIDATA. In the online editing feature, you can only choose one data source. If you change the data source, the extension must be restarted for the change to take effect.
  
  - **"address"**: Specify the address of the U2 server. 
  
@@ -58,6 +58,9 @@ By accessing the configuration file, you can perform actions such as adding, edi
  
  - **"port"**: By default, the port is set to 31438, but you can change this according to your U2 server configuration.
 
+ - **"account"**: The account name used for connecting to the U2 server. If left empty, you will need to provide it in an input box when connecting to the U2 server.
+   - ***Note:*** Previously, when connecting to a U2 server, the extension used the XDEMO account as the default account for UniVerse, and the demo account for UniData.
+
  - **"filterPatterns"**_(Optional)_: Used to specify filter patterns for Accounts, Folders and Files.
 
 There are additional methods available to edit the configuration file: 
@@ -68,7 +71,7 @@ There are additional methods available to edit the configuration file:
  
  - Right-click on a tree view node and select "Delete Server" to remove the configuration of the server from the list.
 
-After making changes to the configuration file, it is necessary to refresh the tree view for the modifications to take effect.
+After making changes to the configuration file, you must refresh the tree view for the modifications to take effect.
 
 ![](../img/online_editing_server_refresh.png)
 
@@ -77,8 +80,6 @@ After making changes to the configuration file, it is necessary to refresh the t
 To establish a connection, you can right-click on a U2 server node in the tree view and select "Connect". This will initiate the connection to the selected server.
 
 ![](../img/online_editing_connect.png)
-
-**Note:** When connecting to a U2 server, the extension uses the XDEMO account as default account for UniVerse, and the demo account for UniData. 
 
 If you wish to disconnect from a U2 server, right-click the corresponding server node in the tree view and select "Disconnect". This will terminate the connection to the server.
 
@@ -90,7 +91,7 @@ If you wish to disconnect from a U2 server, right-click the corresponding server
 
 ### Filtering
 
-Users can establish filters to filter out information which that they user do not want the MVVS to display. Users can configure MVVS to filter out certain file names. This is done to minimize the amount number of unnecessary files listed.
+You can establish filters to filter out information you do not want MVVS to display. You can configure MVVS to filter out certain filenames to minimize the number of unnecessary files listed.
 
 In the Configure Patterns option, enter the account/folder/file name patterns you want to match. Separate each pattern with a comma. Pattern matching characters are:
  * \* = any string
@@ -205,7 +206,7 @@ You can also Add or Delete BASIC files:
 
 ![](../img/online_editing_edit_files.png)
 
-**Note:** Please note that due to access permissions, certain files may not be displayed in the tree view. Additionally, it's important to be aware that not all folders displayed in the tree view will necessarily contain BASIC program files. This is not configurable.
+**Note:** Due to access permissions, certain files may not be displayed in the tree view. Additionally, it's important to be aware that not all folders displayed in the tree view will necessarily contain BASIC program files. This is not configurable.
 
 ### Synchronization 
 
@@ -217,7 +218,7 @@ Here is the synchronization process when editing a BASIC program file:
 
 3. When a user saves changes in the extension online editing mode, the extension will attempt to apply a WRITE lock to the file on the server side. If the application of this lock fails, a warning message will be displayed.
 
-4. After successfully applying the WRITE lock to the BASIC file on the server side, the extension will overwrite the corresponding file with the local copy of the BASIC program. All changes made on the server side will be overwritten without warning.
+4. After the WRITE lock to the BASIC file on the server side is successfully applied, the extension will overwrite the corresponding file with the local copy of the BASIC program. All changes made on the server side will be overwritten without warning.
 
 ### Compile and catalog
 Before using the compilation or catalog functions, a U2 database account must already connected.
@@ -227,17 +228,17 @@ Users can right-click a BASIC program file and select “” to compile a single
 
 ![](../img/catalog_compile.png)
 
-For UniData, there are multiple compilation commands for different flavors. Please refer [UD Compilation here](./Compile.md#unidata-compile-flavor-in-basicmvbasicjson-file)
+For UniData, there are multiple compilation commands for different flavors. Refer to [UD Compilation here](./Compile.md#unidata-compile-flavor-in-basicmvbasicjson-file)
 
 #### Quick catalog
-Users can right-click a BASIC program file and select "Catalog" to catalog a single file for both Universe and Unidata databases 
+Users can right-click a BASIC program file and select "Catalog" to catalog a single file for both Universe and Unidata databases. 
 
 ![](../img/catalog.png)
  
 Clicking on 'Catalog' will use the parameters from the basic.mvbasic.json file to catalog the file. If you need to change the catalog type, arguments, or initial character, please update the settings in this file. See [Catalog Settings in "basic.mvbasic.json" file](./Catalog.md#quick-catalog) for more information.
 
 #### Compile / Catalog with configuration file
-The configuration file can help a user to compile and catalog multiple files.
+The configuration file can help you to compile and catalog multiple files.
 Select “Configure Default Build Task…” from the Terminal menu, and then select “BASIC: Build” to create a build task.
 
 ![](../img/online_editing_compile_2.png)
@@ -256,12 +257,12 @@ Most of the LSP (Language Server Protocol) features are supported, but there are
 
  - Features like Go to Definition, Rename, and Find References may not be able to locate references or definitions in other files. 
 
- - Debugging related functions are currently not supported. 
+ - Debugging related functions are not supported. 
 
- - Custom documentation features are also not supported now. 
+ - Custom documentation features are not supported. 
 
- - Please note that only one instance of VS Code can be run at a time.
+ - Only one instance of VS Code can be run at a time.
 
  - Do not click on another account's folder before completing the cataloging of the current BASIC program. Doing so may result in cataloging the wrong BASIC program on the U2 server side. 
 
- - The parameter "arguments" in the basic.mvbasic.json file is currently not supported by the catalog feature. By default, the argument is set to FORCE for both the UV and UD databases.
+ - The parameter "arguments" in the basic.mvbasic.json file is not supported by the catalog feature. By default, the argument is set to FORCE for both the UV and UD databases.

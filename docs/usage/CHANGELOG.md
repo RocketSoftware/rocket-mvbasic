@@ -1,5 +1,12 @@
 # Change Log
 
+## Version 2.8.0: November 05, 2025
+ - Support for TRY-CATCH syntax introduced in UV 14.2.1
+ - Support for dynamic object syntax introduced in UV 14.2.1
+ - Support for hashed file record operations like Edit, update, and delete records and Optimistic locking for concurrent access
+ - Support for optimistic and pessimistic locking mechanisms on file
+ - Customer Bug fixes
+
 ## Version 2.7.1: June 04, 2025
  - Added VS Code language auto-detection (online mode)
  - Auto-close files on server disconnect in online mode
