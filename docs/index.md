@@ -118,7 +118,7 @@ Click the links below to learn more about using each feature. You can also refer
 - [Signature help](./usage/SignatureHelp.md)
 - [Online Editing](./usage/OnlineEditing.md)
 - [File Locking](./usage/FileLock.md)
-- [Hash File Edit Locking]('./usage/HashedFileEditing.md)
+- [Hash File Edit Locking](./usage/HashedFileEditing.md)
 
 **Development Environment**
 
