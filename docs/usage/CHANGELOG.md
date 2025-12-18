@@ -1,5 +1,10 @@
 # Change Log
 
+## Version 2.8.1: December 18, 2025
+ - Resolved high CPU usage issue during online mode
+ - Fixed UniData Pick compilation
+ - Addressed locking condition
+
 ## Version 2.8.0: November 05, 2025
  - Support for TRY-CATCH syntax introduced in UV 14.2.1
  - Support for dynamic object syntax introduced in UV 14.2.1
