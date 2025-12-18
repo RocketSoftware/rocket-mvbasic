@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Debugging - Rocket MV BASIC</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Rocket MV BASIC</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Usage</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Accounts/" class="dropdown-item">Accounts Settings</a>
+</li>
+                                    
+<li>
+    <a href="../Catalog/" class="dropdown-item">Catalog Settings</a>
+</li>
+                                    
+<li>
+    <a href="../Compile/" class="dropdown-item">Compile</a>
+</li>
+                                    
+<li>
+    <a href="../Configuration/" class="dropdown-item">Configuration</a>
+</li>
+                                    
+<li>
+    <a href="../CodeLens/" class="dropdown-item">Code Lens</a>
+</li>
+                                    
+<li>
+    <a href="../Compatibility/" class="dropdown-item">Compatibility</a>
+</li>
+                                    
+<li>
+    <a href="../CustomizeDoc/" class="dropdown-item">Customized Documentation</a>
+</li>
+                                    
+<li>
+    <a href="../DAPRelease/" class="dropdown-item">DAP Binaries</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Debugging</a>
+</li>
+                                    
+<li>
+    <a href="../DocumentSymbol/" class="dropdown-item">Document Symbol</a>
+</li>
+                                    
+<li>
+    <a href="../Diagnostics/" class="dropdown-item">Diagnostics</a>
+</li>
+                                    
+<li>
+    <a href="../FileLock/" class="dropdown-item">File Locking</a>
+</li>
+                                    
+<li>
+    <a href="../Folding/" class="dropdown-item">Folding</a>
+</li>
+                                    
+<li>
+    <a href="../Formatting/" class="dropdown-item">Formatting</a>
+</li>
+                                    
+<li>
+    <a href="../GaraSign/" class="dropdown-item">GaraSign</a>
+</li>
+                                    
+<li>
+    <a href="../GroupView/" class="dropdown-item">Group View</a>
+</li>
+                                    
+<li>
+    <a href="../HashedFileEditing/" class="dropdown-item">Hashed File Editing</a>
+</li>
+                                    
+<li>
+    <a href="../Hover/" class="dropdown-item">Hover</a>
+</li>
+                                    
+<li>
+    <a href="../Include/" class="dropdown-item">INCLUDE settings</a>
+</li>
+                                    
+<li>
+    <a href="../Logging/" class="dropdown-item">Logging</a>
+</li>
+                                    
+<li>
+    <a href="../MultipleWorkspaceFolders/" class="dropdown-item">Multiple Workspace Folders</a>
+</li>
+                                    
+<li>
+    <a href="../OnlineEditing/" class="dropdown-item">Online Editing</a>
+</li>
+                                    
+<li>
+    <a href="../References/" class="dropdown-item">References</a>
+</li>
+                                    
+<li>
+    <a href="../SemanticHighlighting/" class="dropdown-item">Semantic Highlighting</a>
+</li>
+                                    
+<li>
+    <a href="../SignatureHelp/" class="dropdown-item">Signature Help</a>
+</li>
+                                    
+<li>
+    <a href="../Completion/" class="dropdown-item">Using Auto Completion</a>
+</li>
+                                    
+<li>
+    <a href="../Definition/" class="dropdown-item">Using Definition</a>
+</li>
+                                    
+<li>
+    <a href="../Rename/" class="dropdown-item">Using Rename</a>
+</li>
+                                    
+<li>
+    <a href="../Connection/" class="dropdown-item">U2 Connection Settings</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../FAQ/" class="nav-link">FAQ</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Change Log</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../CHANGELOG/" class="dropdown-item">Change Log</a>
+</li>
+                                    
+<li>
+    <a href="../KnownIssues/" class="dropdown-item">Known Issues</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../DAPRelease/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../DocumentSymbol/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#debugging" class="nav-link">Debugging</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#start-debugging" class="nav-link">Start Debugging</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#support-operations" class="nav-link">Support Operations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#restart-debug" class="nav-link">Restart debug</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="debugging">Debugging</h2>
+<p>With the debugging function, users can easily debug BASIC programs, as well as observe and track the results and changes to variables for each step when running a BASIC program. </p>
+<p>The following U2 server versions and platforms are supported:</p>
+<h3 id="universe">UniVerse</h3>
+<p>Versions: For offline mode debugging 11.3.2 or higher and for online mode debugging 11.4.1 and higher</p>
+<p>Platforms: Windows, Linux, AIX</p>
+<h3 id="unidata">UniData</h3>
+<p>Versions: For offline mode debugging 8.2.4 or higher and for online mode debugging 8.3.1 and higher</p>
+<p>Platforms: Windows, Linux, AIX</p>
+<p><strong>Note:</strong> For more details, please refer <a href="https://my.rocketsoftware.com/RocketCommunity/s/article/Rocket-MV-BASIC-Extension-features-support-matrix">Rocket-MV-BASIC-Extension-features-support-matrix</a>.</p>
+<h3 id="a-high-performance-debugging-feature">A high performance debugging feature</h3>
+<p>A high-performance debugging feature is supported on UniVerse 11.4.1 and UniData 8.3.1. To use this feature, you must upgrade to UniVerse 11.4.1 / UniData 8.3.1 or higher version. Please see <a href="../DAPRelease/">Debugging Binaries Releases</a> for more details.</p>
+<h2 id="start-debugging">Start Debugging</h2>
+<p><strong>Note</strong>: You should not debug BASIC subroutines directly, because this not allowed in UniVerse and UniData.</p>
+<h3 id="connecting-to-a-u2-server-account-folder">Connecting to a U2 server account folder</h3>
+<p>Before using the debugging feature, you must connect to a U2 server account folder firstly. Please see the <a href="../Connection/">Connection section</a> for offline mode and <a href="../OnlineEditing/">Online Editing</a> for online mode to learn how to connect to a U2 server account.</p>
+<p><strong>Note</strong>: The debugging feature will not work if you only open a single BASIC program file in VS Code. You must open an account folder.</p>
+<h3 id="debugging-basic-files">Debugging BASIC files</h3>
+<p>There are 2 methods to debug a BASIC program file: debugging without a launch file and debugging with a launch file.</p>
+<p>Before debugging, open the BASIC program first.</p>
+<p><strong>Note</strong>: debugging a BASIC subroutine directly is not allowed.</p>
+<h3 id="debugging-without-a-launch-file">Debugging without a launch file</h3>
+<blockquote>
+<p><strong>Note</strong> : 
+Debugging without a launch file works properly in offline mode only; in online mode, please create launch file.</p>
+</blockquote>
+<ul>
+<li>
+<p>Click the <strong>Run and Debug</strong> icon on from the left menu bar. The <strong>Run and Debug</strong> view will display if you have no <code>launch.json</code> file in your project.</p>
+</li>
+<li>
+<p>Click the <strong>Run and Debug</strong> button to start debugging the currently focused BASIC program file. </p>
+</li>
+</ul>
+<p><img alt="" src="../../img/run_and_debug.png" /></p>
+<p>The BASIC program file will be compiled first.
+For UniData, there are different compilation flavors and it will read the compile flavor from basic.mvbasic.json, with the value set to: "ud_compile_flavor". <a href="../Compile/#unidata-compile-flavor-in-basicmvbasicjson-file">Please see this section to set ud_compile_flavor value.</a></p>
+<p>On successful compilation, the debugging process will stop at the first runnable line of code in the program file.</p>
+<h3 id="debug-with-launch-file">Debug with launch file</h3>
+<p>You have the option to configure the type and task parameters in the launch.json file which helps VS Code know how to run and debug your code.</p>
+<p><code>launch.json</code> file helps VSCode know how to run and debug your code.</p>
+<p><code>launch.json</code> in MVVS has the type and task parameters, it means that VSCode is first running a task before starting the debugging process.</p>
+<p>type: The type parameter tells VS Code what type of code you're working with. Valid values are: MVBasic, Python. </p>
+<p>task: The task parameter is a step that needs to happen before debugging starts, like preparing your code.</p>
+<p>You have the option to tell VS Code which debugging settings to use in the launch.json file.</p>
+<p>In the <strong>Run and Debug</strong> view, click the create a <code>launch.json</code> file link. </p>
+<p><img alt="" src="../../img/debug_launch_file.png" /></p>
+<p>Select the <strong>MVBasic Debug</strong> from the Select environment dialog box.</p>
+<p><img alt="" src="../../img/debug_type.png" /></p>
+<p>A default debugging configuration file named launch.json is generated in directory .vscode and contains the following. </p>
+<pre><code>{
+    &quot;version&quot;: &quot;0.2.0&quot;,
+    &quot;configurations&quot;: [
+        {
+            &quot;type&quot;: &quot;mvbasic&quot;,
+            &quot;request&quot;: &quot;launch&quot;,
+            &quot;name&quot;: &quot;Launch Program&quot;,
+            &quot;program&quot;: &quot;&quot;,
+            &quot;stopOnEntry&quot;: true,
+            &quot;preLaunchTask&quot;: &quot;BASIC: Build&quot;,
+            &quot;dependencies&quot;: [], 
+            &quot;arguments&quot;: &quot;&quot;
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>"type": "mvbasic" is required to build BASIC program files.</li>
+<li>"request": keep this value "launch" to launch a program.</li>
+<li>"name": this is the name of the launch task. You can change the name to other values.</li>
+<li>"program": if this value is empty, current focused file will be debugged. You can also set this value to another BASIC program file's absolute path. This file will be compiled before debugging.</li>
+<li>"stopOnEntry": used to control whether the program will be stopped at the first runnable line when start debugging. Currently only true is supported.</li>
+<li>"preLaunchTask": this is used to run pre-required task before debugging. In our extension, we use this setting to compile the BASIC program in setting "program" first.</li>
+<li>"dependencies": put other BASIC program files' absolute paths here if they need to be compiled before debugging. For example, "C:\U2\UV\XDEMO\TEST". </li>
+<li>"arguments": put additional debugging online· here. Please refer to your UniVerse / UniData user documentation for more details. By default, this setting doesn’t appear in the configuration file, but can be added manually if needed.</li>
+</ul>
+<blockquote>
+<h4 id="to-enable-debugging-in-online-mode-the-tasksjson-file-is-required">To enable debugging in online mode, the <code>tasks.json</code> file is required.</h4>
+<p>For online mode, create a build task as shown in <a href="../OnlineEditing/">Online Editing</a>.</p>
+<p>For more details on task refer <a href="../Compile/">Compile</a>.</p>
+</blockquote>
+<p>From the <strong>Run and Debug</strong> view, set the launch option to <strong>Launch Program</strong>. Then press the F5 button to start debugging. </p>
+<p><img alt="" src="../../img/debug_launch_program.png" /></p>
+<h2 id="support-operations">Support Operations</h2>
+<p>The following debug operations are supported.</p>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>In online mode, the source code is accessed virtually. When debugging starts, the source code always comes from the U2 debugger service, (which is why a different file is launched for debugging).</p>
+</blockquote>
+<h3 id="setting-break-point">Setting break point</h3>
+<p>When debugging starts, you can set a break point by:</p>
+<ul>
+<li>
+<p>Clicking the  head of a line</p>
+</li>
+<li>
+<p>Pressing the F9 key for an in-focus line.</p>
+</li>
+</ul>
+<p><img alt="" src="../../img/debug_set_breakpoint.png" /></p>
+<p>You can find all break points in <strong>BREAKPOINTS</strong> panel of the <strong>Run and Debug</strong> view.</p>
+<p><img alt="" src="../../img/debug_breakpoints_view.png" /></p>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>In online mode, a different file is launched for debugging, so and breakpoints are applied to that file as well. As a result, the user will see the same breakpoints in the "BREAKPOINTS" view, but in two different files.</p>
+<p><img alt="" src="../../img/online_debug_multiple_breakpoints.png" /></p>
+</blockquote>
+<p>The program will stop when the process encounters a break point.</p>
+<p><strong>Note</strong>: Condition breakpoints are not supported.</p>
+<h3 id="continue">Continue</h3>
+<p>When the process encounters a break point, the program will stop running. You can press the F5 key or click the Continue button from the debug panel to continue running the program. </p>
+<p><strong>Note</strong>: Program cannot jump out of a subroutine through this operation in UniVerse.</p>
+<p><img alt="" src="../../img/debug_continue.png" /></p>
+<h3 id="step-over">Step over</h3>
+<p>The step over function allows you to run the program line-by-line. Press the F10 button or click the Step Over button from the debug panel to run one line of the program.</p>
+<p><strong>Note</strong>: Program cannot jump out of a subroutine through this operation in UniVerse.</p>
+<p><img alt="" src="../../img/debug_step_over.png" /></p>
+<h3 id="step-into-and-step-out">Step into and step out</h3>
+<p>These two operations are still not stable. They partially work if breakpoints are set at CALL line. Please refer <a href="../KnownIssues/">Known Issues</a>.</p>
+<p><strong>Note</strong>: Program cannot jump out of a subroutine through <strong>Step Out</strong> operation in UniVerse.</p>
+<h2 id="restart-debug">Restart debug</h2>
+<p>Click <strong>restart</strong> button to restart debugging process.</p>
+<h3 id="stop-debugging">Stop debugging</h3>
+<p>Click the <strong>Stop</strong> button to stop the debugging process.</p>
+<p><img alt="" src="../../img/debug_stop.png" /></p>
+<h3 id="view-variables">View variables</h3>
+<p>When debugging starts, you can view all variables in the <strong>Run and Debug</strong> view. </p>
+<p>You can also change a variable's value by double-clicking it in the <strong>Run and Debug</strong> view (this only works on UniVerse 11.4.1 / UniData 8.3.1).</p>
+<p><img alt="" src="../../img/debug_variables.png" /></p>
+<p>If variables have no value or have not been initialized, the variable’s value is undefined.</p>
+<h3 id="watch-variables">Watch variables</h3>
+<p>You can also add variables to the <strong>WATCH</strong> panel.</p>
+<p>Click the plus (+) button from the <strong>WATCH</strong> panel and enter the variable name to display the variable’s value.</p>
+<p><img alt="" src="../../img/debug_add_watch.png" /></p>
+<p><strong>Note</strong>: Only variables are supported. Expressions are not supported.</p>
+<h3 id="handle-input-operation">Handle input operation</h3>
+<p>You can switch to the VS Code terminal to handle an INPUT statement during BASIC program running. </p>
+<p><img alt="" src="../../img/debug_input.png" /></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

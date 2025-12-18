@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Logging - Rocket MV BASIC</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Rocket MV BASIC</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Usage</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Accounts/" class="dropdown-item">Accounts Settings</a>
+</li>
+                                    
+<li>
+    <a href="../Catalog/" class="dropdown-item">Catalog Settings</a>
+</li>
+                                    
+<li>
+    <a href="../Compile/" class="dropdown-item">Compile</a>
+</li>
+                                    
+<li>
+    <a href="../Configuration/" class="dropdown-item">Configuration</a>
+</li>
+                                    
+<li>
+    <a href="../CodeLens/" class="dropdown-item">Code Lens</a>
+</li>
+                                    
+<li>
+    <a href="../Compatibility/" class="dropdown-item">Compatibility</a>
+</li>
+                                    
+<li>
+    <a href="../CustomizeDoc/" class="dropdown-item">Customized Documentation</a>
+</li>
+                                    
+<li>
+    <a href="../DAPRelease/" class="dropdown-item">DAP Binaries</a>
+</li>
+                                    
+<li>
+    <a href="../Debugging/" class="dropdown-item">Debugging</a>
+</li>
+                                    
+<li>
+    <a href="../DocumentSymbol/" class="dropdown-item">Document Symbol</a>
+</li>
+                                    
+<li>
+    <a href="../Diagnostics/" class="dropdown-item">Diagnostics</a>
+</li>
+                                    
+<li>
+    <a href="../FileLock/" class="dropdown-item">File Locking</a>
+</li>
+                                    
+<li>
+    <a href="../Folding/" class="dropdown-item">Folding</a>
+</li>
+                                    
+<li>
+    <a href="../Formatting/" class="dropdown-item">Formatting</a>
+</li>
+                                    
+<li>
+    <a href="../GaraSign/" class="dropdown-item">GaraSign</a>
+</li>
+                                    
+<li>
+    <a href="../GroupView/" class="dropdown-item">Group View</a>
+</li>
+                                    
+<li>
+    <a href="../HashedFileEditing/" class="dropdown-item">Hashed File Editing</a>
+</li>
+                                    
+<li>
+    <a href="../Hover/" class="dropdown-item">Hover</a>
+</li>
+                                    
+<li>
+    <a href="../Include/" class="dropdown-item">INCLUDE settings</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Logging</a>
+</li>
+                                    
+<li>
+    <a href="../MultipleWorkspaceFolders/" class="dropdown-item">Multiple Workspace Folders</a>
+</li>
+                                    
+<li>
+    <a href="../OnlineEditing/" class="dropdown-item">Online Editing</a>
+</li>
+                                    
+<li>
+    <a href="../References/" class="dropdown-item">References</a>
+</li>
+                                    
+<li>
+    <a href="../SemanticHighlighting/" class="dropdown-item">Semantic Highlighting</a>
+</li>
+                                    
+<li>
+    <a href="../SignatureHelp/" class="dropdown-item">Signature Help</a>
+</li>
+                                    
+<li>
+    <a href="../Completion/" class="dropdown-item">Using Auto Completion</a>
+</li>
+                                    
+<li>
+    <a href="../Definition/" class="dropdown-item">Using Definition</a>
+</li>
+                                    
+<li>
+    <a href="../Rename/" class="dropdown-item">Using Rename</a>
+</li>
+                                    
+<li>
+    <a href="../Connection/" class="dropdown-item">U2 Connection Settings</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../FAQ/" class="nav-link">FAQ</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Change Log</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../CHANGELOG/" class="dropdown-item">Change Log</a>
+</li>
+                                    
+<li>
+    <a href="../KnownIssues/" class="dropdown-item">Known Issues</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Include/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../MultipleWorkspaceFolders/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#log" class="nav-link">Log</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="log">Log</h2>
+<h3 id="log-location">Log location</h3>
+<ul>
+<li>Console: From the Console, select "View" &gt; "Output" and then from the OUTPUT panel, select "Rocket MV BASIC Language Server" from the Tasks drop-down.</li>
+</ul>
+<p><img alt="" src="../../img/log_console.png" /></p>
+<p><strong>Note</strong>: If there is no warning or above level logs generated, then there is no Console output.</p>
+<ul>
+<li>Log file: .rmv\logs\rocket_mv_basic_language_server.log</li>
+</ul>
+<h3 id="log-config">Log config</h3>
+<ul>
+<li>
+<p>Config file location: .rmv\config\log4j2.properties</p>
+</li>
+<li>
+<p>The Extension uses the <strong>log4j2</strong> component. If you already know log4j2, it will be easy to configure the log. You can find related settings in log4j2 official online documentation here: https://logging.apache.org/log4j/2.x/manual/configuration.html . The following are brief description of commonly used options for your reference.</p>
+</li>
+</ul>
+<h4 id="property">property</h4>
+<p>In most cases,  you will only need to change these properties:</p>
+<ul>
+<li>
+<p>property.ROOT_LEVEL: Used to configure the "rootLogger.level". Logger levels include Trace,Debug, Info, Warn, Error, and Fatal. Only logs with levels higher than or equal to the configured level will be available. Root logger level is the first filter. Console or file level is the second filter, only logs that meet both conditions will be printed. Recommended  value is "Info".</p>
+</li>
+<li>
+<p>property.CONSOLE_LEVEL: Used to configure the "appender.console.filter.threshold.level". Limits the log level of output to the console. Recommended value is "Warn".</p>
+</li>
+<li>
+<p>property.FILE_LEVEL: Used to configure the "appender.all.filter.threshold.level". Limits the log level of output to the file. Recommended value is "trace".</p>
+</li>
+<li>
+<p>property.SERVER_NAME: Used to configure the log output file name. We recommend that this value not be changed. Recommended value is "rocket_mv_basic_language_server".</p>
+</li>
+<li>
+<p>property.LOG_HOME: Used to configure the log output file home path. Recommended value is ".rmv/logs".</p>
+</li>
+</ul>
+<h4 id="global-configuration">global configuration</h4>
+<ul>
+<li>
+<p>status: The level of internal Log4j events that should be logged to the console. We recommend that this value not be changed. Recommended value is "error".</p>
+</li>
+<li>
+<p>monitorInterval: The minimum amount of time, in seconds, before the file configuration is checked for changes. Recommended value is "5" seconds.</p>
+</li>
+</ul>
+<h4 id="rootlogger">rootLogger</h4>
+<p>Set the rootLogger level and where to place the log file. In addition, you can create appender refs for the logger .</p>
+<ul>
+<li>
+<p>rootLogger.level: logger level. Recommended value is "Info"</p>
+</li>
+<li>
+<p>rootLogger.appenderRef.console.ref: This value is identical to the value of appender.console.name. We recommend that this value not be changed. Recommended value is "ConsoleAll".</p>
+</li>
+<li>
+<p>rootLogger.appenderRef.all.ref: This value is identical to the value of appender.file.name. We recommend that this value not be changed. Recommended value is "RollingFileAll".</p>
+</li>
+</ul>
+<h4 id="appenderconsole">appender.console</h4>
+<p>Appender used to define output to the console:</p>
+<ul>
+<li>
+<p>appender.console.type: Suggest not to change. Recommended value is "Console".</p>
+</li>
+<li>
+<p>appender.console.name: Suggest not to change. Recommended value is "ConsoleAll".</p>
+</li>
+<li>
+<p>appender.console.target: SYSTEM_OUT or SYSTEM_ERR, please only use SYSTEM_ERR here. Because SYSTEM_OUT may cause unexpected error.</p>
+</li>
+<li>
+<p>appender.console.layout.type: Includes "JSONLayout", "HTMLLayout", "YMLLayout" and so on. Recommended value is PatternLayout. Recommended value is "PatternLayout".</p>
+</li>
+<li>
+<p>appender.console.layout.pattern: output format. Recommended value is "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"</p>
+</li>
+<li>
+<p>appender.console.filter.threshold.level: Refer to "property.CONSOLE_LEVEL". Suggest not to change, "${CONSOLE_LEVEL}".</p>
+</li>
+<li>
+<p>appender.console.filter.threshold.type: Includes "StringMatchFilter", "LevelRangFilter","RegexFilter" and so on. Recommended value is "ThresholdFilter", output log information when log level &gt;= CONSOLE_LEVEL</p>
+</li>
+</ul>
+<h4 id="appenderfile">appender.file</h4>
+<p>Appender used to define output to the file</p>
+<ul>
+<li>
+<p>appender.file.type: Suggest not to change. Recommended value is "RollingFile".</p>
+</li>
+<li>
+<p>appender.file.name: Suggest not to change. Recommended value is "RollingFileAll".</p>
+</li>
+<li>
+<p>appender.file.filter.threshold.level: Refer to "property.FILE_LEVEL". Fixed value, "${FILE_LEVEL}".</p>
+</li>
+<li>
+<p>appender.file.filter.threshold.type: Refer to "appender.console.filter.threshold.type".</p>
+</li>
+<li>
+<p>appender.file.fileName: Log file absolute path. Recommended value is "${LOG_HOME}/${SERVER_NAME}.log"</p>
+</li>
+<li>
+<p>appender.file.filePattern: file name format. Don't delete "%i" because it is related to "DefaultRolloverStrategy" (unless modify "DefaultRolloverStrategy" to another strategy). Recommended value is "${LOG_HOME}/backup/${SERVER_NAME}.%d{yyyy-MM-dd}-%i.log".</p>
+</li>
+<li>
+<p>appender.file.layout.type: Refer to "appender.console.layout.type".</p>
+</li>
+<li>
+<p>appender.file.layout.pattern: output format. Recommended value is "%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n".</p>
+</li>
+<li>
+<p>appender.file.policies.type: Specifies a strategy for scrolling logs. Fixed value, "Policies".</p>
+</li>
+<li>
+<p>appender.file.policies.time.type: Child of Policies with value fixed to "TimeBasedTriggeringPolicy". Time-based rolling strategy.</p>
+</li>
+<li>
+<p>appender.file.policies.time.interval: Recommended value is "1".</p>
+</li>
+<li>
+<p>appender.file.policies.time.modulate: Indicates whether to adjust the time interval so that the next rollover occurs at the interval boundary. Recommended value is "true".</p>
+</li>
+<li>
+<p>appender.file.policies.size.type: Child of Policies with a fixed value of "SizeBasedTriggeringPolicy". The scroll policy based on file size.</p>
+</li>
+<li>
+<p>appender.file.policies.size.size: Policies define the size of each log file. The size can be specified in bytes, suffixed with KB, MB, or GB. Recommended value is "10M".</p>
+</li>
+<li>
+<p>appender.file.strategy.type: Suggest not to change, "DefaultRolloverStrategy". Used to specify the maximum number of log files that can exist in the same folder before the oldest log files are deleted  allowing new log files to be created  (via the max attribute). The default is to keep a maximum of seven files in backup file path.</p>
+</li>
+</ul>
+<h3 id="examples">Examples</h3>
+<p><strong>Example 1</strong></p>
+<p>To set the log file level output to info level or higher., you only need to change log file level to info:</p>
+<ul>
+<li>
+<p>property.ROOT_LEVEL=Info</p>
+</li>
+<li>
+<p>property.CONSOLE_LEVEL=Info</p>
+</li>
+<li>
+<p>property.FILE_LEVEL=Info</p>
+</li>
+</ul>
+<p><strong>Example 2</strong></p>
+<p>Set the console output information to debug level or higher and set the log file output information to info level or higher:</p>
+<ul>
+<li>
+<p>property.ROOT_LEVEL=Debug</p>
+</li>
+<li>
+<p>property.CONSOLE_LEVEL=Debug</p>
+</li>
+<li>
+<p>property.FILE_LEVEL=Info</p>
+</li>
+</ul>
+<p><strong>Example 3</strong></p>
+<p>Change the log file size to 20M</p>
+<ul>
+<li>appender.file.policies.size.size=20M</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

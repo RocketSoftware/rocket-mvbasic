@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Change Log - Rocket MV BASIC</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Rocket MV BASIC</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Usage</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Accounts/" class="dropdown-item">Accounts Settings</a>
+</li>
+                                    
+<li>
+    <a href="../Catalog/" class="dropdown-item">Catalog Settings</a>
+</li>
+                                    
+<li>
+    <a href="../Compile/" class="dropdown-item">Compile</a>
+</li>
+                                    
+<li>
+    <a href="../Configuration/" class="dropdown-item">Configuration</a>
+</li>
+                                    
+<li>
+    <a href="../CodeLens/" class="dropdown-item">Code Lens</a>
+</li>
+                                    
+<li>
+    <a href="../Compatibility/" class="dropdown-item">Compatibility</a>
+</li>
+                                    
+<li>
+    <a href="../CustomizeDoc/" class="dropdown-item">Customized Documentation</a>
+</li>
+                                    
+<li>
+    <a href="../DAPRelease/" class="dropdown-item">DAP Binaries</a>
+</li>
+                                    
+<li>
+    <a href="../Debugging/" class="dropdown-item">Debugging</a>
+</li>
+                                    
+<li>
+    <a href="../DocumentSymbol/" class="dropdown-item">Document Symbol</a>
+</li>
+                                    
+<li>
+    <a href="../Diagnostics/" class="dropdown-item">Diagnostics</a>
+</li>
+                                    
+<li>
+    <a href="../FileLock/" class="dropdown-item">File Locking</a>
+</li>
+                                    
+<li>
+    <a href="../Folding/" class="dropdown-item">Folding</a>
+</li>
+                                    
+<li>
+    <a href="../Formatting/" class="dropdown-item">Formatting</a>
+</li>
+                                    
+<li>
+    <a href="../GaraSign/" class="dropdown-item">GaraSign</a>
+</li>
+                                    
+<li>
+    <a href="../GroupView/" class="dropdown-item">Group View</a>
+</li>
+                                    
+<li>
+    <a href="../HashedFileEditing/" class="dropdown-item">Hashed File Editing</a>
+</li>
+                                    
+<li>
+    <a href="../Hover/" class="dropdown-item">Hover</a>
+</li>
+                                    
+<li>
+    <a href="../Include/" class="dropdown-item">INCLUDE settings</a>
+</li>
+                                    
+<li>
+    <a href="../Logging/" class="dropdown-item">Logging</a>
+</li>
+                                    
+<li>
+    <a href="../MultipleWorkspaceFolders/" class="dropdown-item">Multiple Workspace Folders</a>
+</li>
+                                    
+<li>
+    <a href="../OnlineEditing/" class="dropdown-item">Online Editing</a>
+</li>
+                                    
+<li>
+    <a href="../References/" class="dropdown-item">References</a>
+</li>
+                                    
+<li>
+    <a href="../SemanticHighlighting/" class="dropdown-item">Semantic Highlighting</a>
+</li>
+                                    
+<li>
+    <a href="../SignatureHelp/" class="dropdown-item">Signature Help</a>
+</li>
+                                    
+<li>
+    <a href="../Completion/" class="dropdown-item">Using Auto Completion</a>
+</li>
+                                    
+<li>
+    <a href="../Definition/" class="dropdown-item">Using Definition</a>
+</li>
+                                    
+<li>
+    <a href="../Rename/" class="dropdown-item">Using Rename</a>
+</li>
+                                    
+<li>
+    <a href="../Connection/" class="dropdown-item">U2 Connection Settings</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../FAQ/" class="nav-link">FAQ</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Change Log</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Change Log</a>
+</li>
+                                    
+<li>
+    <a href="../KnownIssues/" class="dropdown-item">Known Issues</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../FAQ/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../KnownIssues/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#change-log" class="nav-link">Change Log</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#version-281-december-18-2025" class="nav-link">Version 2.8.1: December 18, 2025</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-280-november-05-2025" class="nav-link">Version 2.8.0: November 05, 2025</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-271-june-04-2025" class="nav-link">Version 2.7.1: June 04, 2025</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-270-april-22-2025" class="nav-link">Version 2.7.0: April 22, 2025</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-260-november-21-2024" class="nav-link">Version 2.6.0: November 21, 2024</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-251-august-23-2024" class="nav-link">Version 2.5.1: August 23, 2024</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-250-june-26-2024" class="nav-link">Version 2.5.0: June 26, 2024</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-240-february-26-2024" class="nav-link">Version 2.4.0: February 26, 2024</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-230-october-31-2023" class="nav-link">Version 2.3.0: October 31, 2023</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-220-august-17-2023" class="nav-link">Version 2.2.0: August 17, 2023</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-210-may-31-2023" class="nav-link">Version 2.1.0: May 31, 2023</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-1101-march-30-2023" class="nav-link">Version 1.10.1: March 30, 2023</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-1100-march-30-2023" class="nav-link">Version 1.10.0: March 30, 2023</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-190-january-5-2023" class="nav-link">Version 1.9.0: January 5, 2023</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-180-october-27-2022" class="nav-link">Version 1.8.0: October 27, 2022</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-170-august-17-2022" class="nav-link">Version 1.7.0: August 17, 2022</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-160-april-29-2022" class="nav-link">Version 1.6.0: April 29, 2022</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-150-march-31-2022" class="nav-link">Version 1.5.0: March 31, 2022</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-140-january-28-2022" class="nav-link">Version 1.4.0: January 28, 2022</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-133-december-21-2021" class="nav-link">Version 1.3.3: December 21, 2021</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-132-december-17-2021" class="nav-link">Version 1.3.2: December 17, 2021</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-131-december-11-2021" class="nav-link">Version 1.3.1: December 11, 2021</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-130-december-10-2021" class="nav-link">Version 1.3.0: December 10, 2021</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-120-september-30-2021" class="nav-link">Version 1.2.0: September 30, 2021</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-112-july-31-2021" class="nav-link">Version 1.1.2: July 31, 2021</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-111-may-27-2021" class="nav-link">Version 1.1.1: May 27, 2021</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-110-march-31-2021" class="nav-link">Version 1.1.0: March 31, 2021</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="change-log">Change Log</h1>
+<h2 id="version-281-december-18-2025">Version 2.8.1: December 18, 2025</h2>
+<ul>
+<li>Resolved high CPU usage issue during online mode</li>
+<li>Fixed UniData Pick compilation</li>
+<li>Addressed locking condition</li>
+</ul>
+<h2 id="version-280-november-05-2025">Version 2.8.0: November 05, 2025</h2>
+<ul>
+<li>Support for TRY-CATCH syntax introduced in UV 14.2.1</li>
+<li>Support for dynamic object syntax introduced in UV 14.2.1</li>
+<li>Support for hashed file record operations like Edit, update, and delete records and Optimistic locking for concurrent access</li>
+<li>Support for optimistic and pessimistic locking mechanisms on file</li>
+<li>Customer Bug fixes</li>
+</ul>
+<h2 id="version-271-june-04-2025">Version 2.7.1: June 04, 2025</h2>
+<ul>
+<li>Added VS Code language auto-detection (online mode)</li>
+<li>Auto-close files on server disconnect in online mode</li>
+<li>Customer bug fixes</li>
+</ul>
+<h2 id="version-270-april-22-2025">Version 2.7.0: April 22, 2025</h2>
+<ul>
+<li>Separate compile and catalog option</li>
+<li>Support for debugging BASIC program files in online editing mode. (support with UV 11.4.1 and upcoming 14.2.1)</li>
+<li>Support for keyword search within U2 accounts via right-click context menu.</li>
+<li>Customer bug fixes</li>
+</ul>
+<h2 id="version-260-november-21-2024">Version 2.6.0: November 21, 2024</h2>
+<ul>
+<li>Enhancement: UD compilation will read parameters from basic.mvbasic.json file.</li>
+<li>Support pattern configuration for account, folder and file filtering (only in online mode).</li>
+<li>Customer bug fixes</li>
+</ul>
+<h2 id="version-251-august-23-2024">Version 2.5.1: August 23, 2024</h2>
+<ul>
+<li>Support for cataloging BASIC program files via right-click component in both online and offline modes.</li>
+</ul>
+<h2 id="version-250-june-26-2024">Version 2.5.0: June 26, 2024</h2>
+<ul>
+<li>Support compile / catalog BASIC program files in online editing mode.</li>
+<li>Support the rpc service name can be customized (only in offline mode)</li>
+<li>Customer bug fixes - some incorrect behaviors on Linux</li>
+</ul>
+<h2 id="version-240-february-26-2024">Version 2.4.0: February 26, 2024</h2>
+<ul>
+<li>Support high performance  debugging on UniData 8.3.1 (Windows / Linux).</li>
+<li>Support new compilation flavor 'r' and 'm' for UniData.</li>
+<li>Resolve the issue that extension could not be started when <em>JAVA_OPTIONS</em> is configured.</li>
+</ul>
+<h2 id="version-230-october-31-2023">Version 2.3.0: October 31, 2023</h2>
+<ul>
+<li>Implement the ability to sort BASIC program files while in online editing mode.</li>
+<li>Provide support for configuring unique server names for online editing servers.</li>
+<li>Enhance warning messages for specific operations.</li>
+<li>Implement various optimizations for the online editing mode.</li>
+</ul>
+<h2 id="version-220-august-17-2023">Version 2.2.0: August 17, 2023</h2>
+<ul>
+<li>Support high performance debugging on UniVerse 11.4.1 (Windows / Linux)</li>
+</ul>
+<h2 id="version-210-may-31-2023">Version 2.1.0: May 31, 2023</h2>
+<ul>
+<li>Support online editing (preview) which can help user to edit BASIC program files on remote U2 servers.</li>
+</ul>
+<h2 id="version-1101-march-30-2023">Version 1.10.1: March 30, 2023</h2>
+<ul>
+<li>Update extension's logo.</li>
+</ul>
+<h2 id="version-1100-march-30-2023">Version 1.10.0: March 30, 2023</h2>
+<ul>
+<li>Enhancement: full path support in UniData $INCLUDE statement</li>
+<li>Enhancement: disconnect debug session when U2 server is disconnected.</li>
+<li>Enhancement: add functions / labels / subroutines to breadcrumbs.</li>
+<li>Bugs fix: 6 bugs fixed.</li>
+</ul>
+<h2 id="version-190-january-5-2023">Version 1.9.0: January 5, 2023</h2>
+<ul>
+<li>Enhancement: support additional parameters for compilation</li>
+<li>Enhancement: support additional parameters for debugging</li>
+</ul>
+<h2 id="version-180-october-27-2022">Version 1.8.0: October 27, 2022</h2>
+<ul>
+<li>Feature: support logging system. Please refer online documentation for details.</li>
+<li>Feature: monitor U2 server connection status.</li>
+<li>Enhancement: when compiling a BASIC program, the account folder name must be the same as the connected account name.</li>
+<li>Bug fix: 38 bugs fixed.</li>
+</ul>
+<h2 id="version-170-august-17-2022">Version 1.7.0: August 17, 2022</h2>
+<ul>
+<li>Feature: (Preview) support debugging functionalities on UniData 8.2.4. </li>
+<li>Bug fix: improve the stability of debugging.</li>
+<li>Bug fix: improve file parsing performance.</li>
+</ul>
+<h2 id="version-160-april-29-2022">Version 1.6.0: April 29, 2022</h2>
+<ul>
+<li>Feature: (Preview) support debug BASIC program files on UniVerse. Please refer online documentation to see known issues.</li>
+<li>Bug fix: show connection icon only when extension activated. </li>
+</ul>
+<h2 id="version-150-march-31-2022">Version 1.5.0: March 31, 2022</h2>
+<ul>
+<li>Feature: support multiple workspace folders.</li>
+<li>Enhancement: change some functions to support multiple workspace folders, for example, auto group view, connection to U2 server, etc.</li>
+<li>Bug fix: resolve incorrect syntax checking, for example, label name, REM function, etc.</li>
+<li>Bug fix: resolve a compilation failed issue if VS Code upgraded to latest version.</li>
+<li>Bug fix: make some messages more readable.</li>
+<li>Bug fix: support more UV and UD keywords.</li>
+<li>Bug fix: fix the issue formatting sometimes could not work.</li>
+</ul>
+<h2 id="version-140-january-28-2022">Version 1.4.0: January 28, 2022</h2>
+<ul>
+<li>Enhancement: show U2 server account name when connection established.</li>
+<li>Bug fix: resolve some incorrect grammar / syntax related bugs.</li>
+<li>Bug fix: resolve some incorrect / misspelling messages.</li>
+</ul>
+<h2 id="version-133-december-21-2021">Version 1.3.3: December 21, 2021</h2>
+<ul>
+<li>Upgrade log4j to 2.17.0 to avoid security issue.</li>
+</ul>
+<h2 id="version-132-december-17-2021">Version 1.3.2: December 17, 2021</h2>
+<ul>
+<li>Upgrade log4j to 2.16.0 to avoid security issue.</li>
+</ul>
+<h2 id="version-131-december-11-2021">Version 1.3.1: December 11, 2021</h2>
+<ul>
+<li>Upgrade log4j to latest version to prevent remote injection attack.</li>
+</ul>
+<h2 id="version-130-december-10-2021">Version 1.3.0: December 10, 2021</h2>
+<ul>
+<li>Show U2 server connection status icon in status bar.</li>
+<li>Enhancement: more readable connection and compilation feedback messages.</li>
+<li>Bug fix: code folding error in loop statement.</li>
+<li>Bug fix: add missed functions and statements, for example: COM, TTYSET, XDOMGetElementById, etc.</li>
+<li>Bug fix: CALL @VARIABLE shows undefined function error.</li>
+<li>Bug fix: exclude objective code from compilation tasks in UniData;</li>
+<li>Bug fix: show overwriting message when modifying configuration files.</li>
+<li>Bug fix: update incorrect comments in configuration files.</li>
+<li>Bug fix: BASIC parser crashes when meets double special characters at head of a line.</li>
+</ul>
+<h2 id="version-120-september-30-2021">Version 1.2.0: September 30, 2021</h2>
+<ul>
+<li>Support compile and catalog BASIC program files on U2 server;</li>
+<li>Add comments in configuration files for new created project;</li>
+<li>Select "UniVerse" or "UniData" when open the project first time, rather than set "UniVerse" as default;</li>
+<li>Optimize activation process: the extension now could be activated automatically when ".rmv" folder exists;</li>
+<li>Add commands to enable / disable code lens in current project, by default code lens is disabled;</li>
+<li>Bug fix: highlight U2 internal @ variables and don't show error for them;</li>
+<li>Bug fix: display one file multiple times in group view;</li>
+<li>Bug fix: improve performance when project is too big;</li>
+<li>Bug fix: unrecognized grammar for "LOOP WHILE READNEXT";</li>
+<li>Bug fix: provide hover documents for MQ related functions;</li>
+<li>Bug fix: support function HMAC.</li>
+</ul>
+<h2 id="version-112-july-31-2021">Version 1.1.2: July 31, 2021</h2>
+<ul>
+<li>Add new feature: Code Lens</li>
+<li>Bug fix: @ variables are recognized as undefined symbol</li>
+<li>Bug fix: catalog checking causes high CPU usage</li>
+<li>Bug fix: go to definition doesn't work correctly when cursor at the beginning of a symbol</li>
+<li>Bug fix: open single file in VS Code causes crash</li>
+</ul>
+<h2 id="version-111-may-27-2021">Version 1.1.1: May 27, 2021</h2>
+<ul>
+<li>Add new feature: Signature Help</li>
+<li>Add new feature: Diagnostic</li>
+</ul>
+<h2 id="version-110-march-31-2021">Version 1.1.0: March 31, 2021</h2>
+<ul>
+<li>Initial release</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

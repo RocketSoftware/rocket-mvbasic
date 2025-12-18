@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>Rocket MV BASIC</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/fontawesome.min.css" rel="stylesheet">
+        <link href="css/brands.min.css" rel="stylesheet">
+        <link href="css/solid.min.css" rel="stylesheet">
+        <link href="css/v4-font-face.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">Rocket MV BASIC</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="." class="nav-link active" aria-current="page">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Usage</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="usage/Accounts/" class="dropdown-item">Accounts Settings</a>
+</li>
+                                    
+<li>
+    <a href="usage/Catalog/" class="dropdown-item">Catalog Settings</a>
+</li>
+                                    
+<li>
+    <a href="usage/Compile/" class="dropdown-item">Compile</a>
+</li>
+                                    
+<li>
+    <a href="usage/Configuration/" class="dropdown-item">Configuration</a>
+</li>
+                                    
+<li>
+    <a href="usage/CodeLens/" class="dropdown-item">Code Lens</a>
+</li>
+                                    
+<li>
+    <a href="usage/Compatibility/" class="dropdown-item">Compatibility</a>
+</li>
+                                    
+<li>
+    <a href="usage/CustomizeDoc/" class="dropdown-item">Customized Documentation</a>
+</li>
+                                    
+<li>
+    <a href="usage/DAPRelease/" class="dropdown-item">DAP Binaries</a>
+</li>
+                                    
+<li>
+    <a href="usage/Debugging/" class="dropdown-item">Debugging</a>
+</li>
+                                    
+<li>
+    <a href="usage/DocumentSymbol/" class="dropdown-item">Document Symbol</a>
+</li>
+                                    
+<li>
+    <a href="usage/Diagnostics/" class="dropdown-item">Diagnostics</a>
+</li>
+                                    
+<li>
+    <a href="usage/FileLock/" class="dropdown-item">File Locking</a>
+</li>
+                                    
+<li>
+    <a href="usage/Folding/" class="dropdown-item">Folding</a>
+</li>
+                                    
+<li>
+    <a href="usage/Formatting/" class="dropdown-item">Formatting</a>
+</li>
+                                    
+<li>
+    <a href="usage/GaraSign/" class="dropdown-item">GaraSign</a>
+</li>
+                                    
+<li>
+    <a href="usage/GroupView/" class="dropdown-item">Group View</a>
+</li>
+                                    
+<li>
+    <a href="usage/HashedFileEditing/" class="dropdown-item">Hashed File Editing</a>
+</li>
+                                    
+<li>
+    <a href="usage/Hover/" class="dropdown-item">Hover</a>
+</li>
+                                    
+<li>
+    <a href="usage/Include/" class="dropdown-item">INCLUDE settings</a>
+</li>
+                                    
+<li>
+    <a href="usage/Logging/" class="dropdown-item">Logging</a>
+</li>
+                                    
+<li>
+    <a href="usage/MultipleWorkspaceFolders/" class="dropdown-item">Multiple Workspace Folders</a>
+</li>
+                                    
+<li>
+    <a href="usage/OnlineEditing/" class="dropdown-item">Online Editing</a>
+</li>
+                                    
+<li>
+    <a href="usage/References/" class="dropdown-item">References</a>
+</li>
+                                    
+<li>
+    <a href="usage/SemanticHighlighting/" class="dropdown-item">Semantic Highlighting</a>
+</li>
+                                    
+<li>
+    <a href="usage/SignatureHelp/" class="dropdown-item">Signature Help</a>
+</li>
+                                    
+<li>
+    <a href="usage/Completion/" class="dropdown-item">Using Auto Completion</a>
+</li>
+                                    
+<li>
+    <a href="usage/Definition/" class="dropdown-item">Using Definition</a>
+</li>
+                                    
+<li>
+    <a href="usage/Rename/" class="dropdown-item">Using Rename</a>
+</li>
+                                    
+<li>
+    <a href="usage/Connection/" class="dropdown-item">U2 Connection Settings</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="usage/FAQ/" class="nav-link">FAQ</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Change Log</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="usage/CHANGELOG/" class="dropdown-item">Change Log</a>
+</li>
+                                    
+<li>
+    <a href="usage/KnownIssues/" class="dropdown-item">Known Issues</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="usage/Accounts/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#rocket-mv-basic-for-vs-code" class="nav-link">Rocket MV Basic for VS Code</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#features" class="nav-link">Features</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#getting-started" class="nav-link">Getting started</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#usage" class="nav-link">Usage</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#contact-us" class="nav-link">Contact Us</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="rocket-mv-basic-for-vs-code">Rocket MV Basic for VS Code</h1>
+<p>Rocket MV BASIC for VS Code is a free Visual Studio Code extension created by Rocket Software. This extension enables BASIC developers to modernize their MultiValue applications in one of the most popular development platforms with an exceptional editing experience.</p>
+<h2 id="features">Features</h2>
+<p>This extension allows:</p>
+<ul>
+<li>BASIC statements / keywords highlighting</li>
+<li>Semantic highlighting</li>
+<li>Symbols collection / outline on the current document</li>
+<li>Code folding</li>
+<li>Go to / Peek definition on the current document or crossing different files</li>
+<li>Rename symbols for the same type</li>
+<li>Find symbol references in current document and crossing different files</li>
+<li>Hover over a statement to display its documentation</li>
+<li>Document formatting, range formatting and on typing formatting</li>
+<li>Detail settings for formatting</li>
+<li>Auto-Completion for BASIC statements, keywords, and symbols</li>
+<li>Connect to U2 MultiValue server and cache cataloged programs to local machine when necessary</li>
+<li>Auto-Group files and customize the group rules</li>
+<li>Add customized documentation for functions, subroutines, or labels</li>
+<li>Show syntax and grammar errors</li>
+<li>Prompt parameters of BASIC internal functions</li>
+<li>Compile / Catalog BASIC programs on the U2 server</li>
+<li>Debug BASIC program files</li>
+<li>Remote editing of BASIC program files on a U2 server (preview)</li>
+</ul>
+<h2 id="getting-started">Getting started</h2>
+<p>Requirements:</p>
+<ol>
+<li><a href="https://code.visualstudio.com/">VS Code</a> version 1.75 or higher.</li>
+<li><a href="https://www.oracle.com/java/technologies/downloads/">JDK</a> or <a href="https://openjdk.org/projects/jdk/20/">OpenJDK</a> version 11 or higher.</li>
+</ol>
+<h3 id="install-configure-the-extension">Install &amp; configure the extension</h3>
+<ol>
+<li>
+<p>Install this extension from the VS Code Marketplace.</p>
+<p><em>Step 1</em>: Open <strong>Visual Studio Code</strong>.</p>
+<p><em>Step 2</em>: Click the <strong>Extensions</strong> icon <img alt="EXTENSIONS" src="img/icon-extensions-20x20.png" /> (<kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>X</kbd>). This opens the <strong>EXTENSIONS</strong> panel.</p>
+<p><em>Step 3</em>: Search for <strong>Rocket MV Basic</strong>.</p>
+<p><em>Step 4</em>: Click <strong>Install</strong> and wait for the installation to complete.</p>
+</li>
+<li>
+<p>Download, install and setup the Java environment. Note that you can skip Step 1 and Step 2 if you already have Java 11+ (OpenJDK or Oracle JDK) installed. </p>
+<p><em>Step 1</em>: Click <strong>Manage</strong> <img alt="Manage" src="img/icon-manage-20x20.png" /> <strong>&gt;</strong> <strong>Extension settings</strong>. This opens the <strong>Extension Settings</strong> window.  </p>
+<p><em>Step 2</em>: In the <strong>JDK Environment</strong> section enter the full path to the JDK <strong>bin</strong> folder. For example., <em>C:\jdk-20\bin</em>.</p>
+<p><em>Step 3</em>.  Open User Settings (use the appropriate option listed below):</p>
+<p><strong>On Windows/Linux</strong></p>
+<ul>
+<li>
+<p>File &gt; Preferences &gt; Settings</p>
+</li>
+<li>
+<p>Use the keyboard shortcut <kbd>Ctrl</kbd> + <kbd>,</kbd> to open the setting editor </p>
+</li>
+<li>
+<p>Press <kbd>F1</kbd> or <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> to open the Command Palette, and then select <code>Preferences: Open Settings (UI)</code></p>
+</li>
+</ul>
+<p><strong>On macOS</strong> </p>
+<ul>
+<li>
+<p>Code &gt; Preferences &gt; Settings</p>
+</li>
+<li>
+<p>Press <kbd>F1</kbd> or <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> on Mac to open Command Palette, and then select <code>Preferences: Open Settings (UI)</code></p>
+</li>
+</ul>
+<p><em>Step 4</em>. Search “Rocket” to locate the Rocket MV BASIC extension and enter the Java bin path as illustrated in the example below.</p>
+<p><img alt="" src="img/readme_config.png" /></p>
+<p><strong>Note</strong>: Using this method, an existing working environment that requires a different version of Java would not be impacted and the extension will work properly in the Java 11 (or above) environment.</p>
+</li>
+</ol>
+<h3 id="open-an-account-folder-as-a-workspace">Open an account folder as a workspace</h3>
+<ol>
+<li>
+<p>Select "File" &gt; "Open Folder" to open a folder that contains the BASIC program files you want to view or edit. You can also add multiple folders to the workspace using "File" &gt; "Add Folder to Workspace". We recommend that you open the U2 account level folders to avoid encountering exceptions.</p>
+<p><strong>Note</strong>: This extension is designed to work with folders/directories rather than individual program files. If you open a single file, some functions may be limited.</p>
+</li>
+<li>
+<p>Activate the extension.</p>
+<ul>
+<li>By default, the extension is automatically activated when opening a file with the suffix ".B". If your BASIC program files don’t end with a ".B" suffix, please refer to the FAQ to see how to customize the rules for activating the extension automatically.</li>
+<li>
+<p>If the extension is not activated automatically, please open the <em>Command Palette</em> in VS code(use any option listed below), and enter the "Activate Rocket MV BASIC" command to activate it manually.  </p>
+<p><strong>On Windows/Linux</strong></p>
+<ul>
+<li>
+<p>View &gt; Command Palette</p>
+</li>
+<li>
+<p>Press <kbd>F1</kbd> or <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd></p>
+</li>
+</ul>
+<p><strong>On macOS</strong></p>
+<ul>
+<li>
+<p>View &gt; Command Palette</p>
+</li>
+<li>
+<p>Press <kbd>F1</kbd> or <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd></p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Note</strong>: Currently, the extension does not provide version control capabilities. Users should manage source code versions independent of this extension.</p>
+</li>
+</ol>
+<h2 id="usage">Usage</h2>
+<p>Click the links below to learn more about using each feature. You can also refer to the user manual <a href="https://rocketsoftware.github.io/rocket-mvbasic/">documentation online</a>.</p>
+<p><strong>Editing Features</strong></p>
+<ul>
+<li><a href="usage/Completion/">Auto completion</a></li>
+<li><a href="usage/Folding/">Code folding</a></li>
+<li><a href="usage/CodeLens/">Code lens</a></li>
+<li><a href="usage/DocumentSymbol/">Document symbols</a></li>
+<li><a href="usage/Diagnostics/">Diagnostics</a></li>
+<li><a href="usage/References/">Find references</a></li>
+<li><a href="usage/Formatting/">Formatting</a></li>
+<li><a href="usage/Definition/">Go to definition</a></li>
+<li><a href="usage/Hover/">Hover</a></li>
+<li><a href="usage/Rename/">Rename</a></li>
+<li><a href="usage/SemanticHighlighting/">Semantic highlighting</a></li>
+<li><a href="usage/SignatureHelp/">Signature help</a></li>
+<li><a href="usage/OnlineEditing/">Online Editing</a></li>
+<li><a href="usage/FileLock/">File Locking</a></li>
+<li><a href="usage/HashedFileEditing/">Hashed File Editing</a></li>
+</ul>
+<p><strong>Development Environment</strong></p>
+<ul>
+<li><a href="usage/GroupView/">Auto group view</a></li>
+<li><a href="usage/Compile/">Compile BASIC programs</a></li>
+<li><a href="usage/Configuration/">Configurations</a></li>
+<li><a href="usage/Connection/">Connect to U2 server</a></li>
+<li><a href="usage/CustomizeDoc/">Customized documentation</a></li>
+</ul>
+<p><strong>Others</strong></p>
+<ul>
+<li><a href="usage/Compile/">Compile BASIC programs</a></li>
+<li><a href="usage/MultipleWorkspaceFolders/">Multiple Workspace Folders</a></li>
+<li><a href="usage/Debugging/">Debugging</a></li>
+</ul>
+<h2 id="contact-us">Contact Us</h2>
+<p>Please visit our <a href="https://community.rocketsoftware.com/forums/multivalue?CommunityKey=521bce2e-71d5-4d32-b560-dfa95e950eb5">forum</a> for more information.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js"></script>
+        <script src="search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2025-12-18 02:35:19.495040+00:00
+-->

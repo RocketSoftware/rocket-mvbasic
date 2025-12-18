@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Formatting - Rocket MV BASIC</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Rocket MV BASIC</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Usage</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Accounts/" class="dropdown-item">Accounts Settings</a>
+</li>
+                                    
+<li>
+    <a href="../Catalog/" class="dropdown-item">Catalog Settings</a>
+</li>
+                                    
+<li>
+    <a href="../Compile/" class="dropdown-item">Compile</a>
+</li>
+                                    
+<li>
+    <a href="../Configuration/" class="dropdown-item">Configuration</a>
+</li>
+                                    
+<li>
+    <a href="../CodeLens/" class="dropdown-item">Code Lens</a>
+</li>
+                                    
+<li>
+    <a href="../Compatibility/" class="dropdown-item">Compatibility</a>
+</li>
+                                    
+<li>
+    <a href="../CustomizeDoc/" class="dropdown-item">Customized Documentation</a>
+</li>
+                                    
+<li>
+    <a href="../DAPRelease/" class="dropdown-item">DAP Binaries</a>
+</li>
+                                    
+<li>
+    <a href="../Debugging/" class="dropdown-item">Debugging</a>
+</li>
+                                    
+<li>
+    <a href="../DocumentSymbol/" class="dropdown-item">Document Symbol</a>
+</li>
+                                    
+<li>
+    <a href="../Diagnostics/" class="dropdown-item">Diagnostics</a>
+</li>
+                                    
+<li>
+    <a href="../FileLock/" class="dropdown-item">File Locking</a>
+</li>
+                                    
+<li>
+    <a href="../Folding/" class="dropdown-item">Folding</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Formatting</a>
+</li>
+                                    
+<li>
+    <a href="../GaraSign/" class="dropdown-item">GaraSign</a>
+</li>
+                                    
+<li>
+    <a href="../GroupView/" class="dropdown-item">Group View</a>
+</li>
+                                    
+<li>
+    <a href="../HashedFileEditing/" class="dropdown-item">Hashed File Editing</a>
+</li>
+                                    
+<li>
+    <a href="../Hover/" class="dropdown-item">Hover</a>
+</li>
+                                    
+<li>
+    <a href="../Include/" class="dropdown-item">INCLUDE settings</a>
+</li>
+                                    
+<li>
+    <a href="../Logging/" class="dropdown-item">Logging</a>
+</li>
+                                    
+<li>
+    <a href="../MultipleWorkspaceFolders/" class="dropdown-item">Multiple Workspace Folders</a>
+</li>
+                                    
+<li>
+    <a href="../OnlineEditing/" class="dropdown-item">Online Editing</a>
+</li>
+                                    
+<li>
+    <a href="../References/" class="dropdown-item">References</a>
+</li>
+                                    
+<li>
+    <a href="../SemanticHighlighting/" class="dropdown-item">Semantic Highlighting</a>
+</li>
+                                    
+<li>
+    <a href="../SignatureHelp/" class="dropdown-item">Signature Help</a>
+</li>
+                                    
+<li>
+    <a href="../Completion/" class="dropdown-item">Using Auto Completion</a>
+</li>
+                                    
+<li>
+    <a href="../Definition/" class="dropdown-item">Using Definition</a>
+</li>
+                                    
+<li>
+    <a href="../Rename/" class="dropdown-item">Using Rename</a>
+</li>
+                                    
+<li>
+    <a href="../Connection/" class="dropdown-item">U2 Connection Settings</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../FAQ/" class="nav-link">FAQ</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Change Log</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../CHANGELOG/" class="dropdown-item">Change Log</a>
+</li>
+                                    
+<li>
+    <a href="../KnownIssues/" class="dropdown-item">Known Issues</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Folding/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../GaraSign/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#formatting-usage" class="nav-link">Formatting Usage</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="formatting-usage">Formatting Usage</h2>
+<p>There are three ways to format a document:</p>
+<ul>
+<li>Document formatting: press <kbd>F1</kbd> to open a command window and then enter "Format Document" to format the entire document.</li>
+<li>Range formatting: select a part of the code and then right-click the box and select "Format Selection" to format your selection.</li>
+<li>On typing formatting: open the VS Code settings page and search for "format on type". Select the <code>Editor: Format On Type</code> option. When this option is selected, the line of code you just finished editing will be formatted automatically after pressing <kbd>Enter</kbd>.</li>
+</ul>
+<p><img alt="" src="../../img/formatting_ontype.png" /></p>
+<p>The formatting related configuration file contains many formatting settings. The information below describes these settings:</p>
+<h3 id="trimnewlines">trimNewlines</h3>
+<p>Trim the original multiple newlines to keep one blank line.</p>
+<p><strong>Note:</strong> Not applicable for <em>On Type Formatting.</em></p>
+<h4 id="type-and-values">Type and Values</h4>
+<ul>
+<li>boolean </li>
+</ul>
+<h4 id="example">Example</h4>
+<p>Before:</p>
+<pre><code>CRT “HELLO”
+CRT “WORLD”
+
+
+
+CRT “HI”
+</code></pre>
+<p>After:</p>
+<pre><code>CRT “HELLO”
+CRT “WORLD”
+
+CRT “HI”
+</code></pre>
+<h3 id="trimfinalnewlines">trimFinalNewlines</h3>
+<p>Trim the final newlines down to one newline.  </p>
+<p><strong>Note:</strong> This option is dependent upon Visual Studio Code and will be subject to the Visual Studio Code’s setting in future releases.</p>
+<p><strong>Note:</strong> Not applicable for <em>On Type Formatting.</em></p>
+<h4 id="type-and-values_1">Type and Values</h4>
+<ul>
+<li>boolean</li>
+</ul>
+<h4 id="example_1">Example</h4>
+<p>Before:</p>
+<pre><code>CRT “HELLO”
+END
+
+
+
+&lt;/EOF&gt;
+</code></pre>
+<p>After:</p>
+<pre><code>CRT “HELLO”
+END
+
+&lt;/EOF&gt;
+</code></pre>
+<h3 id="trimtrailingwhitespace">trimTrailingWhitespace</h3>
+<p>Trim the trailing white spaces of a line.</p>
+<h4 id="type-and-values_2">Type and Values</h4>
+<ul>
+<li>boolean</li>
+</ul>
+<h4 id="example_2">Example</h4>
+<p>Before:</p>
+<pre><code>CRT “HELLO”&lt;/SPACE&gt;&lt;/SPACE&gt;&lt;/SPACE&gt;
+</code></pre>
+<p>After:</p>
+<pre><code>CRT “HELLO”
+</code></pre>
+<h3 id="insertfinalnewline">insertFinalNewline</h3>
+<p>Insert a newline at the end of the file if one does not exist.</p>
+<p><strong>Note:</strong> Not applicable for <em>On Type Formatting.</em></p>
+<h4 id="type-and-values_3">Type and Values</h4>
+<ul>
+<li>boolean</li>
+</ul>
+<h4 id="example_3">Example</h4>
+<p>Before:</p>
+<pre><code>CRT “HELLO”&lt;/EOF&gt;
+</code></pre>
+<p>After:</p>
+<pre><code>CRT “HELLO”
+&lt;/EOF&gt;
+</code></pre>
+<h3 id="multistatementsoneline">multiStatementsOneLine</h3>
+<p>Specify whether to allow multiple statements on the same line.</p>
+<p><strong>Note:</strong> this option will not take effect for line clauses when <em>clause.useBlock</em> is <em>false</em>. To split statements in a line clause, set <em>clause.useBlock</em> to <em>true</em>.</p>
+<p><strong>Note:</strong> Not applicable for <em>On Type Formatting.</em></p>
+<h4 id="type-and-values_4">Type and Values</h4>
+<ul>
+<li>boolean</li>
+</ul>
+<h4 id="example-1">Example 1</h4>
+<p>When <em>clause.useBlock</em> is set to <em>false</em>, and <em>multiStatementsOneLine</em> set to <em>false</em>.</p>
+<p>Before:</p>
+<pre><code>CRT “HELLO”; CRT “WORLD”
+IF CLAUSE.USEBLOCK = FALSE THEN CRT “HI”; CRT “WORLD”
+</code></pre>
+<p>After:</p>
+<pre><code>CRT “HELLO”
+CRT “WORLD”
+IF CLAUSE.USEBLOCK = FALSE THEN CRT “HI”; CRT “WORLD”
+</code></pre>
+<h4 id="example-2">Example 2</h4>
+<p>When <em>clause.useBlock</em> is set to <em>true</em>, and <em>multiStatementsOneLine</em> set to <em>false</em>.</p>
+<p>Before:</p>
+<pre><code>CRT “HELLO”; CRT “WORLD”
+IF CLAUSE.USEBLOCK = TRUE THEN CRT “HI”; CRT “WORLD”
+</code></pre>
+<p>After:</p>
+<pre><code>CRT “HELLO”
+CRT “WORLD”
+IF CLAUSE.USEBLOCK = TRUE THEN 
+    CRT “HI”
+    CRT “WORLD”
+END
+</code></pre>
+<h3 id="aligninlinecomments">alignInlineComments</h3>
+<p>Specify the column to which the inline comments are aligned when possible.</p>
+<h4 id="type-and-values_5">Type and Values</h4>
+<ul>
+<li>integer</li>
+</ul>
+<h4 id="example_4">Example</h4>
+<p>If it is set to <em>30</em>,</p>
+<p>Before:</p>
+<pre><code>CRT “HELLO” ;* HELLO
+CRT “WORLD”            ;* WORLD
+CRT “!!”           ;* !!
+</code></pre>
+<p>After:</p>
+<pre><code>CRT “HELLO”         ;* HELLO
+CRT “WORLD”         ;* WORLD
+CRT “!!”            ;* !!
+</code></pre>
+<h3 id="spacingoperator">spacing.operator</h3>
+<p>Specify the number of whitespaces around binary operators such as “+”, ”-“, ”:”, etc.</p>
+<h4 id="type-and-values_6">Type and Values</h4>
+<ul>
+<li>integer</li>
+</ul>
+<h4 id="example_5">Example</h4>
+<p>If it is set to <em>1</em>,</p>
+<p>Before:</p>
+<pre><code>A = B+C
+A = B-C
+A = B:C
+</code></pre>
+<p>After:</p>
+<pre><code>A = B + C
+A = B – C
+A = B : C
+</code></pre>
+<h3 id="spacingsemicolon">spacing.semicolon</h3>
+<p>Specify the number of whitespaces after a semicolon delimiter between statements on the same line.</p>
+<h4 id="type-and-values_7">Type and Values</h4>
+<ul>
+<li>integer</li>
+</ul>
+<h4 id="example_6">Example</h4>
+<p>If it is set to <em>1</em>,</p>
+<p>Before:</p>
+<pre><code>CRT “HELLO”;CRT “WORLD”
+</code></pre>
+<p>After:</p>
+<pre><code>CRT “HELLO”; CRT “WORLD”
+</code></pre>
+<h3 id="spacingcomma">spacing.comma</h3>
+<p>Specify the number of whitespaces after a comma delimiter in a parameter list.</p>
+<h4 id="type-and-values_8">Type and Values</h4>
+<ul>
+<li>integer</li>
+</ul>
+<h4 id="example_7">Example</h4>
+<p>If it is set to <em>1</em>,</p>
+<p>Before:</p>
+<pre><code>CALL SAY(HELLO,WORLD)
+</code></pre>
+<p>After:</p>
+<pre><code>CALL SAY(HELLO, WORLD)
+</code></pre>
+<h3 id="spacingassignment">spacing.assignment</h3>
+<p>Specify the number of whitespaces around assignment symbols such as “=”, “+=”, “:=”, etc</p>
+<h4 id="type-and-values_9">Type and Values</h4>
+<ul>
+<li>integer</li>
+</ul>
+<h4 id="example_8">Example</h4>
+<p>If it is set to <em>1</em>,</p>
+<p>Before:</p>
+<pre><code>A=B
+A+=B
+A:=B
+</code></pre>
+<p>After:</p>
+<pre><code>A = B
+A += B
+A := B
+</code></pre>
+<h3 id="spacingparentheses">spacing.parentheses</h3>
+<p>Specify the number of whitespaces after the open parentheses and before the close parentheses for a parameter list or matrix reference.</p>
+<h4 id="type-and-values_10">Type and Values</h4>
+<ul>
+<li>integer</li>
+</ul>
+<h4 id="example_9">Example</h4>
+<p>If it is set to <em>1</em>,</p>
+<p>Before:</p>
+<pre><code>CALL SAY(HELLO, WORLD)
+</code></pre>
+<p>After:</p>
+<pre><code>CALL SAY( HELLO, WORLD )
+</code></pre>
+<h3 id="spacingsquarebrackets">spacing.squareBrackets</h3>
+<p>Specify the number of whitespaces after the open square bracket and before the close square bracket for a parameter list or matrix reference.</p>
+<h4 id="type-and-values_11">Type and Values</h4>
+<ul>
+<li>integer</li>
+</ul>
+<h4 id="example_10">Example</h4>
+<p>If it is set to <em>1</em>,</p>
+<p>Before:</p>
+<pre><code>PRINT A[&quot;#&quot;, 4, 1]
+</code></pre>
+<p>After:</p>
+<pre><code>PRINT A[ &quot;#&quot;, 4, 1 ]
+</code></pre>
+<h3 id="spacingcurlybrackets">spacing.curlyBrackets</h3>
+<p>Specify the number of whitespaces after the open curly bracket and before the close curly bracket for a parameter list or matrix reference.</p>
+<h4 id="type-and-values_12">Type and Values</h4>
+<ul>
+<li>integer</li>
+</ul>
+<h4 id="example_11">Example</h4>
+<p>If it is set to <em>1</em>,</p>
+<p>Before:</p>
+<pre><code>CALL SAY{HELLO, WORLD}
+</code></pre>
+<p>After:</p>
+<pre><code>CALL SAY{ HELLO, WORLD }
+</code></pre>
+<h3 id="spacinganglebrackets">spacing.angleBrackets</h3>
+<p>Specify the number of whitespaces after the open angle bracket and before the close angle bracket for dynamic arrays.</p>
+<h4 id="type-and-values_13">Type and Values</h4>
+<ul>
+<li>integer</li>
+</ul>
+<h4 id="example_12">Example</h4>
+<p>If it is set to <em>1</em>,</p>
+<p>Before:</p>
+<pre><code>VALUE = DYNARRAY&lt;1, 2&gt;
+</code></pre>
+<p>After:</p>
+<pre><code>VALUE = DYNARRAY&lt; 1, 2 &gt;
+</code></pre>
+<h3 id="styleoperator">style.operator</h3>
+<p>Specify whether to use a symbol or keyword for operators such as <em>GT</em>, <em>LE</em>.</p>
+<h4 id="type-and-values_14">Type and Values</h4>
+<ul>
+<li>
+<p>string</p>
+<ul>
+<li>“<em>Symbol</em>”: use symbols such as &gt;, &lt;, #</li>
+<li>“<em>keyword</em>”: use keywords such as <em>LT</em>, <em>GT</em>, <em>NE</em></li>
+<li>“<em>keep</em>”: keep the original form.</li>
+</ul>
+</li>
+</ul>
+<h4 id="example_13">Example</h4>
+<p>If it is set to “<em>keyword</em>”,</p>
+<p>Before:</p>
+<pre><code>IF A &gt; B THEN CRT “HELLO WORLD”
+</code></pre>
+<p>After:</p>
+<pre><code>IF A GT B THEN CRT “HELLO WORLD”
+</code></pre>
+<h3 id="stylekeyword">style.keyword</h3>
+<p>Specify whether to use the full name or abbreviated name for keywords that support abbreviation.</p>
+<h4 id="type-and-values_15">Type and Values</h4>
+<ul>
+<li>string<ul>
+<li>“<em>full</em>”: use full name such as <em>EQUATE</em>.</li>
+<li>“<em>abbr</em>”: use keyword such as <em>EQU</em>.</li>
+<li>“<em>keep</em>”: keep the original form.</li>
+</ul>
+</li>
+</ul>
+<h4 id="example_14">Example</h4>
+<p>If it is set to “<em>abbr</em>”,</p>
+<p>Before:</p>
+<pre><code>EQUATE HELLO LITERALLY “HI”
+</code></pre>
+<p>After:</p>
+<pre><code>EQU HELLO LIT “HI”
+</code></pre>
+<h3 id="stylecommentmark">style.commentMark</h3>
+<p>Specify the style of comment mark.</p>
+<h4 id="type-and-values_16">Type and Values</h4>
+<ul>
+<li>
+<p>string</p>
+<ul>
+<li>
+<p>“<em>rem</em>”: use <em>rem</em> for as comment mark.</p>
+</li>
+<li>
+<p>“*”: use * as comment mark.</p>
+</li>
+<li>
+<p>“!”: use ! as comment mark.</p>
+</li>
+<li>
+<p>“$<em>”: use $</em> as comment mark.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="example_15">Example</h4>
+<p>If it is set to “<em>rem</em>”,</p>
+<p>Before:</p>
+<pre><code>* comment line
+A = B ;* inline comment
+</code></pre>
+<p>After:</p>
+<pre><code>REM comment line
+A = B ;REM inline comment
+</code></pre>
+<h3 id="stylekeywordcase">style.keywordCase</h3>
+<p>Specify the case for the keywords.</p>
+<h4 id="type-and-values_17">Type and Values</h4>
+<ul>
+<li>
+<p>string</p>
+<ul>
+<li>
+<p>“<em>uppercase</em>”: Use upper case for keywords like <em>IF</em></p>
+</li>
+<li>
+<p>“<em>lowercase</em>”: use lower case for keywords such as <em>if</em>.</p>
+</li>
+<li>
+<p>“<em>titlecase</em>”: use title case for keywords such as <em>If</em>.</p>
+</li>
+<li>
+<p>“<em>keep</em>”: keep the original form.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="example_16">Example</h4>
+<p>If it is set to <em>lowercase</em>,</p>
+<p>Before:</p>
+<pre><code>IF A = B THEN
+     CRT “Hello World”
+END
+</code></pre>
+<p>After:</p>
+<pre><code>if A = B then
+    crt “Hello World”
+end
+</code></pre>
+<h3 id="indentbase">indent.base</h3>
+<p>Specify the number of TAB’s to use as the base indentation for all statements except: </p>
+<ul>
+<li>
+<p>Labels</p>
+</li>
+<li>
+<p>Directives (see <em>indent.directive</em>)  </p>
+</li>
+<li>
+<p><em>PROGRAM</em>, <em>SUBROUTINE</em>, <em>FUNCTION</em> Statements</p>
+</li>
+<li>
+<p><em>END</em> statements (not for block end)</p>
+</li>
+<li>
+<p>Comment (see <em>indent.commentLine</em>)</p>
+</li>
+</ul>
+<h4 id="type-and-values_18">Type and Values</h4>
+<ul>
+<li>integer</li>
+</ul>
+<h4 id="example_17">Example</h4>
+<p>With <em>indent.base</em> set to 1 and in Visual Studio Code, <em>tabSize</em> is set to 4,</p>
+<p>Before:</p>
+<pre><code>SUBROUTINE GREETING(HI, NAME)
+CRT HI
+CRT NAME
+WELCOME:
+CRT “WELCOME”
+END
+</code></pre>
+<p>After:</p>
+<pre><code>SUBROUTINE GREETING(HI, NAME)
+    CRT HI
+    CRT NAME
+WELCOME:
+    CRT “WELCOME”
+END
+</code></pre>
+<h3 id="indentblock">indent.block</h3>
+<p>Specify whether to indent statements in block clauses. The spaces for each level of indentation is configured by the <em>tabSize</em> in the Visual Studio Code.</p>
+<h4 id="types-and-values">Types and Values</h4>
+<ul>
+<li>boolean</li>
+</ul>
+<h4 id="example_18">Example</h4>
+<p>If it is set to <em>true</em>,</p>
+<p>Before:</p>
+<pre><code>IF A = B THEN
+CRT “HELLO”
+CRT “WORLD”
+END
+</code></pre>
+<p>After:</p>
+<pre><code>IF A = B THEN
+    CRT “HELLO”
+    CRT “WORLD”
+END
+</code></pre>
+<h3 id="indentcommentline">indent.commentLine</h3>
+<p>Whether to indent comment lines as statements. If set to <em>true</em>, the comment line will be indented the same as the statement following the comment.</p>
+<h4 id="type-and-values_19">Type and Values</h4>
+<ul>
+<li>boolean</li>
+</ul>
+<h4 id="example_19">Example</h4>
+<p>If it is set to <em>true</em>,</p>
+<p>Before:</p>
+<pre><code>* COMMENT LINE 1
+IF A THEN 
+* COMMENT LINE 2
+    CRT “HI WORLD”
+END
+</code></pre>
+<p>After:</p>
+<pre><code>* COMMENT LINE 1
+IF A THEN 
+    * COMMENT LINE 2
+    CRT “HI WORLD”
+END
+</code></pre>
+<h3 id="indentdirective">indent.directive</h3>
+<p>Specify whether to indent the directives as statements.</p>
+<h4 id="type-and-values_20">Type and Values</h4>
+<ul>
+<li>boolean</li>
+</ul>
+<h4 id="example_20">Example</h4>
+<p>If it is set to <em>true</em>,</p>
+<p>Before:</p>
+<pre><code>$INCLUDE INC GREETING.H
+    CRT ‘HELLO’
+</code></pre>
+<p>After:</p>
+<pre><code>    $INCLUDE INC GREETING.H
+    CRT ‘HELLO’
+</code></pre>
+<h3 id="indentclause">indent.clause</h3>
+<p>If a clause is starting at a new line, then this option controls whether to indent whole clause (including the clause keyword).</p>
+<h4 id="type-and-values_21">Type and Values</h4>
+<ul>
+<li>boolean</li>
+</ul>
+<h4 id="example_21">Example</h4>
+<p>If it is set to <em>true</em>,</p>
+<p>Before:</p>
+<pre><code>OPEN FILENAME TO FILEVAR 
+ON ERROR
+    CRT “ERROR”
+END
+THEN
+    CRT “GOOD”
+END
+ELSE
+    CRT “BAD”
+END
+</code></pre>
+<p>After:</p>
+<pre><code>OPEN FILENAME TO FILEVAR 
+    ON ERROR
+        CRT “ERROR”
+    END
+    THEN
+        CRT “GOOD”
+    END
+    ELSE
+        CRT “BAD”
+  END
+</code></pre>
+<h3 id="clauseuseblock">clause.useBlock</h3>
+<p>Specify to always use a block for clauses,</p>
+<p><strong>Note:</strong> Not applicable for <em>On Type Formatting.</em></p>
+<h4 id="type-and-values_22">Type and Values</h4>
+<ul>
+<li>boolean</li>
+</ul>
+<h4 id="example_22">Example</h4>
+<p>If it is set to <em>true</em>,</p>
+<p>Before:</p>
+<pre><code>IF A = B THEN CRT “HI”; CRT “ WORLD”;
+</code></pre>
+<p>After:</p>
+<pre><code>IF A = B THEN
+    CRT “HI”; CRT “ WORLD”
+END
+</code></pre>
+<h3 id="clauseaddblanklines">clause.addBlankLines</h3>
+<p>For block clauses, always add a blank line before and after the block.</p>
+<p><strong>Note:</strong> Not applicable for <em>On Type Formatting</em></p>
+<h4 id="type-and-values_23">Type and Values</h4>
+<ul>
+<li>boolean</li>
+</ul>
+<h4 id="example_23">Example</h4>
+<p>If it is set to <em>true</em>,</p>
+<p>Before:</p>
+<pre><code>IF A = B THEN
+    CRT “HI”
+    CRT “ WORLD”
+END
+</code></pre>
+<p>After:</p>
+<pre><code>IF A = B THEN
+
+    CRT “HI”
+    CRT “ WORLD”
+
+END
+</code></pre>
+<h3 id="clauseatnewline">clause.atNewline</h3>
+<p>Specify to always ensure that clause keywords (<em>THEN/ELSE/LOCKED/ON ERROR</em>) start at a new line.</p>
+<p><strong>Note:</strong> Not applicable for <em>On Type Formatting.</em></p>
+<h4 id="type-and-values_24">Type and Values</h4>
+<ul>
+<li>boolean</li>
+</ul>
+<h4 id="example_24">Example</h4>
+<p>If it is set to <em>true</em>,</p>
+<p>Before:</p>
+<pre><code>IF A = B THEN
+    CRT “HI”
+    CRT “WORLD”
+END
+</code></pre>
+<p>After:</p>
+<pre><code>IF A = B 
+THEN
+    CRT “HI”
+    CRT “WORLD”
+END
+</code></pre>
+<h3 id="routinelabelpattern">routine.labelPattern</h3>
+<p>Specify a pattern for labels. A Statement’s indentation under these labels is the same as subroutines. For other statements, the indentation is the same as the main routine.</p>
+<p><strong>Note</strong>: If this value is left empty, all statements under the labels use the same indentation as subroutines except for the first label.</p>
+<h4 id="type-and-values_25">Type and Values</h4>
+<ul>
+<li>string</li>
+</ul>
+<p>The pattern follows GLOB rule.</p>
+<h4 id="example_25">Example</h4>
+<p>If set to <em>LABEL</em>*, </p>
+<p>Before:</p>
+<pre><code>MAIN:
+    NULL
+    RETURN
+
+LABEL1:
+    NULL
+    RETURN
+
+LABEL2:
+    NULL
+    RETURN
+
+FINAL:
+    NULL
+    RETURN
+</code></pre>
+<p>After:</p>
+<pre><code>MAIN:
+NULL
+RETURN
+
+LABEL1:
+    NULL
+    RETURN
+
+LABEL2:
+    NULL
+    RETURN
+
+FINAL:
+NULL
+RETURN
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

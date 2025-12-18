@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Compile - Rocket MV BASIC</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Rocket MV BASIC</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Usage</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Accounts/" class="dropdown-item">Accounts Settings</a>
+</li>
+                                    
+<li>
+    <a href="../Catalog/" class="dropdown-item">Catalog Settings</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Compile</a>
+</li>
+                                    
+<li>
+    <a href="../Configuration/" class="dropdown-item">Configuration</a>
+</li>
+                                    
+<li>
+    <a href="../CodeLens/" class="dropdown-item">Code Lens</a>
+</li>
+                                    
+<li>
+    <a href="../Compatibility/" class="dropdown-item">Compatibility</a>
+</li>
+                                    
+<li>
+    <a href="../CustomizeDoc/" class="dropdown-item">Customized Documentation</a>
+</li>
+                                    
+<li>
+    <a href="../DAPRelease/" class="dropdown-item">DAP Binaries</a>
+</li>
+                                    
+<li>
+    <a href="../Debugging/" class="dropdown-item">Debugging</a>
+</li>
+                                    
+<li>
+    <a href="../DocumentSymbol/" class="dropdown-item">Document Symbol</a>
+</li>
+                                    
+<li>
+    <a href="../Diagnostics/" class="dropdown-item">Diagnostics</a>
+</li>
+                                    
+<li>
+    <a href="../FileLock/" class="dropdown-item">File Locking</a>
+</li>
+                                    
+<li>
+    <a href="../Folding/" class="dropdown-item">Folding</a>
+</li>
+                                    
+<li>
+    <a href="../Formatting/" class="dropdown-item">Formatting</a>
+</li>
+                                    
+<li>
+    <a href="../GaraSign/" class="dropdown-item">GaraSign</a>
+</li>
+                                    
+<li>
+    <a href="../GroupView/" class="dropdown-item">Group View</a>
+</li>
+                                    
+<li>
+    <a href="../HashedFileEditing/" class="dropdown-item">Hashed File Editing</a>
+</li>
+                                    
+<li>
+    <a href="../Hover/" class="dropdown-item">Hover</a>
+</li>
+                                    
+<li>
+    <a href="../Include/" class="dropdown-item">INCLUDE settings</a>
+</li>
+                                    
+<li>
+    <a href="../Logging/" class="dropdown-item">Logging</a>
+</li>
+                                    
+<li>
+    <a href="../MultipleWorkspaceFolders/" class="dropdown-item">Multiple Workspace Folders</a>
+</li>
+                                    
+<li>
+    <a href="../OnlineEditing/" class="dropdown-item">Online Editing</a>
+</li>
+                                    
+<li>
+    <a href="../References/" class="dropdown-item">References</a>
+</li>
+                                    
+<li>
+    <a href="../SemanticHighlighting/" class="dropdown-item">Semantic Highlighting</a>
+</li>
+                                    
+<li>
+    <a href="../SignatureHelp/" class="dropdown-item">Signature Help</a>
+</li>
+                                    
+<li>
+    <a href="../Completion/" class="dropdown-item">Using Auto Completion</a>
+</li>
+                                    
+<li>
+    <a href="../Definition/" class="dropdown-item">Using Definition</a>
+</li>
+                                    
+<li>
+    <a href="../Rename/" class="dropdown-item">Using Rename</a>
+</li>
+                                    
+<li>
+    <a href="../Connection/" class="dropdown-item">U2 Connection Settings</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../FAQ/" class="nav-link">FAQ</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Change Log</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../CHANGELOG/" class="dropdown-item">Change Log</a>
+</li>
+                                    
+<li>
+    <a href="../KnownIssues/" class="dropdown-item">Known Issues</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Catalog/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Configuration/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#compiling-basic-program-files" class="nav-link">Compiling BASIC Program Files</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#compile-and-catalog" class="nav-link">Compile and catalog</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#universe-compile-task-examples" class="nav-link">UniVerse Compile Task Examples</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#unidata-compile-task-examples" class="nav-link">UniData Compile Task Examples</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#unidata-compile-flavor-in-basicmvbasicjson-file" class="nav-link">Unidata Compile Flavor in basic.mvbasic.json File</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="compiling-basic-program-files">Compiling BASIC Program Files</h1>
+<p>Users can compile and catalog BASIC programs using this extension. </p>
+<p><strong>Note</strong>:</p>
+<ul>
+<li>Before you compile BASIC programs, a U2 server must be connected. For information on connecting to a U2 server, see <a href="../Connection/">this section</a>.</li>
+<li>After you compile, regardless of whether the compile succeeds or fails, the BASIC files will be synchronized to the U2 server, overwriting the existing ones and creating new files. </li>
+<li>Generated objective files will not be synchronized from the server to the local machine.</li>
+<li>Compilation does not work properly when VS Code and the extension installed on Linux platform.</li>
+</ul>
+<h2 id="compile-and-catalog">Compile and catalog</h2>
+<p>There are four methods to compile BASIC program files:</p>
+<h3 id="from-editor-context">From editor context</h3>
+<p>Right-click in the file you want to compile then select "Compile BASIC programs".</p>
+<p><img alt="" src="../../img/compile_from_context.png" /></p>
+<p>If there are no other modified files in your project, the compile process will be started immediately.</p>
+<p>If other modified files exist, a list of modified files will display. Select files you want to compile, and then click "OK".</p>
+<p><img alt="" src="../../img/compile_from_context_multiple_selection.png" /></p>
+<p>The compilation result will display in the VS Code terminal.</p>
+<p><strong>Note</strong>: Using this method, compiled programs will not be cataloged.</p>
+<p>For UniData, different flavors are supported. Right-click in the file you want to compile then select "Compile BASIC programs". The language value from the basic.mvbasic.json file si read with the value set to: "ud_compile_flavor". <a href="./#unidata-compile-flavor-in-basicmvbasicjson-file">See this section to set ud_compile_flavor value.</a></p>
+<p><img alt="" src="../../img/compile_from_context.png" /></p>
+<h3 id="from-a-file-explorer">From a file explorer</h3>
+<p>Select one or more files, then right-click the file(s) and select "Compile selected BASIC programs".</p>
+<p><img alt="" src="../../img/compile_from_explorer.png" /></p>
+<p>The compilation result will display in the VS Code terminal.</p>
+<p><strong>Note</strong>: Using this method, compiled programs will not be cataloged.</p>
+<h3 id="through-vs-code-task">Through VS Code task</h3>
+<p>By using VS Code tasks, users can compile or catalog multiple BASIC programs at the same time.</p>
+<h4 id="create-a-basic-build-task">Create a BASIC build task</h4>
+<p>Select "Configure Default Build Task ..." or "Configure Tasks ..." from the "Terminal" menu to open the Command Palette.</p>
+<p><img alt="" src="../../img/compile_from_menu_1.png" /></p>
+<p>Select "BASIC: build" to create a BASIC build task.</p>
+<p><img alt="" src="../../img/compile_from_menu_2.png" /></p>
+<p>A default build task configuration will be created and displayed in the editor.</p>
+<pre><code class="language-json">{
+    &quot;version&quot;: &quot;2.0.0&quot;,
+    &quot;tasks&quot;: [
+        {
+            &quot;type&quot;: &quot;BASIC&quot;,
+            &quot;targets&quot;: [],
+            &quot;compile&quot;: {
+                &quot;dataSource&quot;: &quot;UNIVERSE&quot;, 
+                &quot;arguments&quot;: &quot;&quot;
+            },
+            &quot;problemMatcher&quot;: [],
+            &quot;label&quot;: &quot;BASIC: Build&quot;, 
+            &quot;group&quot;: {
+                &quot;kind&quot;: &quot;build&quot;, 
+                &quot;isDefault&quot;: true
+            }
+        }
+    ]
+}
+</code></pre>
+<p>If the project already has a build task, please see <strong>Example 4</strong> (UniVerse) or <strong>Example 3</strong> (UniData) for instructions on how to add a new build task.</p>
+<h4 id="task-properties">Task properties</h4>
+<p>You can find task properties in the <a href="https://code.visualstudio.com/docs/editor/tasks#_custom-tasks">VS Code official documents</a>. There are also some BASIC compilation specified properties:</p>
+<ul>
+<li><strong>type</strong>: must be set to "BASIC". This is used to identify that the current task is a BASIC build task.</li>
+<li><strong>targets</strong>: a list that contains the files you want to compile. The value should be the file's relative path. See the examples section for more details.</li>
+<li><strong>compile</strong>: compilation related settings that contains following configurable items:</li>
+<li><strong>dataSource</strong>: Must be "UNIVERSE" or "UNIDATA", depending on the connected U2 server.</li>
+<li><strong>catalog</strong>: For UniVerse, you can select "global", "local", or "normal". For UniData, you can select "global", "local", or "direct". If not set, files will not be cataloged.</li>
+<li><strong>initialCharacter</strong>: (For UniVerse only) The initial character of the cataloged program can be set only when the <strong>catalog</strong> parameter is set to “global”.</li>
+<li><strong>arguments</strong>: Put additional compilation arguments here. For more details, refer to the UniVerse / UniData user manual. By default, this setting doesn’t appear in the configuration file and must add it manually if needed.</li>
+</ul>
+<h4 id="run-build-task">Run build task</h4>
+<p>Select "Run build task" from the "Terminal" menu to start the build task.</p>
+<p><strong>Note 1</strong>: Ensure that a U2 server has been connected. Otherwise, an error will occur.</p>
+<p><img alt="" src="../../img/compile_from_menu_3.png" /></p>
+<p><strong>Note 2</strong>: Once you click on "Run build task," BASIC is complied using the compile flavor value set to ud_compile_flavor in the basic.mvbasic.json file, instead of compiling with the "language" value specified in the task (for Unidata).</p>
+<p><strong>Note 3</strong>: The "language" parameter is removed from task.json file.</p>
+<h3 id="through-command-palette">Through Command Palette</h3>
+<p>Users can open the Command Palette and then click on "Compile selected BASIC programs". This will compile only the program files that are currently open in tabs.</p>
+<p><img alt="" src="../../img/compile_selected_file.png" /></p>
+<p><img alt="" src="../../img/compile_selected_file2.png" /></p>
+<h2 id="universe-compile-task-examples">UniVerse Compile Task Examples</h2>
+<p><strong>Example 1</strong>. Compile a single BASIC program without cataloging. </p>
+<pre><code class="language-json">{
+    &quot;version&quot;: &quot;2.0.0&quot;,
+    &quot;tasks&quot;: [
+        {
+            &quot;type&quot;: &quot;BASIC&quot;,
+            &quot;targets&quot;: [
+                &quot;BP/SAMPLE_FILE&quot;
+            ],
+            &quot;compile&quot;: {
+                &quot;dataSource&quot;:&quot;UNIVERSE&quot;
+            },
+            &quot;problemMatcher&quot;: [],
+            &quot;label&quot;: &quot;BASIC: Build&quot;,
+            &quot;group&quot;: {
+                &quot;kind&quot;: &quot;build&quot;,
+                &quot;isDefault&quot;: true
+            }
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>Add the source code relative path to "targets". In this example, SAMPLE_FILE is in the BP folder.</li>
+<li>"dataSource" must be "UNIVERSE" for UniVerse.</li>
+<li>Don't set "catalog" and "initialCharacter" if you don't catalog programs.</li>
+</ul>
+<p><strong>Example 2</strong>. Compile multiple BASIC program files and perform global cataloging.</p>
+<pre><code class="language-json">{
+    &quot;version&quot;: &quot;2.0.0&quot;,
+    &quot;tasks&quot;: [
+        {
+            &quot;type&quot;: &quot;BASIC&quot;,
+            &quot;targets&quot;: [
+                &quot;BP/SAMPLE_FILE1&quot;, 
+                &quot;BP/SAMPLE_FILE2&quot;, 
+                &quot;BP/SAMOLE_FILE3&quot;
+            ],
+            &quot;compile&quot;: {
+                &quot;dataSource&quot;:&quot;UNIVERSE&quot;, 
+                &quot;catalog&quot;: &quot;global&quot;, 
+                &quot;initialCharacter&quot;: &quot;Asterisk mark (*)&quot;
+            },
+            &quot;problemMatcher&quot;: [],
+            &quot;label&quot;: &quot;BASIC: Build&quot;,
+            &quot;group&quot;: {
+                &quot;kind&quot;: &quot;build&quot;,
+                &quot;isDefault&quot;: true
+            }
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>You can add multiple source code relative paths to "targets".</li>
+<li>Set "catalog" to "global" if you want to perform global cataloging.</li>
+<li>If the "catalog" type is global, you need set "initialCharacter", or the default value "Asterisk mark (*)" will be used.</li>
+</ul>
+<p><strong>Example 3</strong>. Compile multiple BASIC program files and perform local cataloging.</p>
+<pre><code class="language-json">{
+    &quot;version&quot;: &quot;2.0.0&quot;,
+    &quot;tasks&quot;: [
+        {
+            &quot;type&quot;: &quot;BASIC&quot;,
+            &quot;targets&quot;: [
+                &quot;BP/SAMPLE_FILE1&quot;, 
+                &quot;BP/SAMPLE_FILE2&quot;, 
+                &quot;BP/SAMOLE_FILE3&quot;
+            ],
+            &quot;compile&quot;: {
+                &quot;dataSource&quot;:&quot;UNIVERSE&quot;, 
+                &quot;catalog&quot;: &quot;local&quot;
+            },
+            &quot;problemMatcher&quot;: [],
+            &quot;label&quot;: &quot;BASIC: Build&quot;,
+            &quot;group&quot;: {
+                &quot;kind&quot;: &quot;build&quot;,
+                &quot;isDefault&quot;: true
+            }
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>Set "catalog" to "local". You do not need to set "initialCharacter".</li>
+</ul>
+<p><strong>Example 4</strong>. Multiple build tasks.</p>
+<pre><code class="language-json">{
+    &quot;version&quot;: &quot;2.0.0&quot;,
+    &quot;tasks&quot;: [
+        {
+            &quot;type&quot;: &quot;BASIC&quot;,
+            &quot;targets&quot;: [
+                &quot;BP/SAMPLE_FILE1&quot;
+            ],
+            &quot;compile&quot;: {
+                &quot;dataSource&quot;:&quot;UNIVERSE&quot;
+            },
+            &quot;problemMatcher&quot;: [],
+            &quot;label&quot;: &quot;BASIC Build Task 1&quot;,
+            &quot;group&quot;: {
+                &quot;kind&quot;: &quot;build&quot;,
+                &quot;isDefault&quot;: true
+            }
+        }, 
+        {
+            &quot;type&quot;: &quot;BASIC&quot;,
+            &quot;targets&quot;: [
+                &quot;BP/SAMPLE_FILE2&quot;, 
+                &quot;BP/SAMOLE_FILE3&quot;
+            ],
+            &quot;compile&quot;: {
+                &quot;dataSource&quot;:&quot;UNIVERSE&quot;, 
+                &quot;catalog&quot;: &quot;global&quot;, 
+                &quot;initialCharacter&quot;: &quot;Asterisk mark (*)&quot;
+            },
+            &quot;problemMatcher&quot;: [],
+            &quot;label&quot;: &quot;BASIC Build Task 2&quot;,
+            &quot;group&quot;: {
+                &quot;kind&quot;: &quot;build&quot;,
+                &quot;isDefault&quot;: true
+            }
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>Add another task object in "tasks".</li>
+<li>Change the "label" in the tasks. When you run build tasks, you can select one of these tasks.</li>
+</ul>
+<h2 id="unidata-compile-task-examples">UniData Compile Task Examples</h2>
+<p><strong>Example 1</strong>. Compile a single BASIC program without cataloging.</p>
+<pre><code class="language-json">{
+    &quot;version&quot;: &quot;2.0.0&quot;,
+    &quot;tasks&quot;: [
+        {
+            &quot;type&quot;: &quot;BASIC&quot;,
+            &quot;targets&quot;: [
+                &quot;BP/SAMPLE_FILE&quot;
+            ],
+            &quot;compile&quot;: {
+                &quot;dataSource&quot;:&quot;UNIDATA&quot;
+            },
+            &quot;problemMatcher&quot;: [],
+            &quot;label&quot;: &quot;BASIC: Build&quot;,
+            &quot;group&quot;: {
+                &quot;kind&quot;: &quot;build&quot;,
+                &quot;isDefault&quot;: true
+            }
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>Add source code relative path to "targets". In this example, SAMPLE_FILE is in the BP folder.</li>
+<li>"dataSource" must be "UNIDATA" for UniData.</li>
+<li>You do not need to set "catalog" if you don't want to catalog programs.</li>
+<li>The "Language" parameter is removed so you cannot select it. In this example, <strong>It will read the compilation UD flavor value from the basic.mvbasic.json file, with the value set to: "ud_compile_flavor".</strong> <a href="./#unidata-compile-flavor-in-basicmvbasicjson-file">See this section to set ud_compile_flavor value.</a></li>
+</ul>
+<p><strong>Example 2</strong>. Compile multiple BASIC program files and perform global cataloging.</p>
+<pre><code class="language-json">{
+    &quot;version&quot;: &quot;2.0.0&quot;,
+    &quot;tasks&quot;: [
+        {
+            &quot;type&quot;: &quot;BASIC&quot;,
+            &quot;targets&quot;: [
+                &quot;BP/SAMPLE_FILE1&quot;, 
+                &quot;BP/SAMPLE_FILE2&quot;, 
+                &quot;BP/SAMOLE_FILE3&quot;
+            ],
+            &quot;compile&quot;: {
+                &quot;dataSource&quot;:&quot;UNIDATA&quot;, 
+                &quot;catalog&quot;: &quot;global&quot;
+            },
+            &quot;problemMatcher&quot;: [],
+            &quot;label&quot;: &quot;BASIC: Build&quot;,
+            &quot;group&quot;: {
+                &quot;kind&quot;: &quot;build&quot;,
+                &quot;isDefault&quot;: true
+            }
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>You can add multiple source code relative paths to "targets".</li>
+<li>The "Language" parameter is removed so you cannot select it. In this example, <strong>It will read the compilation UD flavor value from the basic.mvbasic.json file, with the value set to: "ud_compile_flavor".</strong> <a href="./#unidata-compile-flavor-in-basicmvbasicjson-file">See this section to set ud_compile_flavor value.</a></li>
+<li>Set "catalog" to "global" if you want to perform global cataloging.</li>
+</ul>
+<p><strong>Example 3</strong>. Multiple tasks</p>
+<pre><code class="language-json">{
+    &quot;version&quot;: &quot;2.0.0&quot;,
+    &quot;tasks&quot;: [
+        {
+            &quot;type&quot;: &quot;BASIC&quot;,
+            &quot;targets&quot;: [
+                &quot;BP/SAMPLE_FILE1&quot;
+            ],
+            &quot;compile&quot;: {
+                &quot;dataSource&quot;:&quot;UNIDATA&quot;
+            },
+            &quot;problemMatcher&quot;: [],
+            &quot;label&quot;: &quot;BASIC Build Task 1&quot;,
+            &quot;group&quot;: {
+                &quot;kind&quot;: &quot;build&quot;,
+                &quot;isDefault&quot;: true
+            }
+        }, 
+        {
+            &quot;type&quot;: &quot;BASIC&quot;,
+            &quot;targets&quot;: [
+                &quot;BP/SAMPLE_FILE2&quot;, 
+                &quot;BP/SAMOLE_FILE3&quot;
+            ],
+            &quot;compile&quot;: {
+                &quot;dataSource&quot;:&quot;UNIDATA&quot;,
+                &quot;catalog&quot;: &quot;global&quot;
+            },
+            &quot;problemMatcher&quot;: [],
+            &quot;label&quot;: &quot;BASIC Build Task 2&quot;,
+            &quot;group&quot;: {
+                &quot;kind&quot;: &quot;build&quot;,
+                &quot;isDefault&quot;: true
+            }
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>Add another task object in "tasks".</li>
+<li>Change "label" in the tasks. When you run build tasks, you can select one of these tasks.</li>
+</ul>
+<p><strong>Example 4</strong>. Additional compilation arguments</p>
+<pre><code class="language-json">{
+    &quot;version&quot;: &quot;2.0.0&quot;,
+    &quot;tasks&quot;: [
+        {
+            &quot;type&quot;: &quot;BASIC&quot;,
+            &quot;targets&quot;: [
+                &quot;BP/SAMPLE_FILE&quot;
+            ],
+            &quot;compile&quot;: {
+                &quot;dataSource&quot;:&quot;UNIVERSE&quot;, 
+                &quot;arguments&quot;: &quot;-L -X&quot;
+            },
+            &quot;problemMatcher&quot;: [],
+            &quot;label&quot;: &quot;BASIC: Build&quot;,
+            &quot;group&quot;: {
+                &quot;kind&quot;: &quot;build&quot;,
+                &quot;isDefault&quot;: true
+            }
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>Compile the BASIC program with arguments "-L" and "-X".</li>
+</ul>
+<h2 id="unidata-compile-flavor-in-basicmvbasicjson-file">Unidata Compile Flavor in basic.mvbasic.json File</h2>
+<p>By Using the VS Code task, users can compile or catalog multiple BASIC programs at the same time. BASIC compilation will use the specified Task propeties (except the "language" property which is removed).</p>
+<pre><code class="language-json">{
+    &quot;version&quot;: &quot;2.0.0&quot;,
+    &quot;tasks&quot;: [
+        {
+            &quot;type&quot;: &quot;BASIC&quot;,
+            &quot;targets&quot;: [
+                &quot;BP/SAMPLE_FILE&quot;
+            ],
+            &quot;compile&quot;: {
+                &quot;dataSource&quot;:&quot;UNIDATA&quot;
+            },
+            &quot;problemMatcher&quot;: [],
+            &quot;label&quot;: &quot;BASIC: Build&quot;,
+            &quot;group&quot;: {
+                &quot;kind&quot;: &quot;build&quot;,
+                &quot;isDefault&quot;: true
+            }
+        }
+    ]
+}
+</code></pre>
+<p>The language value from the basic.mvbasic.json file is read with the value set to: "ud_compile_flavor".</p>
+<pre><code class="language-json">    {
+        &quot;catalog&quot;: &quot;direct&quot;,
+        &quot;arguments&quot;: &quot;&quot;,
+        &quot;initialCharacter&quot;: &quot;&quot;,
+        &quot;ud_compile_flavor&quot;: &quot;Pick&quot;
+    }
+</code></pre>
+<p><strong>Example 1</strong>. Compile a single BASIC program with flavor UniBasic.</p>
+<pre><code class="language-json">    {
+        &quot;catalog&quot;: &quot;local&quot;,
+        &quot;arguments&quot;: &quot;&quot;,
+        &quot;initialCharacter&quot;: &quot;&quot;,
+        &quot;ud_compile_flavor&quot;: &quot;UniBasic&quot;
+    }
+</code></pre>
+<p><strong>Example 2</strong>. Compile a single BASIC program with flavor revelation.</p>
+<pre><code class="language-json">    {
+        &quot;catalog&quot;: &quot;local&quot;,
+        &quot;arguments&quot;: &quot;&quot;,
+        &quot;initialCharacter&quot;: &quot;&quot;,
+        &quot;ud_compile_flavor&quot;: &quot;revelation&quot;
+    }
+</code></pre>
+<p><strong>Note</strong>: Earlier by default we were sending -D in the arguments, now it is configurable. Users must provide -D in the arguments to debug the UniData BASIC program. </p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
