@@ -2,7 +2,7 @@
 
 This user guide provides instructions on how to use the **Hashed File Editing** feature to manage and edit records in a selected file. This feature allows users to view, edit, update, and delete records through a user-friendly interface.
 
-**Note:** This feature is enabled for both UniVerse and UniData, but currently works with UniVerse only.
+**Note:** This feature is enabled for both UniVerse and UniData, but currently works with UniVerse only. It is not supported for jBASE.
 
 ## Getting Started
 

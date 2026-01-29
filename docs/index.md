@@ -22,9 +22,10 @@ This extension allows:
  - Add customized documentation for functions, subroutines, or labels
  - Show syntax and grammar errors
  - Prompt parameters of BASIC internal functions
- - Compile / Catalog BASIC programs on the U2 server
+ - Compile / Catalog BASIC programs on the U2 server or jBASE
  - Debug BASIC program files
- - Remote editing of BASIC program files on a U2 server (preview)
+ - Remote editing of BASIC program files on a U2 server
+ - jBASE Support
 
 ## Getting started
 
@@ -133,6 +134,7 @@ Click the links below to learn more about using each feature. You can also refer
 - [Compile BASIC programs](./usage/Compile.md)
 - [Multiple Workspace Folders](./usage/MultipleWorkspaceFolders.md)
 - [Debugging](./usage/Debugging.md)
+- [jBASE Support](./usage/JBaseSupport.md)
 
 ## Contact Us
 

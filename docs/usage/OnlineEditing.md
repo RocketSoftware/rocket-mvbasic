@@ -2,7 +2,7 @@
 
 Online Editing is an additional method for modifying BASIC program files on the U2 server. With this feature, users can remotely edit BASIC program files on the U2 server instead of having to retrieve or upload files from a repository. However, you cannot simultaneously utilize this mode alongside the traditional editing mode.
 
-**Note:** VS Code version 1.75 or higher is required to use this feature. Only Windows is supported in this preview version.
+**Note:** VS Code version 1.75 or higher is required to use this feature. Only Windows is supported in this preview version. This feature is not supported for jBASE.
 
 ### Start Using
 
@@ -251,6 +251,14 @@ A default task file will be generated. For more information on this file, see th
 
 ### Debugging in online mode
 Refer [Debugging](./Debugging.md) for debugging steps.
+
+### Online Debugging and Port Requirements
+
+Online debugging uses uddap or uvdap services from the server, which open random ports to exchange debugging data. On servers where ports are not whitelisted, these connections fail, and online debugging does not work.
+
+Currently, these services request an open port from the operating system, which can be any port between 1 and 65535. Based on our testing, most ports fall in the range 31000 to 65535.
+
+To ensure smooth online debugging, server administrators should whitelist the port range 31000–65535 on the server firewall.
 
 ### Limitation:
 Most of the LSP (Language Server Protocol) features are supported, but there are some limitations. 

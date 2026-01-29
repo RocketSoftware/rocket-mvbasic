@@ -1,5 +1,11 @@
 # Change Log
 
+## Version 2.9.0: February 28, 2026
+ - Support for jBASE connections, including basic capabilities such as Compile and Catalog.
+ - Introduced NLS support
+ - Improved performance, including enhancements to IntelliSense.
+ - Customer Bug fixes
+ 
 ## Version 2.8.1: December 18, 2025
  - Resolved high CPU usage issue during online mode
  - Fixed UniData Pick compilation

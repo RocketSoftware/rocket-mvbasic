@@ -4,6 +4,8 @@ You can add additional account folders in the configuration file. Doing this all
 
 **Note**: the account folders must be on your local machine.
 
+**Note**: Accounts settings are not supported for jBASE.
+
 Please refer to  [Configuration](Configuration.md) to open the database related configuration file.
 
 ```

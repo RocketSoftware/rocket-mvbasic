@@ -1,5 +1,7 @@
 ## Catalog Settings in "db.mvbasic.json" file
 
+**Note**: Catalog settings in `db.mvbasic.json` are not supported for jBASE.
+
 Please refer to [Configuration](Configuration.md) to open the database related configuration file and then find the "catalog" section.
 
 ```
@@ -101,7 +103,7 @@ Please refer to [Configuration](Configuration.md) to open the database related c
 
 ## Quick Catalog
 
-Users can right-click a BASIC program file and select "Catalog" to catalog a single file for both Universe and Unidata databases 
+Users can right-click a BASIC program file and select "Catalog" to catalog a single file for both Universe, Unidata and jBASE databases 
 
 ![](../img/catalog.png)
 
@@ -112,7 +114,7 @@ Cataloging a program makes it available to all users or to users of one account.
 ```
 {
     "catalog": "",
-    "arguments": "",
+    "catalog_arguments": "",
     "initialCharacter": "",
     "ud_compile_flavor": ""
 }
@@ -128,7 +130,7 @@ pointing to the object file, you need not recatalog the program every time you r
 
     {
         "catalog": "local",
-        "arguments": "",
+        "catalog_arguments": "",
         "initialCharacter": "",
         "ud_compile_flavor": ""
     }
@@ -146,7 +148,7 @@ or !, and do not specify the keyword LOCAL.
 
     {
         "catalog": "normal",
-        "arguments": "",
+        "catalog_arguments": "",
         "initialCharacter": "",
         "ud_compile_flavor": ""
     }
@@ -169,7 +171,7 @@ the keyword LOCAL.
 
     {
         "catalog": "global",
-        "arguments": "",
+        "catalog_arguments": "",
         "initialCharacter": "*",
         "ud_compile_flavor": ""
     }
@@ -180,7 +182,7 @@ the keyword LOCAL.
 
     {
         "catalog": "direct",
-        "arguments": "",
+        "catalog_arguments": "",
         "initialCharacter": "",
         "ud_compile_flavor": ""
     }
@@ -190,11 +192,19 @@ already exist.
 
     {
         "catalog": "local",
-        "arguments": "",
+        "catalog_arguments": "",
         "initialCharacter": "",
         "ud_compile_flavor": ""
     }
 
+
+### Cataloging in jBASE
+
+**Catalog BASIC files**: For jBASE, quick catalog is supported. Add arguments to `catalog_arguments` value in  `basic.mvbasic.json`. 
+
+    {
+        "catalog_arguments": ""
+    }
 
 **Note 1 :** The parameter "arguments" in the basic.mvbasic.json file is currently not supported by the catalog feature. By default, the argument is set to FORCE for both the UV and UD databases.
 

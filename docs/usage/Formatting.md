@@ -1,5 +1,7 @@
 ## Formatting Usage
 
+**Note:** Formatting configuration is partially supported for jBASE.
+
 There are three ways to format a document:
 
 - Document formatting: press <kbd>F1</kbd> to open a command window and then enter "Format Document" to format the entire document.

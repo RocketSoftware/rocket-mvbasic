@@ -1,5 +1,7 @@
 ## Include Settings
 
+**Note:** This feature is not supported for jBASE.
+
 When a BASIC program includes some other files by using the `INCLUDE` statement, you can update the "includeMapping" setting in the configuration file so that the included file is referenced correctly.
 
 Please refer to [Configuration](Configuration.md) for information on opening database related configuration files.

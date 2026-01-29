@@ -1,5 +1,7 @@
 ## Using Auto-Completion
 
+**Note:** This feature is not supported for jBASE.
+
 When editing a BASIC program, the auto-completion function can prompt and complete what is currently being edited according to the contextual environment. The completion includes:
 
  - Statements and keywords

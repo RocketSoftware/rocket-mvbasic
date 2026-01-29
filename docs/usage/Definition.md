@@ -1,5 +1,7 @@
 ## Using Definition
 
+**Note:** This feature is not supported for jBASE.
+
 Use following methods to find a symbol's definition:
 
 - Right click a symbol then select `Goto Definition`;

@@ -4,8 +4,8 @@ Users can compile and catalog BASIC programs using this extension.
 
 **Note**:
 
-- Before you compile BASIC programs, a U2 server must be connected. For information on connecting to a U2 server, see [this section](./Connection.md).
-- After you compile, regardless of whether the compile succeeds or fails, the BASIC files will be synchronized to the U2 server, overwriting the existing ones and creating new files. 
+- Before you compile BASIC programs, a U2 server or jBASE must be connected. For information on connecting to a U2 server, see [this section](./Connection.md).
+- After you compile, regardless of whether the compile succeeds or fails, the BASIC files will be synchronized to the U2 server or jBASE, overwriting the existing ones and creating new files.
 - Generated objective files will not be synchronized from the server to the local machine.
 - Compilation does not work properly when VS Code and the extension installed on Linux platform.
 
@@ -90,7 +90,7 @@ You can find task properties in the [VS Code official documents](https://code.vi
 - **type**: must be set to "BASIC". This is used to identify that the current task is a BASIC build task.
 - **targets**: a list that contains the files you want to compile. The value should be the file's relative path. See the examples section for more details.
 - **compile**: compilation related settings that contains following configurable items:
-  - **dataSource**: Must be "UNIVERSE" or "UNIDATA", depending on the connected U2 server.
+  - **dataSource**: Must be "UNIVERSE", "UNIDATA" or "JBASE", depending on the connected server.
   - **catalog**: For UniVerse, you can select "global", "local", or "normal". For UniData, you can select "global", "local", or "direct". If not set, files will not be cataloged.
   - **initialCharacter**: (For UniVerse only) The initial character of the cataloged program can be set only when the **catalog** parameter is set to “global”.
   - **arguments**: Put additional compilation arguments here. For more details, refer to the UniVerse / UniData user manual. By default, this setting doesn’t appear in the configuration file and must add it manually if needed.
@@ -98,7 +98,7 @@ You can find task properties in the [VS Code official documents](https://code.vi
 
 Select "Run build task" from the "Terminal" menu to start the build task.
 
-**Note 1**: Ensure that a U2 server has been connected. Otherwise, an error will occur.
+**Note 1**: Ensure that a U2 server or jBASE has been connected. Otherwise, an error will occur.
 
 ![](../img/compile_from_menu_3.png)
 
@@ -459,3 +459,134 @@ The language value from the basic.mvbasic.json file is read with the value set t
 ```
 
 **Note**: Earlier by default we were sending -D in the arguments, now it is configurable. Users must provide -D in the arguments to debug the UniData BASIC program. 
+
+## jBASE Compile Task Examples
+**Example 1**. Compile a single BASIC program.
+
+```json
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "BASIC",
+			"targets": [
+				"BP/SAMPLE_FILE"
+			],
+			"compile": {
+				"dataSource":"jBASE"
+			},
+			"problemMatcher": [],
+			"label": "BASIC: Build",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+    ]
+}
+```
+
+- Add source code relative path to "targets". In this example, SAMPLE_FILE is in the BP folder.
+- "dataSource" must be "jBASE" for jBASE.
+- "catalog" is not suported for jBASE.
+
+**Example 2**. Compile multiple BASIC program files.
+
+```json
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "BASIC",
+			"targets": [
+				"BP/SAMPLE_FILE1", 
+                "BP/SAMPLE_FILE2", 
+                "BP/SAMOLE_FILE3"
+			],
+			"compile": {
+				"dataSource":"jBASE"
+			},
+			"problemMatcher": [],
+			"label": "BASIC: Build",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+    ]
+}
+```
+
+- You can add multiple source code relative paths to "targets".
+
+**Example 3**. Multiple tasks
+
+```json
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "BASIC",
+			"targets": [
+				"BP/SAMPLE_FILE1"
+			],
+			"compile": {
+				"dataSource":"jBASE"
+			},
+			"problemMatcher": [],
+			"label": "BASIC Build Task 1",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}, 
+        {
+            "type": "BASIC",
+			"targets": [
+                "BP/SAMPLE_FILE2", 
+                "BP/SAMOLE_FILE3"
+			],
+			"compile": {
+				"dataSource":"jBASE"
+			},
+			"problemMatcher": [],
+			"label": "BASIC Build Task 2",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+        }
+    ]
+}
+```
+
+- Add another task object in "tasks".
+- Change "label" in the tasks. When you run build tasks, you can select one of these tasks.
+
+**Example 4**. Additional compilation arguments
+
+```json
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "BASIC",
+			"targets": [
+				"BP/SAMPLE_FILE"
+			],
+			"compile": {
+				"dataSource":"jBASE", 
+				"arguments": "(V"
+			},
+			"problemMatcher": [],
+			"label": "BASIC: Build",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+    ]
+}
+```
+
+- Compile the BASIC program with arguments "(V".

@@ -18,6 +18,9 @@ Platforms: Windows, Linux, AIX
 
 **Note:** For more details, please refer [Rocket-MV-BASIC-Extension-features-support-matrix](https://my.rocketsoftware.com/RocketCommunity/s/article/Rocket-MV-BASIC-Extension-features-support-matrix).
 
+### jBASE
+**Note:** Debugging is not supported for jBASE.
+
 ### A high performance debugging feature
 
 A high-performance debugging feature is supported on UniVerse 11.4.1 and UniData 8.3.1. To use this feature, you must upgrade to UniVerse 11.4.1 / UniData 8.3.1 or higher version. Please see [Debugging Binaries Releases](./DAPRelease.md) for more details.

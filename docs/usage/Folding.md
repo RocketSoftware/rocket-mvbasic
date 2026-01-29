@@ -2,6 +2,8 @@
 
 The code folding feature can be used to improve code readability for statements containing large blocks of code.
 
+**Note:** This feature is not supported for jBASE.
+
 The following code snippet contains code blocks for the IF statement and the ON statement.
 
 ![](../img/folding_before.png)
