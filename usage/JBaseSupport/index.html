@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>JBASE Support - Rocket MV BASIC</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Rocket MV BASIC</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Usage</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Accounts/" class="dropdown-item">Accounts Settings</a>
+</li>
+                                    
+<li>
+    <a href="../Catalog/" class="dropdown-item">Catalog Settings</a>
+</li>
+                                    
+<li>
+    <a href="../Compile/" class="dropdown-item">Compile</a>
+</li>
+                                    
+<li>
+    <a href="../Configuration/" class="dropdown-item">Configuration</a>
+</li>
+                                    
+<li>
+    <a href="../CodeLens/" class="dropdown-item">Code Lens</a>
+</li>
+                                    
+<li>
+    <a href="../Compatibility/" class="dropdown-item">Compatibility</a>
+</li>
+                                    
+<li>
+    <a href="../CustomizeDoc/" class="dropdown-item">Customized Documentation</a>
+</li>
+                                    
+<li>
+    <a href="../DAPRelease/" class="dropdown-item">DAP Binaries</a>
+</li>
+                                    
+<li>
+    <a href="../Debugging/" class="dropdown-item">Debugging</a>
+</li>
+                                    
+<li>
+    <a href="../DocumentSymbol/" class="dropdown-item">Document Symbol</a>
+</li>
+                                    
+<li>
+    <a href="../Diagnostics/" class="dropdown-item">Diagnostics</a>
+</li>
+                                    
+<li>
+    <a href="../FileLock/" class="dropdown-item">File Locking</a>
+</li>
+                                    
+<li>
+    <a href="../Folding/" class="dropdown-item">Folding</a>
+</li>
+                                    
+<li>
+    <a href="../Formatting/" class="dropdown-item">Formatting</a>
+</li>
+                                    
+<li>
+    <a href="../RocketSign/" class="dropdown-item">RocketSign</a>
+</li>
+                                    
+<li>
+    <a href="../GroupView/" class="dropdown-item">Group View</a>
+</li>
+                                    
+<li>
+    <a href="../HashedFileEditing/" class="dropdown-item">Hashed File Editing</a>
+</li>
+                                    
+<li>
+    <a href="../Hover/" class="dropdown-item">Hover</a>
+</li>
+                                    
+<li>
+    <a href="../Include/" class="dropdown-item">INCLUDE settings</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">JBASE Support</a>
+</li>
+                                    
+<li>
+    <a href="../Logging/" class="dropdown-item">Logging</a>
+</li>
+                                    
+<li>
+    <a href="../MultipleWorkspaceFolders/" class="dropdown-item">Multiple Workspace Folders</a>
+</li>
+                                    
+<li>
+    <a href="../OnlineEditing/" class="dropdown-item">Online Editing</a>
+</li>
+                                    
+<li>
+    <a href="../References/" class="dropdown-item">References</a>
+</li>
+                                    
+<li>
+    <a href="../SemanticHighlighting/" class="dropdown-item">Semantic Highlighting</a>
+</li>
+                                    
+<li>
+    <a href="../SignatureHelp/" class="dropdown-item">Signature Help</a>
+</li>
+                                    
+<li>
+    <a href="../Completion/" class="dropdown-item">Using Auto Completion</a>
+</li>
+                                    
+<li>
+    <a href="../Definition/" class="dropdown-item">Using Definition</a>
+</li>
+                                    
+<li>
+    <a href="../Rename/" class="dropdown-item">Using Rename</a>
+</li>
+                                    
+<li>
+    <a href="../Connection/" class="dropdown-item">U2 Connection Settings</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../FAQ/" class="nav-link">FAQ</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Change Log</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../CHANGELOG/" class="dropdown-item">Change Log</a>
+</li>
+                                    
+<li>
+    <a href="../KnownIssues/" class="dropdown-item">Known Issues</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Include/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Logging/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#jbase-support-in-mvvs" class="nav-link">jBASE Support in MVVS</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#prerequisites" class="nav-link">Prerequisites:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#connection" class="nav-link">Connection</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#editing-basic-files" class="nav-link">Editing BASIC files</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#compiling-basic-program-files" class="nav-link">Compiling BASIC Program Files</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#catalog-basic-program-files" class="nav-link">Catalog BASIC Program Files</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#jbase-support-matrix" class="nav-link">jBASE Support Matrix</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="jbase-support-in-mvvs">jBASE Support in MVVS</h1>
+<h2 id="prerequisites">Prerequisites:</h2>
+<p>For jBase, we are using jRemote, which establishes communication with the <a href="https://docs.rocketsoftware.com/bundle/jbase_lib_61/page/wci1693826147509.html">jAgent</a> service on port 20002 running on the jBase server.
+This setup is a prerequisite for establishing a connection with the jBase server.</p>
+<p>To enable this, please run the following command in the bin directory of your jBase installation (for example: C:\jBASE\6.2.1\bin):
+Command: </p>
+<pre><code>jbase_agent -L4 -A user
+</code></pre>
+<p><strong>Note:</strong> MVVS currently supports only user authentication mode. Refer to the jbase_agent wiki to set up user authentication.</p>
+<h2 id="connection">Connection</h2>
+<p>Refer <a href="../Connection/">Connection</a></p>
+<h2 id="editing-basic-files">Editing BASIC files</h2>
+<p>Open BASIC files, set 'rocket-mvbasic' as lanugage for document.
+<img alt="" src="../../img/jBase_edit_basic_files.png" /></p>
+<h2 id="compiling-basic-program-files">Compiling BASIC Program Files</h2>
+<ol>
+<li>From editor context <a href="../Compile/#from-editor-context">Refer</a></li>
+<li>From a file explorer <a href="../Compile/#from-a-file-explorer">Refer</a></li>
+<li>Through VS Code task <a href="../Compile/#through-vs-code-task">Refer</a><br>
+Also refer <a href="../Compile/#jbase-compile-task-examples">Examples</a></li>
+<li>Through Command Palette <a href="../Compile/#through-command-palette">Refer</a></li>
+</ol>
+<h3 id="compilation-limitation">Compilation limitation:</h3>
+<p>In jBase, the  <a href="https://docs.rocketsoftware.com/bundle/jbase_lib_61/page/dyl1666031271431.html">BASIC</a> command allows users to pass arguments or options in two places:</p>
+<p>Immediately after the BASIC keyword, using the '-' prefix
+At the end of the command, using the '(' prefix</p>
+<p>In the current MVVS implementation, only the options provided at the end (with the '(' prefix) are supported.</p>
+<h2 id="catalog-basic-program-files">Catalog BASIC Program Files</h2>
+<h3 id="quick-catalog">Quick Catalog</h3>
+<p>Refer <a href="../Catalog/#quick-catalog">Quick Catalog</a></p>
+<h2 id="jbase-support-matrix">jBASE Support Matrix</h2>
+<p>We now support jBASE 5.9 or higher.</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accounts Settings from <code>db.mvbasic.json</code></td>
+<td>❌ Not Supported</td>
+</tr>
+<tr>
+<td>Catalog Settings in <code>db.mvbasic.json</code></td>
+<td>❌ Not Supported</td>
+</tr>
+<tr>
+<td><strong>Compiling BASIC Program Files</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>– From editor context</td>
+<td>✅ Supported</td>
+</tr>
+<tr>
+<td>– From file explorer</td>
+<td>✅ Supported</td>
+</tr>
+<tr>
+<td>– Through VS Code task</td>
+<td>✅ Supported</td>
+</tr>
+<tr>
+<td>– Through Command Palette</td>
+<td>✅ Supported</td>
+</tr>
+<tr>
+<td>Compile &amp; Catalog Configuration in <code>basic.mvbasic.json</code></td>
+<td>✅ Supported</td>
+</tr>
+<tr>
+<td>Code Lens</td>
+<td>✅ Supported</td>
+</tr>
+<tr>
+<td>Custom Documentation</td>
+<td>✅ Supported</td>
+</tr>
+<tr>
+<td>Debugging</td>
+<td>❌ Not Supported</td>
+</tr>
+<tr>
+<td>Document Symbols</td>
+<td>✅ Supported</td>
+</tr>
+<tr>
+<td>Diagnostics</td>
+<td>❌ Not Supported</td>
+</tr>
+<tr>
+<td>File Locking in Online Editing</td>
+<td>❌ Not Supported</td>
+</tr>
+<tr>
+<td>Code Folding</td>
+<td>❌ Not Supported</td>
+</tr>
+<tr>
+<td>Formatting Configuration</td>
+<td>⚠️ Partially Supported</td>
+</tr>
+<tr>
+<td>Group View</td>
+<td>✅ Supported</td>
+</tr>
+<tr>
+<td>Hashed File Editing (Online Mode)</td>
+<td>❌ Not Supported</td>
+</tr>
+<tr>
+<td>Hover with brief description</td>
+<td>❌ Not Supported</td>
+</tr>
+<tr>
+<td>Include Settings (<code>includeMapping</code> from <code>db.mvbasic.json</code>)</td>
+<td>❌ Not Supported</td>
+</tr>
+<tr>
+<td>Multiple Workspace Folders Support</td>
+<td>❌ Not Supported</td>
+</tr>
+<tr>
+<td>Online Editing</td>
+<td>❌ Not Supported</td>
+</tr>
+<tr>
+<td>Go to References / Find All References (Offline Mode)</td>
+<td>✅ Supported</td>
+</tr>
+<tr>
+<td>Semantic Highlighting</td>
+<td>❌ Not Supported</td>
+</tr>
+<tr>
+<td>Auto‑Completion</td>
+<td>❌ Not Supported</td>
+</tr>
+<tr>
+<td>Go‑To Definition</td>
+<td>❌ Not Supported</td>
+</tr>
+<tr>
+<td>Rename</td>
+<td>✅ Supported</td>
+</tr>
+<tr>
+<td>jBASE BASIC</td>
+<td>⚠️ Partially Supported</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes-for-partially-supported-features">Notes for Partially Supported features</h3>
+<ul>
+<li>jBASE BASIC: IntelliSense is not available. Marked partially supported because common syntax shared with UniVerse/UniData BASIC is recognized.</li>
+<li>Formatting Configuration: Most formatting works, but full jBASE BASIC–specific formatting is not yet supported.</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
